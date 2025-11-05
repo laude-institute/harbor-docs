@@ -15,7 +15,7 @@ uv tool install harbor
 pip install harbor
 ```
 
-## Running an eval
+## Getting started
 
 Run the following command to see a list of all available commands:
 
@@ -23,23 +23,39 @@ Run the following command to see a list of all available commands:
 harbor --help
 ```
 
-The primary command is `harbor run`, which is used to run evals.
+## Running an eval
+
+The primary command is `harbor run`, which is used to run evals or generate rollouts.
 
 ```bash
 harbor run --help
 ```
 
-To evaluate an agent and model on a dataset, you can use the following command:
+To view registered datasets, run
+
+```bash
+harbor datasets list
+```
+
+### Running a registered dataset
+
+To evaluate an agent and model one of these datasets, you can use the following command:
 
 ```bash
 harbor run -d "<dataset@version>" -m "<model>" -a "<agent>"
 ```
 
-Harbor will automatically download registered datasets. Local datasets can also be run using
+Harbor will automatically download registered datasets. 
+
+### Running a local dataset
+
+Local datasets (directories of tasks) can also be run using
 
 ```bash
 harbor run -p "<path/to/dataset>" -m "<model>" -a "<agent>"
 ```
+
+### Running a cloud sandbox
 
 To run using a cloud sandbox provider like Daytona, you can use the following command:
 
