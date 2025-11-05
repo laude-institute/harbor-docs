@@ -10,7 +10,7 @@ Harbor includes utilities for turning trials (agent task completion attempts) in
 - `--sharegpt` adds a ShareGPT-style column to support instruction-tuning datasets expecting the `{"from": "...", "value": "..."}` schema.
 - Success filtering (`--filter success|failure`) inspects `result.json` and lets you keep only passing or failing attempts for curriculum-style datasets.
 
-<Callout title="CLI flags only work for Terminus-2" type="warning">
+<Callout title="CLI flags only work for Terminus 2" type="warning">
 Today the exporter only understands the `terminus-2` agent output structure. Runs produced by other agents will raise a `NotImplementedError`. We welcome PRs to add trace generation support for other agents.
 </Callout>
 

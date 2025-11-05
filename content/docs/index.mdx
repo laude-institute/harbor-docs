@@ -1,40 +1,14 @@
 ---
-title: Getting Started
-description: Installing the package and running your first eval
+title: Motivation
+description: Why we built Harbor
 ---
+Harbor is a framework for evaluating and optimizing (e.g. via RL) agents and models in container environments.
 
-Harbor is a framework for evals, post-training, and prompt optimization using agentic environments.
+## Why container environments?
 
-## Installation
+Right now, there are two agent paradigms emerging:
 
-```bash tab="uv"
-uv tool install harbor
-```
+1. **Tool-use agents**, which constrain the action space to a set of very specific tools designed to complete very specific tasks.
+1. **CLI agents**, which are general-purpose agents with an action space as large as the terminal that accomplish tasks by writing and executing code.
 
-```bash tab="pip"
-pip install harbor
-```
-
-## Running an eval
-
-To evaluate an agent and model on a dataset, you can use the following command:
-
-```bash
-harbor run -d "<dataset@version>" -m "<model>" -a "<agent>"
-```
-
-Harbor will automatically download registered datasets. Local datasets can also be run using
-
-```bash
-harbor run -p "<path/to/dataset>" -m "<model>" -a "<agent>"
-```
-
-To run using a cloud sandbox provider like Daytona, you can use the following command:
-
-```bash
-harbor run -d "<dataset@version>" -m "<model>" -a "<agent>" --env "daytona" -n 32
-```
-
-If you run a cloud sandbox using an API model, trials become I/O bounded rather than compute bounded, which means you can typically parallelize far above your CPU count (the example command above runs 32 trials concurrently).
-
-Sandboxes agent evaluations are often slow, because they can require many turns to complete and each command requires time to execute. Horizontal scaling becomes the only viable way to accelerate experimentation, so we recommend using a cloud sandbox provider like Daytona.
+We believe that general-purpose agents will [become the dominant paradigm](https://x.com/alexalbert__/status/1983209299624243529) and deserve their own framework for testing and development, which is why we built Harbor. CLI agents are already being used for [more than just coding tasks](https://x.com/alexalbert__/status/1948765443776544885), and new sandboxed, general-purpose, CLI-equipped agents are emerging in other verticals (e.g. [Biomni](https://biomni.stanford.edu/)).

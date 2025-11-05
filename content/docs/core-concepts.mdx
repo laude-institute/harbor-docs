@@ -3,44 +3,31 @@ title: Core Concepts
 description: Core concepts and terminology in Harbor
 ---
 
-Harbor is a framework for evaluating and optimizing (e.g. via RL) agents and models in container environments.
-
-## Why container environments?
-
-Right now, there are two agent paradigms emerging:
-
-1. **Tool-use agents**, which constrain the action space to a set of very specific tools designed to complete very specific tasks.
-1. **CLI agents**, which are general-purpose agents with an action space as large as the terminal that accomplish tasks by writing and executing code.
-
-We believe that general-purpose agents will [become the dominant paradigm](https://x.com/alexalbert__/status/1983209299624243529) and deserve their own framework for testing and development, which is why we built Harbor. CLI agents are already being used for [far more than just coding tasks](https://x.com/alexalbert__/status/1948765443776544885), and new sandboxed, general-purpose, CLI-equipped agents are emerging in other verticals (e.g. [Biomni](https://biomni.stanford.edu/)).
-
-## Harbor's core concepts
-
 Harbor has the following core concepts:
 
-### Task
+## Task
 
 A task is a single instruction, container environment, and test script. Tasks are used to evaluate agents and models. A task is implemented as a directory of files in the [Harbor task format](/docs/task-format).
 
-### Dataset
+## Dataset
 
 A [dataset](/docs/datasets) is a collection of tasks. Datasets are used to evaluate agents and models. Usually, a dataset corresponds to a benchmark (e.g. Terminal-Bench, SWE-Bench Verified, etc.). Datasets can optionally be distributed via the Harbor registry.
 
-### Agent
+## Agent
 
 An [agent](/docs/agents) is a program that completes tasks. Agents are defined by implementing the `BaseAgent` or `BaseInstalledAgent` interfaces.
 
-### Container environment
+## Container environment
 
 Environments in Harbor are containers, typically defined as Docker images using a `Dockerfile`. The `BaseEnvironment` interface provides a unified interface for interacting with environments. Many cloud container runtimes are already supported out of the box, including Daytona, Modal, and E2B. Other container runtimes can be supported by implementing the `BaseEnvironment` interface.
 
-### Trial
+## Trial
 
 A trial is an agent's attempt at completing a task. Trials can be configured using the `TrialConfig` class.
 
 Essentially, a trial is a rollout that produces a reward.
 
-### Job
+## Job
 
 A job is a collection of trials. Jobs are used to evaluate agents and models. A job can consist of multiple datasets, agents, tasks, and models. Jobs can be configured using the `JobConfig` class.
 
