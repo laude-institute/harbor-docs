@@ -49,6 +49,15 @@ class HarborRolloutInterface(SomeRLFrameworkRolloutInterface):
                 environment=EnvironmentConfig(
                     type=EnvironmentType.DAYTONA,
                 ),
+                agents=[
+                    AgentConfig(
+                        name=AgentName.TERMINUS_2,
+                        model_name="hosted_vllm/<model-name>",
+                        kwargs={
+                            "base_url": "https://<vllm-server-url>",
+                        }
+                    )
+                ]
                 orchestrator=OrchestratorConfig(
                     n_concurrent_trials=32,
                 ),
