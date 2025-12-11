@@ -5,7 +5,7 @@ description: LLM observability and evaluation for Harbor trials
 
 [Opik](https://github.com/comet-ml/opik) is an open-source LLM observability and evaluation platform by [Comet](https://www.comet.com/site/). It lets you debug, evaluate, and monitor LLM applications with comprehensive tracing, automated evaluations, and production-ready dashboards. Harbor integrates with Opik to log traces for all trial executions.
 
-![Harbor integration with Opik](/harbor-opik-integration.png)
+![Opik experiments tab](/harbor-opik-experiments.png)
 
 Opik logs the following from Harbor trials:
 
@@ -60,7 +60,7 @@ See the [Configuration](#configuration) section for additional options like sett
 
 Once you run the command, you can track your Harbor run in real-time in the Opik experiments tab. Each trial is logged as a trace with timing, metadata, and verifier rewards as feedback scores. Trajectory steps appear as nested spans with tool calls, observations, and token usage. You can then compare runs across different agents or models to identify what drives differences in trial results.
 
-![Opik experiments tab](/harbor-opik-experiments.png)
+![Opik trace view](/harbor-opik-integration.png)
 
 ## Custom Agent Tracking
 
