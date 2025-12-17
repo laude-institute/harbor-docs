@@ -15,6 +15,28 @@ harbor run --help
 
 Right now, Harbor includes Terminus-2, Claude Code, Codex CLI, Gemini CLI, OpenHands, Mini-SWE-Agent, and more.
 
+## Agent Authentication
+
+Some agents require authentication via environment variables, often requiring to export their API key. E.g., ANTHROPIC_API_KEY in case of Claude Code, OPENAI_API_KEY in case of Codex CLI, GEMINI_API_KEY in case of Gemini CLI.
+
+### Claude Code Pro/Max subscribers
+Claude Code Pro/Max subscribers can also use OAuth tokens via `CLAUDE_CODE_OAUTH_TOKEN`. The token location varies by operating system:
+
+- **Linux**: Claude stores credentials in `~/.claude/.credentials.json`
+  ```bash
+  export CLAUDE_CODE_OAUTH_TOKEN=$(jq -r '.claudeAiOauth.accessToken' ~/.claude/.credentials.json)
+  ```
+
+- **macOS**: Claude stores credentials in Keychain
+  ```bash
+  export CLAUDE_CODE_OAUTH_TOKEN=$(security find-generic-password -s "Claude Code-credentials" -a "$USER" -w | jq -r '.claudeAiOauth.accessToken')
+  ```
+
+Then run Harbor commands as normal:
+```bash
+harbor run -d "<dataset@version>" -m "<model>" -a claude-code
+```
+
 ## Integrating your own agent
 
 Harbor supports integrating your own agent without having to modify the Harbor source code.
