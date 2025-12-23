@@ -19,6 +19,23 @@ If you are thinking about adapting your benchmark or contributing one from our [
 See [this section](#translating-terminal-bench-adapters-to-harbor) to learn about the requirements and differences between Terminal-Bench and Harbor.
 </Callout>
 
+## Quick Start
+
+```bash
+# List available adapters
+harbor adapters list
+
+# Start the interactive wizard to create a new adapter
+harbor adapters init
+
+# Initialize with specific arguments (skipping some prompts)
+harbor adapters init my-adapter --name "My Benchmark"
+```
+
+Use the above commands to view our supported adapters and start creating your new ones. The `harbor adapters init` command will create starter code and template files.
+
+For more details about what adapters are and how we ensure equivalance between the original benchmark and its harbor adapter, please continue reading.
+
 ## Overview
 
 Adapting a benchmark to Harbor is a straightforward process designed to ensure consistency and quality. This guide will walk you through everything you need to know. However, since each benchmark is unique, the exact process and special requirements may vary slightly depending on the benchmark. Please contact our team to understand the specific requirements and considerations for your benchmark. We will support API costs for running parity experiments :-)
