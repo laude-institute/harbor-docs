@@ -24,6 +24,8 @@
         "evals",
         "rl",
         "sft",
+        "---Integrations---",
+        "opik",
         "---Contributing---",
         "contributing"
     ]
