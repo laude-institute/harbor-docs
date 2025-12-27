@@ -267,6 +267,29 @@ If the original benchmark uses custom agents that aren't available in Harbor, yo
 
 Keep a link to any forked repositories, and document your agent implementation approach in your adapter's README.
 
+<Callout title="Large or Expensive Benchmarks: Parity on Subset">
+If the original benchmark is very large and expensive to run, you may want to run parity experiments on a fixed, representative subset of samples instead of the full dataset. Please discuss with the team to confirm sampling and parity plans!
+
+This approach has two important implications:
+
+1. **README Documentation:** In your adapter's README, you must clearly:
+   - State how the parity subset was selected (e.g., random seed, "stratified sample across difficulty levels", etc.)
+   - Explicitly indicate that parity experiments were run on a subset
+   - Provide instructions for users on how to use the full dataset with the adapter code, typically using an argument like `--split parity` (or similar) to generate only the parity subset
+  ```bash
+  # Example of adapter code usage
+  # Generate only the parity subset
+  uv run run_adapter.py --split parity --output-dir /path/to/output
+
+  # Generate the full dataset
+  uv run run_adapter.py --output-dir /path/to/output
+  ```
+
+2. **Registry Version Naming:** When uploading the dataset to the registry, use the version name `"parity"` instead of `"1.0"` or `"2.0"` to avoid confusion. This allows users to run parity reproduction using `-d <adapter_name>@parity` while keeping the full dataset available separately.
+
+
+</Callout>
+
 ### 5. Run Parity Experiments
 
 
@@ -368,13 +391,17 @@ Once your adapter correctly generates tasks and you verify the parity experiment
 - **Pull Request:** Create a pull request to the `harbor-datasets` repository. It's recommended to link the original benchmark's GitHub repository in your PR. Request @Slimshilin for review, and he will merge it so you can try `--registry-path` for the `harbor` harness. You may always submit another PR to update the dataset registry.
 
 
-Then you should navigate to the `harbor` repository (not the dataset repo!) and add a new entry to the `registry.json` file in the root. **Note:** Harbor's registry format uses task-level entries with Git URLs. For example:
+Then you should navigate to the `harbor` repository (not the dataset repo!) and add a new entry to the `registry.json` file in the root. **Note:** Harbor's registry format uses task-level entries with Git URLs. 
+
+**Version naming:** Use `"version": "1.0"` by default. If there's a version naming of the original benchmark (e.g., "verified", "lite"), then please follow their naming. If you ran parity experiments on a subset (see [Section 4](#4-discuss-parity-plans-and-implement-agents)), use `"version": "parity"` for the parity subset to allow users to run `-d <adapter_name>@parity` for parity reproduction.
+
+For example:
 ```json
 [
     // existing entries...
     {
         "name": "<your-adapter-name>",
-        "version": "1.0",
+        "version": "1.0",  // or "parity" if this is a parity subset
         "description": "A brief description of the adapter. Original benchmark: [URL]. More details at [adapter README URL].",
         "tasks": [
             {
@@ -425,6 +452,12 @@ Your README must clearly and comprehensively document all adaptation details, in
 
 The documentation should be detailed enough for other community users to understand your adaptation choices and reproduce your work.
 
+Once everything is ready for review (all steps completed, documentation finalized, screenshots added), update your Harbor adapter PR:
+
+1. **Change the PR title** from `[WIP] Adapter: {adapter_name}` to `[Ready for Review] Adapter: {adapter_name}`
+2. **Request review** from `@Slimshilin` in the PR
+
+This signals to the team that your adapter is complete and ready for final review and merge.
 
 ### Other Useful Resources
 - The [Harbor documentation](/docs/getting-started) provides detailed information about running tasks and jobs with Harbor.
