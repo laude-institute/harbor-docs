@@ -1,0 +1,108 @@
+---
+title: Opik
+description: LLM observability and evaluation for Harbor trials
+---
+
+[Opik](https://github.com/comet-ml/opik) is an open-source LLM observability and evaluation platform by [Comet](https://www.comet.com/site/). It lets you debug, evaluate, and monitor LLM applications with comprehensive tracing, automated evaluations, and production-ready dashboards. Harbor integrates with Opik to log traces for all trial executions.
+
+![Opik experiments tab](/harbor-opik-experiments.png)
+
+Opik logs the following from Harbor trials:
+
+- **Experiments** for each Harbor job allowing you to group and compare runs across different agents, models, or configurations
+- **Trial results** as Opik traces with timing, metadata, and feedback scores from verifier rewards
+- **Trajectory steps** as nested spans showing the complete agent-environment interaction
+- **Tool calls and observations** as detailed execution records
+- **Token usage and costs** aggregated from ATIF metrics
+
+## Installation
+
+Install the `opik` package alongside Harbor:
+
+```bash tab="uv"
+uv pip install opik
+```
+
+```bash tab="pip"
+pip install opik
+```
+
+## Configuration
+
+Create a free [Comet account](https://www.comet.com/signup?from=llm&utm_source=opik&utm_medium=colab&utm_content=harbor&utm_campaign=opik) and grab your API key, or run Opik locally using the [self-hosting guide](https://www.comet.com/docs/opik/self-host/overview/).
+
+Configure the Opik SDK using the CLI:
+
+```bash
+opik configure
+```
+
+Or configure in code:
+
+```python
+import opik
+opik.configure()
+```
+
+## CLI Usage
+
+The easiest way to use Harbor with Opik is through the `opik harbor` CLI command. This automatically enables Opik tracking for all trial executions. All standard Harbor commands are available as subcommands.
+
+```bash
+# Run a benchmark with Opik tracking
+opik harbor run -d terminal-bench@head -a terminus_2 -m gpt-4.1
+
+# Use a configuration file
+opik harbor run -c config.yaml
+``` 
+
+See the [Configuration](#configuration) section for additional options like setting the project name via environment variables.
+
+Once you run the command, you can track your Harbor run in real-time in the Opik experiments tab. Each trial is logged as a trace with timing, metadata, and verifier rewards as feedback scores. Trajectory steps appear as nested spans with tool calls, observations, and token usage. You can then compare runs across different agents or models to identify what drives differences in trial results.
+
+![Opik trace view](/harbor-opik-integration.png)
+
+## Custom Agent Tracking
+
+When building [custom agents](/docs/agents), you can use Opik's `@track` decorator on methods within your agent implementation. These decorated functions will automatically be captured as spans within the trial trace:
+
+```python
+from harbor.agents.base import BaseAgent
+from opik import track
+
+class MyCustomAgent(BaseAgent):
+    @staticmethod
+    def name() -> str:
+        return "my-custom-agent"
+
+    @track
+    async def plan_next_action(self, observation: str) -> str:
+        # This function will appear as a span in Opik
+        return action
+
+    @track
+    async def execute_tool(self, tool_name: str, args: dict) -> str:
+        # This will also be tracked as a nested span
+        result = await self._run_tool(tool_name, args)
+        return result
+
+    async def run(self, instruction: str, environment, context) -> None:
+        # Your main agent loop
+        while not done:
+            observation = await environment.exec("pwd")
+            action = await self.plan_next_action(observation)
+            result = await self.execute_tool(action.tool, action.args)
+```
+
+## Environment Variables
+
+| Variable | Description |
+|----------|-------------|
+| `OPIK_PROJECT_NAME` | Default project name for traces |
+| `OPIK_API_KEY` | API key for Opik Cloud |
+| `OPIK_WORKSPACE` | Workspace name (for Opik Cloud) |
+
+<Callout title="Questions or feedback?">
+If you have questions about the Opik integration or want to report an issue, please open an issue on the [Opik GitHub repository](https://github.com/comet-ml/opik/issues).
+</Callout>
+
