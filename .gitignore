@@ -1,5 +1,6 @@
 # deps
 /node_modules
+package-lock.json
 
 # generated content
 .source
@@ -24,3 +25,4 @@ yarn-error.log*
 .env*.local
 .vercel
 next-env.d.ts
+.env

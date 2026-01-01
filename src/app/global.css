@@ -6,9 +6,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: var(--font-instrument-sans), var(--font-plus), sans-serif;
+  --font-sans: var(--font-google-sans-flex), sans-serif;
   --font-serif: var(--font-instrument-serif), serif;
-  --font-mono: var(--font-geist-mono), monospace;
+  --font-code: var(--font-google-sans-code), monospace;
+  --font-mono: var(--font-google-sans-code), monospace;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -122,4 +123,9 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Remove shadow from code blocks */
+figure.shiki {
+  box-shadow: none;
 }

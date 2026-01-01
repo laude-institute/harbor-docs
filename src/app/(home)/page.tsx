@@ -4,9 +4,11 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-1 flex-col justify-center space-y-12 max-w-6xl mx-auto px-4 py-6">
+    <main className="flex flex-1 flex-col justify-center space-y-12 max-w-6xl mx-auto px-4 py-6 sm:pt-12">
       <div className="space-y-6 flex flex-col items-center">
-        <h1 className="text-8xl tracking-tight font-serif">Harbor</h1>
+        <h1 className="text-8xl tracking-tighter font-code font-medium">
+          Harbor
+        </h1>
         <p className="text-sm px-3 rounded-lg border py-1 bg-muted">
           From the makers of Terminal-Bench.
         </p>
