@@ -1,15 +1,9 @@
 import { CodeBlock } from "@/components/code-block";
-import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { createClient } from "@/lib/supabase/server";
 import type { Tables } from "@/lib/supabase/types";
 import type { Metadata } from "next";
+import { DatasetCard } from "./dataset-card";
 
 export const metadata: Metadata = {
   title: "Harbor Registry",
@@ -58,6 +52,8 @@ export default async function RegistryPage() {
           </p>
         </div>
 
+        <CodeBlock lang="bash" code="harbor datasets list" />
+
         {datasets.length === 0 ? (
           <Card>
             <CardContent className="py-12 text-center">
@@ -70,35 +66,13 @@ export default async function RegistryPage() {
           <div className="border rounded-xl overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 -m-px bg-card">
               {datasets.map((dataset) => (
-                <Card
+                <DatasetCard
                   key={`${dataset.name}:${dataset.version}`}
-                  className="shadow-none rounded-none -mr-px -mt-px"
-                >
-                  <CardHeader>
-                    <div className="flex items-center justify-between gap-2">
-                      <CardTitle className="truncate font-code">
-                        {dataset.name}
-                      </CardTitle>
-                      <Badge variant="secondary" className="shrink-0 font-code">
-                        v{dataset.version}
-                      </Badge>
-                    </div>
-                    <CardDescription className="line-clamp-2">
-                      {dataset.description || "No description available"}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="gap-4 flex-1 flex flex-col justify-between">
-                    <div>
-                      <CodeBlock
-                        lang="bash"
-                        code={`harbor run -d ${dataset.name}@${dataset.version}`}
-                      />
-                    </div>
-                    <p className="text-sm text-muted-foreground font-code">
-                      {dataset.dataset_task[0]?.count ?? 0} tasks
-                    </p>
-                  </CardContent>
-                </Card>
+                  name={dataset.name}
+                  version={dataset.version}
+                  description={dataset.description}
+                  taskCount={dataset.dataset_task[0]?.count ?? 0}
+                />
               ))}
             </div>
           </div>
