@@ -19,6 +19,11 @@ export function baseOptions(): BaseLayoutProps {
         active: "nested-url",
       },
       {
+        url: "/registry",
+        text: "Registry",
+        active: "nested-url",
+      },
+      {
         url: "https://discord.gg/6xWPKhGDbA",
         text: "Discord",
         active: "none",
