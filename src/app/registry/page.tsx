@@ -1,5 +1,5 @@
-import { createClient } from "@/lib/supabase/server";
-import type { Dataset, DatasetTask, DatasetMetric } from "@/lib/supabase/types";
+import { CodeBlock } from "@/components/code-block";
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
@@ -7,79 +7,41 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { createClient } from "@/lib/supabase/server";
+import type { Tables } from "@/lib/supabase/types";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Registry - Harbor",
+  title: "Harbor Registry",
   description: "Browse datasets available in the Harbor registry",
 };
 
-interface DatasetWithCounts {
-  name: string;
-  version: string;
-  description: string | null;
-  created_at: string;
-  task_count: number;
-  metric_count: number;
-}
+type Dataset = Tables<"dataset"> & {
+  dataset_task: [{ count: number }];
+};
 
-async function getDatasets(): Promise<DatasetWithCounts[]> {
+const FEATURED_DATASETS = ["terminal-bench", "swebench-verified"];
+
+async function getDatasets() {
   const supabase = createClient();
-
-  // Fetch datasets with their related task and metric counts
-  const { data: datasets, error } = await supabase
+  const { data, error } = await supabase
     .from("dataset")
-    .select("*")
+    .select("*, dataset_task(count)")
     .order("created_at", { ascending: false });
 
-  if (error || !datasets) {
+  if (error || !data) {
     console.error("Error fetching datasets:", error);
     return [];
   }
 
-  // Fetch task counts for each dataset
-  const { data: tasks } = await supabase
-    .from("dataset_task")
-    .select("dataset_name, dataset_version");
-
-  // Fetch metric counts for each dataset
-  const { data: metrics } = await supabase
-    .from("dataset_metric")
-    .select("dataset_name, dataset_version");
-
-  // Create maps for counting
-  const taskCountMap = new Map<string, number>();
-  const metricCountMap = new Map<string, number>();
-
-  (tasks as Pick<DatasetTask, "dataset_name" | "dataset_version">[] | null)?.forEach((task) => {
-    const key = `${task.dataset_name}:${task.dataset_version}`;
-    taskCountMap.set(key, (taskCountMap.get(key) || 0) + 1);
-  });
-
-  (metrics as Pick<DatasetMetric, "dataset_name" | "dataset_version">[] | null)?.forEach((metric) => {
-    const key = `${metric.dataset_name}:${metric.dataset_version}`;
-    metricCountMap.set(key, (metricCountMap.get(key) || 0) + 1);
-  });
-
-  return (datasets as Dataset[]).map((dataset) => {
-    const key = `${dataset.name}:${dataset.version}`;
-    return {
-      name: dataset.name,
-      version: dataset.version,
-      description: dataset.description,
-      created_at: dataset.created_at,
-      task_count: taskCountMap.get(key) || 0,
-      metric_count: metricCountMap.get(key) || 0,
-    };
-  });
-}
-
-function formatDate(dateString: string): string {
-  return new Date(dateString).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
+  const datasets = data as Dataset[];
+  return datasets.sort((a, b) => {
+    const aIndex = FEATURED_DATASETS.indexOf(a.name);
+    const bIndex = FEATURED_DATASETS.indexOf(b.name);
+    if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+    if (aIndex !== -1) return -1;
+    if (bIndex !== -1) return 1;
+    return 0;
   });
 }
 
@@ -87,10 +49,10 @@ export default async function RegistryPage() {
   const datasets = await getDatasets();
 
   return (
-    <main className="flex flex-1 flex-col max-w-6xl mx-auto px-4 py-12">
+    <main className="flex flex-1 flex-col max-w-6xl w-full mx-auto px-4 py-12">
       <div className="space-y-6">
-        <div className="space-y-2">
-          <h1 className="text-5xl tracking-tight font-serif">Registry</h1>
+        <div>
+          <h1 className="text-5xl tracking-tighter font-code mb-6">Registry</h1>
           <p className="text-lg text-muted-foreground">
             Browse the datasets available in the Harbor registry.
           </p>
@@ -106,7 +68,7 @@ export default async function RegistryPage() {
           </Card>
         ) : (
           <div className="border rounded-xl overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 -m-px bg-card">
+            <div className="grid grid-cols-1 md:grid-cols-2 -m-px bg-card">
               {datasets.map((dataset) => (
                 <Card
                   key={`${dataset.name}:${dataset.version}`}
@@ -114,8 +76,10 @@ export default async function RegistryPage() {
                 >
                   <CardHeader>
                     <div className="flex items-center justify-between gap-2">
-                      <CardTitle className="truncate">{dataset.name}</CardTitle>
-                      <Badge variant="secondary" className="shrink-0">
+                      <CardTitle className="truncate font-code">
+                        {dataset.name}
+                      </CardTitle>
+                      <Badge variant="secondary" className="shrink-0 font-code">
                         v{dataset.version}
                       </Badge>
                     </div>
@@ -123,14 +87,15 @@ export default async function RegistryPage() {
                       {dataset.description || "No description available"}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2 text-sm text-muted-foreground">
-                      <span>{dataset.task_count} tasks</span>
-                      <span>·</span>
-                      <span>{dataset.metric_count} metrics</span>
+                  <CardContent className="gap-4 flex-1 flex flex-col justify-between">
+                    <div>
+                      <CodeBlock
+                        lang="bash"
+                        code={`harbor run -d ${dataset.name}@${dataset.version}`}
+                      />
                     </div>
-                    <p className="text-xs text-muted-foreground mt-2">
-                      Added {formatDate(dataset.created_at)}
+                    <p className="text-sm text-muted-foreground font-code">
+                      {dataset.dataset_task[0]?.count ?? 0} tasks
                     </p>
                   </CardContent>
                 </Card>

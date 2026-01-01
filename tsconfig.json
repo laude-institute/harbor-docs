@@ -23,8 +23,8 @@
       "@/*": [
         "./src/*"
       ],
-      "@/.source": [
-        ".source"
+      "@/.source/*": [
+        ".source/*"
       ]
     },
     "plugins": [

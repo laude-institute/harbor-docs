@@ -3,9 +3,10 @@ import { RootProvider } from "fumadocs-ui/provider/next";
 import { GeistMono } from "geist/font/mono";
 import { Metadata } from "next";
 import {
+  Google_Sans_Code,
+  Google_Sans_Flex,
   Instrument_Sans,
   Instrument_Serif,
-  Plus_Jakarta_Sans,
 } from "next/font/google";
 import "./global.css";
 
@@ -53,9 +54,14 @@ const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
 });
 
-const plus = Plus_Jakarta_Sans({
+const googleSansCode = Google_Sans_Code({
   subsets: ["latin"],
-  variable: "--font-plus",
+  variable: "--font-google-sans-code",
+});
+
+const googleSansFlex = Google_Sans_Flex({
+  subsets: ["latin"],
+  variable: "--font-google-sans-flex",
 });
 
 export default function Layout({ children }: LayoutProps<"/">) {
@@ -63,7 +69,8 @@ export default function Layout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={cn(
-        plus.variable,
+        googleSansCode.variable,
+        googleSansFlex.variable,
         instrumentSerif.variable,
         instrumentSans.variable,
         GeistMono.variable
