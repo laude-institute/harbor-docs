@@ -20,7 +20,7 @@ This is the documentation website for **Harbor**, a framework for evaluating and
 - **Database**: Supabase (for registry data)
 - **Syntax Highlighting**: Shiki (github-light/github-dark themes)
 - **Fonts**: Google Sans Code, Google Sans Flex, Instrument Sans/Serif, Geist Mono
-- **Package Manager**: npm (or pnpm/yarn)
+- **Package Manager**: bun
 
 ## Directory Structure
 
@@ -68,19 +68,19 @@ harbor-docs/
 
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Run development server (http://localhost:3000)
-npm run dev
+bun dev
 
 # Build for production
-npm run build
+bun run build
 
 # Start production server
-npm start
+bun start
 
 # Run ESLint
-npm run lint
+bun lint
 ```
 
 ## Key Files and Concepts
@@ -182,7 +182,7 @@ Important information here.
 
 Use shadcn/ui CLI:
 ```bash
-npx shadcn@latest add <component-name>
+bunx shadcn@latest add <component-name>
 ```
 
 Components are installed to `src/components/ui/` following the new-york style variant.
