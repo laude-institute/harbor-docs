@@ -29,7 +29,11 @@ export function DatasetCard({
     try {
       await navigator.clipboard.writeText(datasetString);
       toast.success("Copied to clipboard", {
-        description: datasetString,
+        description: (
+          <span className="font-mono text-muted-foreground">
+            {datasetString}
+          </span>
+        ),
       });
     } catch {
       toast.error("Failed to copy to clipboard");
@@ -41,12 +45,16 @@ export function DatasetCard({
       <CardHeader>
         <div className="flex items-center justify-between gap-2">
           <CardTitle
-            className="truncate font-code cursor-pointer hover:underline"
+            className="truncate font-code cursor-pointer"
             onClick={handleCopyDataset}
           >
             {name}
           </CardTitle>
-          <Badge variant="secondary" className="shrink-0 font-code">
+          <Badge
+            variant="secondary"
+            className="shrink-0 font-code cursor-pointer hover:bg-secondary/80"
+            onClick={handleCopyDataset}
+          >
             v{version}
           </Badge>
         </div>

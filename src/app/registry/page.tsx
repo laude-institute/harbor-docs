@@ -52,7 +52,9 @@ export default async function RegistryPage() {
           </p>
         </div>
 
-        <CodeBlock lang="bash" code="harbor datasets list" />
+        <div>
+          <CodeBlock lang="bash" code="harbor datasets list" />
+        </div>
 
         {datasets.length === 0 ? (
           <Card>
