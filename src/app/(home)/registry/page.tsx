@@ -43,43 +43,39 @@ export default async function RegistryPage() {
   const datasets = await getDatasets();
 
   return (
-    <main className="flex flex-1 flex-col max-w-6xl w-full mx-auto px-4 py-12">
-      <div className="space-y-6">
-        <div>
-          <h1 className="text-5xl tracking-tighter font-code mb-6">Registry</h1>
-          <p className="text-lg text-muted-foreground">
-            Browse the datasets available in the Harbor registry.
-          </p>
-        </div>
-
-        <div>
-          <CodeBlock lang="bash" code="harbor datasets list" />
-        </div>
-
-        {datasets.length === 0 ? (
-          <Card>
-            <CardContent className="py-12 text-center">
-              <p className="text-muted-foreground">
-                No datasets available yet.
-              </p>
-            </CardContent>
-          </Card>
-        ) : (
-          <div className="border rounded-xl overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2 -m-px bg-card">
-              {datasets.map((dataset) => (
-                <DatasetCard
-                  key={`${dataset.name}:${dataset.version}`}
-                  name={dataset.name}
-                  version={dataset.version}
-                  description={dataset.description}
-                  taskCount={dataset.dataset_task[0]?.count ?? 0}
-                />
-              ))}
-            </div>
-          </div>
-        )}
+    <>
+      <div>
+        <h1 className="text-5xl tracking-tighter font-code mb-6">Registry</h1>
+        <p className="text-lg text-muted-foreground">
+          Browse the datasets available in the Harbor registry.
+        </p>
       </div>
-    </main>
+
+      <div>
+        <CodeBlock lang="bash" code="harbor datasets list" />
+      </div>
+
+      {datasets.length === 0 ? (
+        <Card>
+          <CardContent className="py-12 text-center">
+            <p className="text-muted-foreground">No datasets available yet.</p>
+          </CardContent>
+        </Card>
+      ) : (
+        <div className="border rounded-xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 -m-px bg-card">
+            {datasets.map((dataset) => (
+              <DatasetCard
+                key={`${dataset.name}:${dataset.version}`}
+                name={dataset.name}
+                version={dataset.version}
+                description={dataset.description}
+                taskCount={dataset.dataset_task[0]?.count ?? 0}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
