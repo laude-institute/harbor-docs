@@ -43,7 +43,7 @@ export default async function RegistryPage() {
   const datasets = await getDatasets();
 
   return (
-    <main className="flex flex-1 flex-col max-w-6xl w-full mx-auto px-4 py-12">
+    <main className="flex flex-1 flex-col max-w-7xl w-full mx-auto px-4 py-12">
       <div className="space-y-6">
         <div>
           <h1 className="text-5xl tracking-tighter font-code mb-6">Registry</h1>

@@ -1,5 +1,13 @@
 import { CodeBlock } from "@/components/code-block";
 import { Badge } from "@/components/ui/badge";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import { Card, CardContent } from "@/components/ui/card";
 import { createClient } from "@/lib/supabase/server";
 import type { Tables } from "@/lib/supabase/types";
@@ -86,15 +94,24 @@ export default async function DatasetPage({ params }: DatasetPageProps) {
   }
 
   return (
-    <main className="flex flex-1 flex-col max-w-6xl w-full mx-auto px-4 py-12">
+    <main className="flex flex-1 flex-col max-w-7xl w-full mx-auto px-4 py-12">
       <div className="space-y-6">
         <div>
-          <Link
-            href="/registry"
-            className="text-sm text-muted-foreground hover:text-foreground mb-4 inline-block"
-          >
-            &larr; Back to Registry
-          </Link>
+          <Breadcrumb className="mb-4">
+            <BreadcrumbList className="font-code">
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link href="/registry">Registry</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>
+                  {dataset.name}@{dataset.version}
+                </BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
           <div className="flex items-center gap-3 mb-2">
             <h1 className="text-5xl tracking-tighter font-code">
               {dataset.name}
@@ -131,11 +148,13 @@ export default async function DatasetPage({ params }: DatasetPageProps) {
             </Card>
           ) : (
             <div className="border rounded-xl overflow-hidden">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 -m-px bg-card">
+              <div className="grid grid-cols-1 md:grid-cols-2 -m-px bg-card">
                 {tasks.map((task) => (
                   <TaskCard
                     key={task.id}
                     name={task.name}
+                    datasetName={dataset.name}
+                    datasetVersion={dataset.version}
                     gitUrl={task.git_url}
                     gitCommitId={task.git_commit_id}
                     path={task.path}
