@@ -74,7 +74,7 @@ export function DatasetCard({
             <CodeBlock lang="bash" code={`harbor run -d ${name}@${version}`} />
           </div>
           <p className="text-sm text-muted-foreground font-code">
-            {taskCount} tasks
+            {taskCount} {taskCount === 1 ? "task" : "tasks"}
           </p>
         </CardContent>
       </Card>
