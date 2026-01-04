@@ -4,7 +4,7 @@ export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
       title: (
-        <div className="flex items-center gap-2 mx-4">
+        <div className="flex items-center gap-2 mr-4">
           <p className="font-code tracking-tight text-lg font-medium">harbor</p>
         </div>
       ),
