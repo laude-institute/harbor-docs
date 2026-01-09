@@ -279,6 +279,161 @@ Terminus-2 automatically generates trajectories in the **Agent Trajectory Interc
 
 See the [Agent Trajectory Format](/docs/trajectory-format) documentation for details on the ATIF specification.
 
+### Trajectory Configuration
+
+Terminus-2 supports a `TrajectoryConfig` that controls how trajectories are recorded and formatted. This is particularly important when generating SFT datasets or when context summarization occurs.
+
+#### Configuration Options
+
+**`raw_content` (default: `False`)**
+
+Controls whether to save raw LLM responses or parsed structured data in the trajectory.
+
+- **`raw_content=False` (default)**: Saves parsed, structured data with separate `message` and `tool_calls` fields. Best for trajectory analysis and debugging.
+- **`raw_content=True`**: Saves the exact raw LLM response in the `message` field without parsing. Essential for SFT data export where you need the exact model outputs.
+
+**`linear_history` (default: `False`)**
+
+Controls how trajectories are split when context summarization occurs. The key difference is whether you can **recover the true LLM conversation history** from the trajectory files.
+
+During agent execution, the actual conversation history sent to the LLM looks like this:
+
+```
+Turn 1:
+  {"user": "You are an AI assistant tasked with solving command-line tasks...
+           Task Description: Create a file called hello.txt
+           Current terminal state: ..."}
+  {"assistant": "{'analysis': '...', 'plan': '...', 'commands': [...]}"}
+
+Turn 2:
+  {"user": "You are an AI assistant tasked with solving command-line tasks...
+           Task Description: Create a file called hello.txt
+           Current terminal state: ..."}
+  {"assistant": "{'analysis': '...', 'plan': '...', 'commands': [...]}"}
+  {"user": "New Terminal Output:\nroot@container:/app# ..."}
+  {"assistant": "{'analysis': '...', 'plan': '...', 'commands': [...]}"}
+
+// Context summarization happens here
+
+Turn 3:
+  {"user": "You are an AI assistant tasked with solving command-line tasks...
+           Task Description: Create a file called hello.txt
+           Current terminal state: ..."}
+  {"user": "You are picking up work from a previous AI agent on this task:
+           **Original Task:** Create a file called hello.txt
+           **Summary from Previous Agent:** ...
+           **Current Terminal Screen:** ...
+           Please begin by asking several questions..."}
+  {"assistant": "1. What files have been created so far?\n2. ..."}
+  {"user": "Here are the answers the other agent provided.\n\n[answers]\n\nContinue working on this task..."}
+  {"assistant": "{'analysis': '...', 'plan': '...', 'commands': [...]}"}
+```
+
+Notice how in Turn 3, the conversation history was reset and compressed - the system prompt is followed by the question prompt (which includes the task, summary, and terminal screen), then model questions, then the handoff prompt with answers, skipping all the intermediate conversation steps.
+
+**When `linear_history=False` (default):**
+
+All main agent steps are stored in a single `trajectory.json` file in a human-readable format, while summarization subagents are stored in separate files. However, you **cannot recover the true conversation history** from the main trajectory file - the handoff prompt appears to be a continuation of the previous conversation, but in reality, the LLM context was reset.
+
+File structure:
+```
+trajectory.json                              # All main agent steps
+trajectory.summarization-1-summary.json      # First summarization: summary subagent
+trajectory.summarization-1-questions.json    # First summarization: questions subagent
+trajectory.summarization-1-answers.json      # First summarization: answers subagent
+```
+
+If multiple summarizations occur, you'll see:
+```
+trajectory.json
+trajectory.summarization-1-*.json            # First summarization
+trajectory.summarization-2-*.json            # Second summarization
+...
+```
+
+**When `linear_history=True`:**
+
+The trajectory is split into separate files when summarization occurs. Each file represents a continuous, unambiguous linear history that was actually sent to the LLM.
+
+`trajectory.json`:
+```json
+[
+  {"user": "You are an AI assistant tasked with solving command-line tasks...\nTask Description: Create a file called hello.txt\nCurrent terminal state: ..."},
+  {"assistant": "{'analysis': '...', 'plan': '...', 'commands': [...]}"},
+  {"user": "New Terminal Output:\nroot@container:/app# ..."},
+  {"assistant": "{'analysis': '...', 'plan': '...', 'commands': [...]}"}
+]
+```
+
+`trajectory.cont-1.json`:
+```json
+[
+  {"user": "You are an AI assistant tasked with solving command-line tasks...\nTask Description: Create a file called hello.txt\nCurrent terminal state: ..."},
+  {"user": "You are picking up work from a previous AI agent on this task:\n**Original Task:** ...\n**Summary from Previous Agent:** ...\n**Current Terminal Screen:** ...\nPlease begin by asking several questions..."},
+  {"assistant": "1. What files have been created so far?\n2. ..."},
+  {"user": "Here are the answers the other agent provided.\n\n[answers]\n\nContinue working on this task..."},  // No ambiguity!
+  {"assistant": "{'analysis': '...', 'plan': '...', 'commands': [...]}"}
+]
+```
+
+File structure:
+```
+trajectory.json                              # Before first summarization
+trajectory.cont-1.json                       # After first summarization
+trajectory.cont-2.json                       # After second summarization (if any)
+trajectory.summarization-1-*.json            # First summarization subagents
+trajectory.summarization-2-*.json            # Second summarization subagents (if any)
+```
+
+**Use cases:**
+- **`linear_history=False`**: Simpler structure, easier to see the full agent execution in one file. Good for debugging and human analysis.
+- **`linear_history=True`**: Each file represents the exact LLM context. Essential for SFT training where you need unambiguous input/output sequences.
+
+#### Example Configuration
+
+```python
+from harbor.agents.terminus_2 import Terminus2
+from harbor.models.agent.trajectory_config import TrajectoryConfig
+
+# For SFT dataset generation
+trajectory_config = TrajectoryConfig(
+    raw_content=True,      # Preserve exact LLM responses
+    linear_history=True    # Split on summarization for clean sequences
+)
+
+agent = Terminus2(
+    logs_dir=Path("logs"),
+    model_name="anthropic/claude-3-5-sonnet-20241022",
+    trajectory_config=trajectory_config
+)
+```
+
+Common configurations:
+
+**For debugging and analysis:**
+```python
+TrajectoryConfig(
+    raw_content=False,     # Structured, parsed data
+    linear_history=False   # Single file, easier to navigate
+)
+```
+
+**For SFT data export:**
+```python
+TrajectoryConfig(
+    raw_content=True,      # Raw model outputs
+    linear_history=True    # Clean input/output sequences
+)
+```
+
+**For RL training:**
+```python
+TrajectoryConfig(
+    raw_content=False,     # Either works (token IDs are always exact), but structured helps debugging
+    linear_history=False   # Full episode in one file
+)
+```
+
 ## Related Documentation
 
 - [Agents Overview](/docs/agents) - General agent integration guide

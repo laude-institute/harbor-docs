@@ -5,9 +5,22 @@ description: Generating SFT datasets from Harbor trials
 
 Harbor includes utilities for turning trials (agent task completion attempts) into conversational traces that can be fed into supervised fine-tuning pipelines for agentic LLMs. Export helpers live under `harbor.utils.traces_utils` and power several CLI entry points.
 
-<Callout title="CLI flags only work for Terminus 2" type="warning">
-Today the exporter only understands the `terminus-2` agent output structure. Runs produced by other agents will raise a `NotImplementedError`. We welcome PRs to add trace generation support for other agents.
+<Callout title="Requires ATIF trajectory format" type="info">
+The SFT exporter works with any agent that produces trajectories in the [ATIF format](/docs/trajectory-format). This includes Terminus-2, OpenHands, Claude Code, Gemini CLI, and other agents with ATIF support. Agents without ATIF trajectory support cannot be exported.
 </Callout>
+
+For best results with SFT data export, configure Terminus-2 with appropriate trajectory settings:
+
+```python
+from harbor.models.agent.trajectory_config import TrajectoryConfig
+
+trajectory_config = TrajectoryConfig(
+    raw_content=True,      # Preserve exact LLM responses for SFT
+    linear_history=True    # Split on summarization for clean sequences
+)
+```
+
+Learn more about trajectory configuration options in the [Terminus-2 documentation](/docs/terminus-2#trajectory-configuration).
 
 - Each exported row represents one `agent/episode-*` directory and captures the input `debug.json` messages plus the final agent reply from `response.json` or `response.txt`.
 - Rows include metadata such as `agent`, `model`, `model_provider`, `task`, `trial_name`, `episode`, and `run_id`, letting you merge runs from multiple jobs.
