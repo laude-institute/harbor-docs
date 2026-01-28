@@ -16,6 +16,7 @@
         "---Datasets---",
         "running-tbench",
         "datasets",
+        "registering-datasets",
         "adapters",
         "metrics",
         "---Cloud---",

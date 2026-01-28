@@ -1,0 +1,93 @@
+---
+title: Registering Datasets
+description: How to register your dataset in the Harbor registry
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+
+The Harbor registry allows you to share your datasets with the community. Once registered, anyone can run your dataset using the `harbor run -d "your-dataset@version"` command.
+
+<Callout title="CLI Coming Soon">
+We have CLI commands coming soon that will drastically simplify the process of hosting and registering datasets. Stay tuned!
+</Callout>
+
+## Registration Steps
+
+### 1. Push your tasks to a public git repository
+
+Your tasks must be hosted in a publicly accessible git repository. Each task should follow the [Harbor task format](/docs/task-format).
+
+Organize your repository with one directory per task:
+
+```
+my-dataset/
+├── task-1/
+│   ├── instruction.md
+│   ├── task.toml
+│   ├── environment/
+│   │   └── Dockerfile
+│   ├── solution/
+│   │   └── solve.sh
+│   └── tests/
+│       └── test.sh
+├── task-2/
+│   ├── instruction.md
+│   ├── task.toml
+│   ├── environment/
+│   │   └── Dockerfile
+│   └── tests/
+│       └── test.sh
+└── ...
+```
+
+Make sure to commit your changes and note the commit hash you want to use for your dataset version.
+
+### 2. Create a registry entry
+
+Add an entry to the [registry.json](https://github.com/laude-institute/harbor/blob/main/registry.json) file with the following structure:
+
+```json
+{
+    "name": "your-dataset-name",
+    "version": "1.0",
+    "description": "A description of what your dataset evaluates",
+    "tasks": [
+        {
+            "name": "task-1",
+            "git_url": "https://github.com/your-org/your-repo.git",
+            "git_commit_id": "abc123...",
+            "path": "task-1"
+        },
+        {
+            "name": "task-2",
+            "git_url": "https://github.com/your-org/your-repo.git",
+            "git_commit_id": "abc123...",
+            "path": "task-2"
+        }
+    ]
+}
+```
+
+### 3. Test your changes locally
+
+Before submitting your PR, test that your registry entry works correctly by pointing to your local registry file:
+
+```bash
+harbor run -d "your-dataset-name@1.0" -a "<agent>" -m "<model>" --registry-path ./registry.json
+```
+
+This ensures your tasks are properly configured and accessible before you submit.
+
+### 4. Submit a pull request
+
+Open a pull request to the [Harbor repository](https://github.com/laude-institute/harbor) with your registry.json changes. Include in your PR description:
+
+- What the dataset evaluates
+- The number of tasks included
+- Any relevant context about difficulty or domain
+
+Once your PR is reviewed and merged, your dataset will be available to all Harbor users.
+
+## Questions?
+
+If you have any questions about registering your dataset, reach out to us on [Discord](https://discord.gg/6xWPKhGDbA).
