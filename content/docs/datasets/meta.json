@@ -1,0 +1,4 @@
+{
+    "title": "Datasets",
+    "pages": ["index", "running-tbench", "registering-datasets", "adapters", "metrics"]
+}

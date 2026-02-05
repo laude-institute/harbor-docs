@@ -3,7 +3,7 @@ title: Task Structure
 description: Creating and running tasks for agentic environments
 ---
 
-The Harbor task format is designed to be maximally flexible while still being intuitive to implement. The differences between the Harbor task format and the Terminal-Bench task format are [documented here](/docs/task-difference).
+The Harbor task format is designed to be maximally flexible while still being intuitive to implement. The differences between the Harbor task format and the Terminal-Bench task format are [documented here](/docs/tasks/task-difference).
 
 ## Creating a task
 
@@ -66,9 +66,13 @@ tags = ["trivial"]
 
 [verifier]
 timeout_sec = 120.0
+env = { API_KEY = "sk-test-123" }
 
 [agent]
 timeout_sec = 120.0
+
+[solution]
+env = { API_KEY = "sk-test-123" }
 
 [environment]
 build_timeout_sec = 600.0
@@ -76,6 +80,9 @@ docker_image = "some-org/some-name:some-tag"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240
+gpus = 0
+gpu_types = ["H100", "A100"]
+allow_internet = true
 ```
 
 The configuration parameters are shown below:
@@ -102,11 +109,23 @@ import { TypeTable } from 'fumadocs-ui/components/type-table';
       default: 600.0,
       path: "verifier.timeout_sec"
     },
+    "verifier.env": {
+      description: "Environment variables to set when running the verifier.",
+      type: "object",
+      default: "{}",
+      path: "verifier.env"
+    },
     "agent.timeout_sec": {
       description: "Timeout in seconds for the agent.",
       type: "number",
       default: 600.0,
       path: "agent.timeout_sec"
+    },
+    "solution.env": {
+      description: "Environment variables to set when running the solution.",
+      type: "object",
+      default: "{}",
+      path: "solution.env"
     },
     "environment.build_timeout_sec": {
       description: "Timeout in seconds for environment build.",
@@ -137,6 +156,24 @@ import { TypeTable } from 'fumadocs-ui/components/type-table';
       type: "integer",
       default: 10240,
       path: "environment.storage_mb"
+    },
+    "environment.gpus": {
+      description: "Number of GPUs available to the environment.",
+      type: "integer",
+      default: 0,
+      path: "environment.gpus"
+    },
+    "environment.gpu_types": {
+      description: "List of acceptable GPU types (e.g., ['H100', 'A100', 'T4']). None means any GPU type is acceptable.",
+      type: 'list[string] | null',
+      default: null,
+      path: "environment.gpu_types"
+    },
+    "environment.allow_internet": {
+      description: "Whether to allow internet access in the environment.",
+      type: "boolean",
+      default: true,
+      path: "environment.allow_internet"
     },
     "source": {
       description: "Optional source string for task provenance.",

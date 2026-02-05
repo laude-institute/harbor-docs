@@ -1,32 +1,15 @@
 {
     "pages": [
-        "---Harbor---",
         "index",
         "getting-started",
         "core-concepts",
         "migration",
-        "---Agents---",
         "agents",
-        "terminus-2",
-        "trajectory-format",
-        "---Tasks---",
-        "task-format",
-        "task-difference",
-        "task-tutorial",
-        "---Datasets---",
-        "running-tbench",
+        "tasks",
         "datasets",
-        "registering-datasets",
-        "adapters",
-        "metrics",
-        "---Cloud---",
         "cloud",
-        "---Use Cases---",
-        "evals",
-        "rl",
-        "sft",
-        "---Contributing---",
-        "contributing",
-        "roadmap"
+        "examples",
+        "use-cases",
+        "contributing"
     ]
 }
