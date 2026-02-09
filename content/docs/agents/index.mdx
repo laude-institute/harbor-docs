@@ -110,3 +110,16 @@ To run a custom agent, you can use the following command:
 ```bash
 harbor run -d "<dataset@version>" --agent-import-path path.to.agent:SomeAgent
 ```
+
+## MCP support
+
+Harbor can automatically configure agents to connect to [MCP](https://modelcontextprotocol.io/) servers declared in a task's `task.toml`. When MCP servers are declared, Harbor passes the server configuration to the agent, which writes it to the appropriate config file before execution.
+
+The following built-in agents support MCP:
+
+| Agent | Config format | Notes |
+|-------|--------------|-------|
+| **Claude Code** | `~/.claude.json` (`mcpServers` key) | Converts `streamable-http` transport to `http`. |
+| **Codex** | `config.toml` (`mcp_servers` sections) | Supports all three transports. |
+
+Custom agents receive MCP server configuration via the `mcp_servers` parameter on `BaseAgent.__init__`. See the [MCP server task example](/docs/examples/mcp) for a full walkthrough of declaring MCP servers in `task.toml` and running multi-container tasks.

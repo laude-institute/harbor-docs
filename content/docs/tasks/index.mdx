@@ -83,6 +83,12 @@ storage_mb = 10240
 gpus = 0
 gpu_types = ["H100", "A100"]
 allow_internet = true
+
+# MCP servers available to the agent (optional)
+[[environment.mcp_servers]]
+name = "my-mcp-server"
+transport = "sse"
+url = "http://mcp-server:8000/sse"
 ```
 
 The configuration parameters are shown below:
@@ -174,6 +180,12 @@ import { TypeTable } from 'fumadocs-ui/components/type-table';
       type: "boolean",
       default: true,
       path: "environment.allow_internet"
+    },
+    "environment.mcp_servers": {
+      description: "List of MCP servers to make available to the agent. Each entry specifies a server name, transport type, and connection details. See the MCP example for a full walkthrough.",
+      type: "list[MCPServerConfig]",
+      default: "[]",
+      path: "environment.mcp_servers"
     },
     "source": {
       description: "Optional source string for task provenance.",

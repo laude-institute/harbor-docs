@@ -1,27 +1,116 @@
 ---
 title: "MCP Server Task"
-description: How to create a task with a sidecar MCP server using Docker Compose.
+description: How to create a task with MCP server support using task.toml and Docker Compose.
 ---
 
-Multi-container tasks are useful for simulating external services. This example shows how to build a task where the agent must interact with an [MCP](https://modelcontextprotocol.io/) server running as a sidecar service. The full source is in [`examples/tasks/hello-mcp`](https://github.com/laude-institute/harbor/tree/main/examples/tasks/hello-mcp).
+Harbor supports the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), allowing agents to connect to MCP servers and use their tools during task execution. MCP servers are declared in `task.toml` and Harbor automatically configures supported agents (Claude Code, Codex) to connect to them.
+
+The full source for this example is in [`examples/tasks/hello-mcp`](https://github.com/laude-institute/harbor/tree/main/examples/tasks/hello-mcp).
+
+## Declaring MCP servers in `task.toml`
+
+Add one or more `[[environment.mcp_servers]]` entries to your `task.toml`:
+
+```toml title="task.toml"
+version = "1.0"
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0
+allow_internet = true
+
+[[environment.mcp_servers]]
+name = "mcp-server"
+transport = "streamable-http"
+url = "http://mcp-server:8000/mcp"
+```
+
+When a task declares MCP servers, Harbor passes them to the agent at runtime. Agents that support MCP (currently **Claude Code** and **Codex**) automatically write the appropriate configuration so they can discover and call the server's tools.
+
+### MCP server fields
+
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+
+<TypeTable
+  type={{
+    "name": {
+      description: "Unique identifier for the MCP server.",
+      type: "string",
+      required: true,
+    },
+    "transport": {
+      description: 'Transport protocol. One of "sse", "streamable-http", or "stdio".',
+      type: "string",
+      default: '"sse"',
+    },
+    "url": {
+      description: "Server endpoint URL. Required for sse and streamable-http transports.",
+      type: "string | null",
+      default: "null",
+    },
+    "command": {
+      description: "Command to launch the server. Required for stdio transport.",
+      type: "string | null",
+      default: "null",
+    },
+    "args": {
+      description: "Arguments passed to the command (stdio transport only).",
+      type: "list[string]",
+      default: "[]",
+    },
+  }}
+/>
+
+### Transport types
+
+| Transport | Required fields | Description |
+|-----------|----------------|-------------|
+| `sse` | `url` | Server-Sent Events over HTTP. |
+| `streamable-http` | `url` | HTTP streaming protocol. |
+| `stdio` | `command`, `args` (optional) | Launches a local process and communicates over stdin/stdout. |
+
+**Examples for each transport:**
+
+```toml title="SSE"
+[[environment.mcp_servers]]
+name = "my-server"
+transport = "sse"
+url = "http://mcp-server:8000/sse"
+```
+
+```toml title="Streamable HTTP"
+[[environment.mcp_servers]]
+name = "my-server"
+transport = "streamable-http"
+url = "http://mcp-server:8000/mcp"
+```
+
+```toml title="stdio"
+[[environment.mcp_servers]]
+name = "my-server"
+transport = "stdio"
+command = "npx"
+args = ["-y", "my-mcp-server"]
+```
 
 ## Multi-container environments
 
-Harbor tasks define their environments in the [`environment/` directory](/docs/tasks#environment). Every implementation of the `BaseEnvironment` class defines which files are required in that environment directory. Most environments expect a single `Dockerfile`, which is insufficient for multi-container tasks.
+When the MCP server runs as a sidecar container (the most common pattern), you need a multi-container environment. Harbor's `--env docker` environment supports this by reading a `docker-compose.yaml` from the `environment/` directory.
 
-The `--env docker` environment supports multi-container tasks by preferring a `environment/docker-compose.yaml` file if present.
+import { Callout } from 'fumadocs-ui/components/callout';
 
-Note that the `DockerEnvironment` class is currently the only environment that supports multi-container tasks. We are actively working on adding cloud support for multi-container tasks.
+<Callout type="info" title="Docker only">
+Multi-container tasks currently only work with the local Docker environment (`--env docker`). Cloud sandbox providers (Modal, Daytona, E2B) only support single-Dockerfile environments.
+</Callout>
 
-## Task overview
+## Example: hello-mcp
 
-In this example task, the agent is asked to connect to an MCP server, call a tool, and write the result to a file. The key concepts demonstrated are:
+This task asks the agent to connect to an MCP server, call a tool, and write the result to a file.
 
-- Using **Docker Compose** to run additional services alongside the agent container
-- Health checks to ensure the sidecar is ready before the agent starts
-- Verifying the agent's output with a simple pytest check
-
-## Directory structure
+### Directory structure
 
 ```
 hello-mcp/
@@ -40,9 +129,9 @@ hello-mcp/
     └── test_outputs.py
 ```
 
-## Docker Compose sidecar
+### Docker Compose sidecar
 
-When a task needs additional services (databases, APIs, MCP servers, etc.), place a `docker-compose.yaml` in the `environment/` directory. Harbor merges it with its base compose config automatically.
+Place a `docker-compose.yaml` in the `environment/` directory. Harbor merges it with its base compose config automatically.
 
 ```yaml title="environment/docker-compose.yaml"
 services:
@@ -67,7 +156,7 @@ services:
 - `main` is the agent's container — Harbor configures it automatically. You only add overrides like `depends_on`.
 - Additional services (here `mcp-server`) are defined normally. They share a Docker network with `main`, so the agent can reach them by service name.
 
-## MCP server
+### MCP server
 
 The server uses [FastMCP](https://github.com/jlowin/fastmcp) and exposes a single tool over SSE:
 
@@ -87,7 +176,7 @@ if __name__ == "__main__":
     mcp.run(transport="sse", host="0.0.0.0", port=8000)
 ```
 
-## Instruction
+### Instruction
 
 ```markdown title="instruction.md"
 There is an MCP server running at `http://mcp-server:8000/sse`
@@ -98,7 +187,7 @@ that exposes a tool called `get_secret`.
 3. Write the returned secret value to `/app/secret.txt`
 ```
 
-## Verification
+### Verification
 
 The test script runs a pytest check that compares the file contents to the expected secret:
 
@@ -111,7 +200,7 @@ def test_secret_file_exists():
     assert content.strip() == SECRET_VALUE
 ```
 
-## Running it
+### Running it
 
 ```bash
 # Verify with the oracle agent (runs solution/solve.sh)
@@ -121,8 +210,11 @@ harbor run -p examples/tasks/hello-mcp -a oracle
 harbor run -p examples/tasks/hello-mcp -a claude-code -m anthropic/claude-sonnet-4-5
 ```
 
-import { Callout } from 'fumadocs-ui/components/callout';
+## How agents receive MCP configuration
 
-<Callout type="info" title="Docker Compose & cloud providers">
-Docker Compose tasks currently only work with the local Docker environment (`--env docker`). Most cloud sandbox providers only support single-Dockerfile environments. We are actively working on multi-container support for cloud sandbox providers.
-</Callout>
+When you declare MCP servers in `task.toml`, Harbor handles wiring them to supported agents automatically:
+
+- **Claude Code** — MCP servers are written to `~/.claude.json` under the `mcpServers` key. The `streamable-http` transport is converted to Claude Code's native `http` format.
+- **Codex** — MCP servers are written to `config.toml` under `mcp_servers` sections in the Codex configuration directory.
+
+Agents that don't have built-in MCP support can still use MCP servers manually by connecting with an MCP client library — the server URL and transport are described in the task instruction.
