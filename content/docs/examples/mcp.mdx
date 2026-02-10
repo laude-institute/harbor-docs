@@ -18,6 +18,7 @@ Note that the `DockerEnvironment` class is currently the only environment that s
 In this example task, the agent is asked to connect to an MCP server, call a tool, and write the result to a file. The key concepts demonstrated are:
 
 - Using **Docker Compose** to run additional services alongside the agent container
+- Declaring MCP servers in `task.toml` so compatible agents can register them automatically
 - Health checks to ensure the sidecar is ready before the agent starts
 - Verifying the agent's output with a simple pytest check
 
@@ -57,7 +58,7 @@ services:
     expose:
       - "8000"
     healthcheck:
-      test: ["CMD", "curl", "-Isf", "http://localhost:8000/sse"]
+      test: ["CMD", "python", "-c", "import socket; s=socket.create_connection(('localhost',8000),timeout=2); s.close()"]
       interval: 2s
       timeout: 5s
       retries: 15
@@ -67,9 +68,22 @@ services:
 - `main` is the agent's container — Harbor configures it automatically. You only add overrides like `depends_on`.
 - Additional services (here `mcp-server`) are defined normally. They share a Docker network with `main`, so the agent can reach them by service name.
 
+## Declaring MCP servers in `task.toml`
+
+You can list MCP servers in the task config so that compatible agents (e.g., Claude Code, Codex) register them automatically. Each agent decides how to consume the config — for example, Claude Code writes it to `~/.claude.json`.
+
+```toml title="task.toml"
+[[environment.mcp_servers]]
+name = "mcp-server"
+transport = "streamable-http"
+url = "http://mcp-server:8000/mcp"
+```
+
+Supported transports are `"sse"`, `"streamable-http"`, and `"stdio"`. Network-based transports require a `url`; `stdio` requires `command` and optionally `args`.
+
 ## MCP server
 
-The server uses [FastMCP](https://github.com/jlowin/fastmcp) and exposes a single tool over SSE:
+The server uses [FastMCP](https://github.com/jlowin/fastmcp) and exposes a single tool over streamable HTTP:
 
 ```python title="environment/mcp-server/server.py"
 from fastmcp import FastMCP
@@ -84,7 +98,7 @@ def get_secret() -> str:
     return SECRET_VALUE
 
 if __name__ == "__main__":
-    mcp.run(transport="sse", host="0.0.0.0", port=8000)
+    mcp.run(transport="streamable-http", host="0.0.0.0", port=8000)
 ```
 
 ## Instruction
