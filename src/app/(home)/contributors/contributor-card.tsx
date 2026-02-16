@@ -9,19 +9,11 @@ import {
 interface ContributorCardProps {
   name: string;
   githubHandle: string;
-  affiliation: string;
-  prCount: number;
-  totalAdditions: number;
-  totalDeletions: number;
 }
 
 export function ContributorCard({
   name,
   githubHandle,
-  affiliation,
-  prCount,
-  totalAdditions,
-  totalDeletions,
 }: ContributorCardProps) {
   return (
     <Link
@@ -36,12 +28,6 @@ export function ContributorCard({
           <CardDescription className="font-code text-xs">
             @{githubHandle}
           </CardDescription>
-          {affiliation && (
-            <p className="text-xs text-muted-foreground">{affiliation}</p>
-          )}
-          <p className="text-xs text-muted-foreground font-code pt-1">
-            {prCount} PRs &middot; +{totalAdditions.toLocaleString()} / &minus;{totalDeletions.toLocaleString()}
-          </p>
         </CardHeader>
       </Card>
     </Link>

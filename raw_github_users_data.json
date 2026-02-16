@@ -33,25 +33,25 @@
     "github_handle": "DannyGooo",
     "email": "",
     "name": "Yonghui Liu",
-    "affiliation": ""
+    "affiliation": "Monash University"
   },
   {
     "github_handle": "Dongzhikang",
     "email": "",
     "name": "Zhikang Dong",
-    "affiliation": ""
+    "affiliation": "Stony Brook University"
   },
   {
     "github_handle": "EstelYang",
-    "email": "",
-    "name": "EstelYang",
-    "affiliation": ""
+    "email": "ypyangrui@pku.edu.cn",
+    "name": "Rui Yang",
+    "affiliation": "Peking University"
   },
   {
     "github_handle": "EtashGuha",
     "email": "",
-    "name": "EtashGuha",
-    "affiliation": ""
+    "name": "Etash Guha",
+    "affiliation": "Stanford University"
   },
   {
     "github_handle": "Guangy627",
@@ -81,7 +81,7 @@
     "github_handle": "Ji-Pengliang",
     "email": "",
     "name": "Pengliang Ji",
-    "affiliation": ""
+    "affiliation": "Carnegie Mellon University"
   },
   {
     "github_handle": "KunWuLuan",
@@ -105,7 +105,7 @@
     "github_handle": "MichaelY310",
     "email": "",
     "name": "Michael Yang",
-    "affiliation": ""
+    "affiliation": "UC Santa Barbara"
   },
   {
     "github_handle": "Michaelsqj",
@@ -128,8 +128,8 @@
   {
     "github_handle": "Slimshilin",
     "email": "",
-    "name": "Slimshilin",
-    "affiliation": ""
+    "name": "Lin Shi",
+    "affiliation": "Cornell Tech"
   },
   {
     "github_handle": "StevenDillmann",
@@ -146,8 +146,8 @@
   {
     "github_handle": "TheMikeMerrill",
     "email": "",
-    "name": "TheMikeMerrill",
-    "affiliation": ""
+    "name": "Mike Merrill",
+    "affiliation": "Stanford University"
   },
   {
     "github_handle": "Waterpine",
@@ -231,7 +231,7 @@
     "github_handle": "chenzizhao",
     "email": "",
     "name": "Zizhao Chen",
-    "affiliation": ""
+    "affiliation": "Cornell Tech"
   },
   {
     "github_handle": "cliangyu",
@@ -242,14 +242,14 @@
   {
     "github_handle": "connor-cognition",
     "email": "",
-    "name": "connor-cognition",
-    "affiliation": ""
+    "name": "Connor Fogarty",
+    "affiliation": "Cognition AI"
   },
   {
     "github_handle": "crystalxyz",
     "email": "",
     "name": "Crystal Zhou",
-    "affiliation": ""
+    "affiliation": "Cornell University"
   },
   {
     "github_handle": "davidheineman",
@@ -284,14 +284,14 @@
   {
     "github_handle": "dzorlu",
     "email": "",
-    "name": "Deniz",
-    "affiliation": ""
+    "name": "Deniz Zorlu",
+    "affiliation": "Contextual AI"
   },
   {
     "github_handle": "ethanlshen",
     "email": "ethans03@cs.washington.edu",
     "name": "Ethan Shen",
-    "affiliation": ""
+    "affiliation": "University of Washington"
   },
   {
     "github_handle": "giansegato",
@@ -303,7 +303,7 @@
     "github_handle": "hanxu12",
     "email": "",
     "name": "Han Xu",
-    "affiliation": ""
+    "affiliation": "UIUC"
   },
   {
     "github_handle": "harshraj172",
@@ -332,14 +332,14 @@
   {
     "github_handle": "james-rl",
     "email": "",
-    "name": "james-rl",
-    "affiliation": ""
+    "name": "James",
+    "affiliation": "Run Loop"
   },
   {
     "github_handle": "josancamon19",
     "email": "",
     "name": "Joan Cabezas",
-    "affiliation": ""
+    "affiliation": "Based Hardware / Omi AI"
   },
   {
     "github_handle": "junhongmit",
@@ -434,8 +434,8 @@
   {
     "github_handle": "octaviaguo",
     "email": "",
-    "name": "octaviaguo",
-    "affiliation": ""
+    "name": "Ruohao Guo",
+    "affiliation": "Georgia Institute of Technology"
   },
   {
     "github_handle": "omi-n",
@@ -458,14 +458,14 @@
   {
     "github_handle": "pashpashpash",
     "email": "nik@cline.bot",
-    "name": "pashpashpash",
-    "affiliation": "vault77.ai"
+    "name": "Nik Pash",
+    "affiliation": "OpenAI"
   },
   {
     "github_handle": "penfever",
     "email": "",
     "name": "Ben Feuer",
-    "affiliation": ""
+    "affiliation": "Stanford University"
   },
   {
     "github_handle": "pfbyjy",
@@ -477,7 +477,7 @@
     "github_handle": "richardzhuang0412",
     "email": "",
     "name": "Richard Zhuang",
-    "affiliation": ""
+    "affiliation": "Stanford University"
   },
   {
     "github_handle": "robertzhidealx",
@@ -512,8 +512,8 @@
   {
     "github_handle": "self-supervisor",
     "email": "",
-    "name": "self-supervisor",
-    "affiliation": "@VmaxAI "
+    "name": "Augustine Mavor-Parker",
+    "affiliation": "VmaxAI"
   },
   {
     "github_handle": "stared",
@@ -549,7 +549,7 @@
     "github_handle": "tyler-griggs",
     "email": "",
     "name": "Tyler Griggs",
-    "affiliation": ""
+    "affiliation": "UC Berkeley"
   },
   {
     "github_handle": "vatsj",

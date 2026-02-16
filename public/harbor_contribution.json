@@ -1,257 +1,5 @@
 [
   {
-    "github_handle": "EstelYang",
-    "email": "",
-    "name": "EstelYang",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 68583,
-    "total_deletions": 67032,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/351",
-        "pr_title": "[Ready for Review] Adapter: QCircuitBench",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "chenzizhao",
-    "email": "",
-    "name": "Zizhao Chen",
-    "affiliation": "",
-    "pr_count": 4,
-    "total_additions": 37076,
-    "total_deletions": 71989,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/518",
-        "pr_title": "Revise bixbench README with known issue and task details",
-        "pr_type": "task"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/472",
-        "pr_title": "Update registry with bixbench-cli",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/451",
-        "pr_title": "[ready for review] bixbench-cli addition",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/154",
-        "pr_title": "[Ready for review - final fix] Adapter: BixBench",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "RishiDesai",
-    "email": "",
-    "name": "Rishi Desai",
-    "affiliation": "",
-    "pr_count": 3,
-    "total_additions": 33046,
-    "total_deletions": 27018,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/512",
-        "pr_title": "registry for swe-gen-js",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/230",
-        "pr_title": "Serialize Docker image builds to prevent parallel build race condition",
-        "pr_type": "engineering"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/200",
-        "pr_title": "Allow custom BaseLLM backend for Agent",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "EtashGuha",
-    "email": "",
-    "name": "EtashGuha",
-    "affiliation": "",
-    "pr_count": 2,
-    "total_additions": 32570,
-    "total_deletions": 3336,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/113",
-        "pr_title": "update train on traces",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/38",
-        "pr_title": "added triage for together context limit issue",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "Waterpine",
-    "email": "sbian8@wisc.edu",
-    "name": "Song Bian",
-    "affiliation": "University of Wisconsin-Madison",
-    "pr_count": 1,
-    "total_additions": 25831,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/307",
-        "pr_title": "[Ready for Review] mmau adapter",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "Ternura143",
-    "email": "",
-    "name": "Zixuan Zhu",
-    "affiliation": "NTU",
-    "pr_count": 1,
-    "total_additions": 24649,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/358",
-        "pr_title": "[Ready for Review - Final Fix] Adapter: bfcl",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "alexgshaw",
-    "email": "alexgshaw64@gmail.com",
-    "name": "Alex Shaw",
-    "affiliation": "Laude Institute",
-    "pr_count": 23,
-    "total_additions": 18837,
-    "total_deletions": 10958,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/603",
-        "pr_title": "Add Responses API support for Terminus",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/495",
-        "pr_title": "Claude/add package dashboard lxufb",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/476",
-        "pr_title": "Improve terminal bench mapper functionality",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/468",
-        "pr_title": "feat(hooks): add job-level named hook methods for trial lifecycle events",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/394",
-        "pr_title": "Remove verbose flag and show task counts",
-        "pr_type": "task"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/388",
-        "pr_title": "Postgres registry",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/362",
-        "pr_title": "Fix AttributeError when accessing default environment type in CLI",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/361",
-        "pr_title": "Change -a shorthand in start-env from --agent to --all",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/360",
-        "pr_title": "Restrict environment variables passed to Oracle container",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/359",
-        "pr_title": "Add include-standard-metadata option to tasks init",
-        "pr_type": "task"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/327",
-        "pr_title": "Make internet configurable from task config",
-        "pr_type": "task"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/326",
-        "pr_title": "Add CLAUDE.md documentation for AI assistants",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/325",
-        "pr_title": "feat: add support for custom environment implementations via import path",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/318",
-        "pr_title": "Revert to include env vars in docker.",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/70",
-        "pr_title": "Alexgshaw/support docker compose",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/52",
-        "pr_title": "Warn users about Modal Python installation",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/43",
-        "pr_title": "QOL upgrades from running a billion ICLR experiments",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/24",
-        "pr_title": "Rename package, strip out db, reformat results and configs, change base environment methods.",
-        "pr_type": "engineering"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/22",
-        "pr_title": "Daytona",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/18",
-        "pr_title": "Alex-temp",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/14",
-        "pr_title": "Add Claude Code GitHub Workflow",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/9",
-        "pr_title": "Create cli command for single trial",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/1",
-        "pr_title": "Working branch",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
     "github_handle": "li-boxuan",
     "email": "",
     "name": "Boxuan Li",
@@ -498,472 +246,128 @@
     ]
   },
   {
-    "github_handle": "MichaelY310",
-    "email": "",
-    "name": "Michael Yang",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 15684,
-    "total_deletions": 0,
+    "github_handle": "alexgshaw",
+    "email": "alexgshaw64@gmail.com",
+    "name": "Alex Shaw",
+    "affiliation": "Laude Institute",
+    "pr_count": 23,
+    "total_additions": 18837,
+    "total_deletions": 10958,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/96",
-        "pr_title": "[Ready For Review]  Adding SWTBench Adapter",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "jakozaur",
-    "email": "jacek@migdal.pl",
-    "name": "Jacek Migdal",
-    "affiliation": "",
-    "pr_count": 2,
-    "total_additions": 13564,
-    "total_deletions": 13120,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/662",
-        "pr_title": "Add otel-bench benchmark to registry.json",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/603",
+        "pr_title": "Add Responses API support for Terminus",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/661",
-        "pr_title": "Add binary-audit benchmark to registry.json",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "Anjiang-Wei",
-    "email": "",
-    "name": "Anjiang Wei",
-    "affiliation": "Stanford University",
-    "pr_count": 2,
-    "total_additions": 13415,
-    "total_deletions": 10,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/418",
-        "pr_title": "Remove repository path setup from run_adapter.py to fix ruff error",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/395",
-        "pr_title": "[Ready for Review] Adapter: SATBench",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "terryyz",
-    "email": "terryzhuo25@gmail.com",
-    "name": "Terry Yue Zhuo",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 10081,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/330",
-        "pr_title": "[Ready for Review - fixing] Adapter: BigCodeBench-Hard",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "robertzhidealx",
-    "email": "0xrobertzhang@gmail.com",
-    "name": "Robert Zhang",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 9252,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/249",
-        "pr_title": "Adapters: SWE-bench Pro",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "Slimshilin",
-    "email": "",
-    "name": "Slimshilin",
-    "affiliation": "",
-    "pr_count": 7,
-    "total_additions": 9179,
-    "total_deletions": 10887,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/580",
-        "pr_title": "Add parity API instructions for adapter experiments",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/579",
-        "pr_title": "[Ready to merge] OPENAI_BASE_URL support for codex.",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/495",
+        "pr_title": "Claude/add package dashboard lxufb",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/516",
-        "pr_title": "remove aider-polyglot and livecodebench duplicates",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/476",
+        "pr_title": "Improve terminal bench mapper functionality",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/263",
-        "pr_title": "Fix EvoEval Adapter forked_repo Link",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/98",
-        "pr_title": "Adapters readme template",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/83",
-        "pr_title": "Adapter README template",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/82",
-        "pr_title": "Fix -t to -p. Polish README",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "harshraj172",
-    "email": "",
-    "name": "Harsh Raj",
-    "affiliation": "Khoury College, Northeastern University ",
-    "pr_count": 5,
-    "total_additions": 8873,
-    "total_deletions": 241,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/458",
-        "pr_title": "add codex trajectory.json back",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/468",
+        "pr_title": "feat(hooks): add job-level named hook methods for trial lifecycle events",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/115",
-        "pr_title": "Add swesmith adapter",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/86",
-        "pr_title": "claude-code atif formatting",
-        "pr_type": "engineering"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/77",
-        "pr_title": "Codex ATIF trajectory",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/58",
-        "pr_title": "Add the `aider-polyglot` adapter",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "davidheineman",
-    "email": "david@davidheineman.com",
-    "name": "David Heineman",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 8656,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/100",
-        "pr_title": "[Ready for Review] Adapter: SWE-Lancer",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "Michaelsqj",
-    "email": "shenqijia11@gmail.com",
-    "name": "Qijia Shen",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 8263,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/577",
-        "pr_title": "add seta env to registry.json",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "killthefullmoon",
-    "email": "killthefullmoon@gmail.com",
-    "name": "Hui Shen",
-    "affiliation": "University of Michigan",
-    "pr_count": 1,
-    "total_additions": 7849,
-    "total_deletions": 904,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/432",
-        "pr_title": "[Ready for Review] Adapter: DS1000",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "digitsisyph",
-    "email": "",
-    "name": "Gary?",
-    "affiliation": "",
-    "pr_count": 3,
-    "total_additions": 7109,
-    "total_deletions": 2,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/153",
-        "pr_title": "Add adapter init command",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/143",
-        "pr_title": "Add trajectory viewer",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/69",
-        "pr_title": "Add adapter for evoeval",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "hanxu12",
-    "email": "",
-    "name": "Han Xu",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 7030,
-    "total_deletions": 1,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/380",
-        "pr_title": "[Ready for Review] Adapter: LawBench",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "linhaowei1",
-    "email": "",
-    "name": "Haowei Lin",
-    "affiliation": "Peking University",
-    "pr_count": 6,
-    "total_additions": 6653,
-    "total_deletions": 47,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/440",
-        "pr_title": "[Ready for Review] Adapter: Algotune",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/438",
-        "pr_title": "[BugFix] Fix hello-world registry format",
-        "pr_type": "engineering"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/424",
-        "pr_title": "[FIX] Update Parity for Adapter: AutoCodeBench",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/292",
-        "pr_title": "[fix adapter] Revise the parity results for SLDBench",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/151",
-        "pr_title": "[adapter] Add SLDBench",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/106",
-        "pr_title": "Add Autocodebench adapter",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "self-supervisor",
-    "email": "",
-    "name": "self-supervisor",
-    "affiliation": "@VmaxAI ",
-    "pr_count": 1,
-    "total_additions": 6266,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/563",
-        "pr_title": "Vmax tasks",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/394",
+        "pr_title": "Remove verbose flag and show task counts",
         "pr_type": "task"
-      }
-    ]
-  },
-  {
-    "github_handle": "TheMikeMerrill",
-    "email": "",
-    "name": "TheMikeMerrill",
-    "affiliation": "",
-    "pr_count": 6,
-    "total_additions": 6136,
-    "total_deletions": 1352,
-    "pr_list": [
+      },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/40",
-        "pr_title": "t2 context improperly queried",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/388",
+        "pr_title": "Postgres registry",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/27",
-        "pr_title": "Fix token tracking",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/362",
+        "pr_title": "Fix AttributeError when accessing default environment type in CLI",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/20",
-        "pr_title": "Mikeam/agents two",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/361",
+        "pr_title": "Change -a shorthand in start-env from --agent to --all",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/19",
-        "pr_title": "Add logging to terminus",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/360",
+        "pr_title": "Restrict environment variables passed to Oracle container",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/16",
-        "pr_title": "Initial terminus2",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/359",
+        "pr_title": "Add include-standard-metadata option to tasks init",
+        "pr_type": "task"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/327",
+        "pr_title": "Make internet configurable from task config",
+        "pr_type": "task"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/326",
+        "pr_title": "Add CLAUDE.md documentation for AI assistants",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/2",
-        "pr_title": "Add DB implementation",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "aht",
-    "email": "",
-    "name": "Hai-Anh Trinh",
-    "affiliation": "grammarly.com",
-    "pr_count": 1,
-    "total_additions": 5038,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/256",
-        "pr_title": "[Ready for Review] Adapter: REASONING GYM ",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "neginraoof",
-    "email": "",
-    "name": "Negin Raoof",
-    "affiliation": "UC Berkeley",
-    "pr_count": 5,
-    "total_additions": 4637,
-    "total_deletions": 302,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/279",
-        "pr_title": "Adding swe-agent",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/325",
+        "pr_title": "feat: add support for custom environment implementations via import path",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/243",
-        "pr_title": "Inline swe-agent inference config",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/318",
+        "pr_title": "Revert to include env vars in docker.",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/70",
+        "pr_title": "Alexgshaw/support docker compose",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/52",
+        "pr_title": "Warn users about Modal Python installation",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/43",
+        "pr_title": "QOL upgrades from running a billion ICLR experiments",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/24",
+        "pr_title": "Rename package, strip out db, reformat results and configs, change base environment methods.",
         "pr_type": "engineering"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/242",
-        "pr_title": "Add SWE-agent configuration example",
-        "pr_type": "engineering"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/49",
-        "pr_title": "updated terminus 2 summarization fallback",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/22",
+        "pr_title": "Daytona",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/44",
-        "pr_title": "Swebench adapter",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "junhongmit",
-    "email": "junhonghust@gmail.com",
-    "name": "Junhong Lin",
-    "affiliation": "Massachusetts Institute of Technology",
-    "pr_count": 1,
-    "total_additions": 3521,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/97",
-        "pr_title": "[Adapter] Adding USACO Adapter",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "octaviaguo",
-    "email": "",
-    "name": "octaviaguo",
-    "affiliation": "",
-    "pr_count": 2,
-    "total_additions": 3471,
-    "total_deletions": 153,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/446",
-        "pr_title": "Update StrongReject adapter with new registry",
-        "pr_type": "adapter"
+        "pr_url": "https://github.com/laude-institute/harbor/pull/18",
+        "pr_title": "Alex-temp",
+        "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/363",
-        "pr_title": "[Ready for Review] Adapter: StrongReject",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "HaishuoFang",
-    "email": "fanghaishuo@gmail.com",
-    "name": "Haishuo",
-    "affiliation": "TU Darmstadt",
-    "pr_count": 2,
-    "total_additions": 2966,
-    "total_deletions": 87,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/434",
-        "pr_title": "Fix ruff check error for financeagent Adapter",
-        "pr_type": "adapter"
+        "pr_url": "https://github.com/laude-institute/harbor/pull/14",
+        "pr_title": "Add Claude Code GitHub Workflow",
+        "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/267",
-        "pr_title": "[Ready for Review - final discussion] Adapter: FinanceAgent",
-        "pr_type": "adapter"
+        "pr_url": "https://github.com/laude-institute/harbor/pull/9",
+        "pr_title": "Create cli command for single trial",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/1",
+        "pr_title": "Working branch",
+        "pr_type": "other"
       }
     ]
   },
@@ -971,7 +375,7 @@
     "github_handle": "penfever",
     "email": "",
     "name": "Ben Feuer",
-    "affiliation": "",
+    "affiliation": "Stanford University",
     "pr_count": 16,
     "total_additions": 2734,
     "total_deletions": 202,
@@ -1059,27 +463,6 @@
     ]
   },
   {
-    "github_handle": "DannyGooo",
-    "email": "",
-    "name": "Yonghui Liu",
-    "affiliation": "",
-    "pr_count": 2,
-    "total_additions": 2716,
-    "total_deletions": 2,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/452",
-        "pr_title": "[Ready for Review] Adapter: Spider2 - Experiment with Harbor-supported agents",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/436",
-        "pr_title": "[Ready for Review] Adapter: Spider2",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
     "github_handle": "StevenDillmann",
     "email": "",
     "name": "Steven Dillmann",
@@ -1141,304 +524,53 @@
     ]
   },
   {
-    "github_handle": "Ji-Pengliang",
+    "github_handle": "CharlieFRuan",
     "email": "",
-    "name": "Pengliang Ji",
-    "affiliation": "",
-    "pr_count": 3,
-    "total_additions": 2230,
-    "total_deletions": 3,
+    "name": "Charlie Ruan",
+    "affiliation": "UC Berkeley",
+    "pr_count": 8,
+    "total_additions": 288,
+    "total_deletions": 94,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/550",
-        "pr_title": "Add --n-attempts 2 to arc_agi_2 reproduction command",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/686",
+        "pr_title": "[Terminus] Fix `n_episodes` counting when error out",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/401",
-        "pr_title": "update arc-agi-2 parity test pr",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/653",
+        "pr_title": "[Terminus] Do not retry on ContextLengthExceededError when enable_summarize=False",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/651",
+        "pr_title": "[Env] Make sandbox lifecycle timeouts configurable via environment kwargs",
         "pr_type": "engineering"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/220",
-        "pr_title": "[Ready for Review - fixing] Adapter: ARC-AGI-2 benchmark",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "audreycs",
-    "email": "",
-    "name": "Yuxin Wang",
-    "affiliation": "Dartmouth College",
-    "pr_count": 1,
-    "total_additions": 2158,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/88",
-        "pr_title": "[Adapter] Adding Livecodebench adpter",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "Dongzhikang",
-    "email": "",
-    "name": "Zhikang Dong",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 2140,
-    "total_deletions": 2,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/89",
-        "pr_title": "adapter for Deveval",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "crystalxyz",
-    "email": "",
-    "name": "Crystal Zhou",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 2124,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/201",
-        "pr_title": "[Ready for review - Final Review] Adapter: LAB-Bench FigQA",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "xianliu",
-    "email": "lxjsj@fedoraproject.org",
-    "name": "Xian Liu",
-    "affiliation": "Meetchances/ex-Bytedance/ex-Redhat",
-    "pr_count": 1,
-    "total_additions": 2116,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/402",
-        "pr_title": "[Ready for Review] Add crustbench adapter",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "Rebabit",
-    "email": "",
-    "name": "Rebecca Deng",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 1883,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/311",
-        "pr_title": "[Ready for Review - Final Fix] Adapter: MMMLU",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "1171-jpg",
-    "email": "",
-    "name": "140",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 1836,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/403",
-        "pr_title": "[Ready for Review] Adapter: Ineqmath",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "omi-n",
-    "email": "",
-    "name": "nabil",
-    "affiliation": "University of Washington, Microsoft",
-    "pr_count": 1,
-    "total_additions": 1771,
-    "total_deletions": 1,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/99",
-        "pr_title": "[Adapter] Add mlgym-bench adapter",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "Hangzhi",
-    "email": "hangzhiweiwei@gmail.com",
-    "name": "Yiwei Dai",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 1768,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/346",
-        "pr_title": "[Ready for review  -Final Fix] Quixbugs adapter",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "kobe0938",
-    "email": "xiaokunchen0@gmail.com",
-    "name": "Kobe Chen",
-    "affiliation": "Stanford U",
-    "pr_count": 1,
-    "total_additions": 1761,
-    "total_deletions": 2,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/257",
-        "pr_title": "[Ready for Review - fixing] Adapter: Humanevalfix",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "neverSettles",
-    "email": "",
-    "name": "Chris Settles",
-    "affiliation": "Operative AI, Inc",
-    "pr_count": 1,
-    "total_additions": 1748,
-    "total_deletions": 122,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/549",
-        "pr_title": "ATIF 1.5->1.6: Support multimodal trajectories",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "XuandongZhao",
-    "email": "csxuandongzhao@gmail.com",
-    "name": "Xuandong Zhao",
-    "affiliation": "UC Berkeley",
-    "pr_count": 1,
-    "total_additions": 1723,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/264",
-        "pr_title": "[Adapter] GPQA-Diamond Adapter",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "kanazawa-asyncio",
-    "email": "",
-    "name": "Kanaza",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 1208,
-    "total_deletions": 1,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/376",
-        "pr_title": "feat(registry): add Alibaba terminal-bench-pro dataset",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "cliangyu",
-    "email": "",
-    "name": "Leon Chen",
-    "affiliation": "Stanford University",
-    "pr_count": 1,
-    "total_additions": 1197,
-    "total_deletions": 19,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/26",
-        "pr_title": "Migrate 11 agents from terminal-bench to sandboxes",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "LithiumDA",
-    "email": "",
-    "name": "Shanda Li",
-    "affiliation": "Carnegie Mellon University",
-    "pr_count": 4,
-    "total_additions": 1147,
-    "total_deletions": 15,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/466",
-        "pr_title": "fix (adapter): registery",
-        "pr_type": "adapter"
+        "pr_url": "https://github.com/laude-institute/harbor/pull/650",
+        "pr_title": "[Modal] Add tenacity to modal just like daytona",
+        "pr_type": "engineering"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/139",
-        "pr_title": "[Adapter] fix (codepde): remove tmux & asciinema from Dockerfile",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/102",
-        "pr_title": "[CodePDE Adapter] fix: linting",
-        "pr_type": "adapter"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/90",
-        "pr_title": "[Adapter] Adding CodePDE adapter",
-        "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "giansegato",
-    "email": "",
-    "name": "gian",
-    "affiliation": "",
-    "pr_count": 2,
-    "total_additions": 999,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/212",
-        "pr_title": "feat: Add GKE/Kubernetes environment support",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/593",
+        "pr_title": "[LLMs] Remove ParseError as it is not used anywhere",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/135",
-        "pr_title": "Add extended thinking mode support for Anthropic models",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "orfeas-menis",
-    "email": "",
-    "name": "Orfeas Menis",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 887,
-    "total_deletions": 0,
-    "pr_list": [
+        "pr_url": "https://github.com/laude-institute/harbor/pull/592",
+        "pr_title": "[Trial] Remove EnvironmentBuildTimeoutError since it is not used",
+        "pr_type": "engineering"
+      },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/149",
-        "pr_title": "Adapter for AIME",
-        "pr_type": "adapter"
+        "pr_url": "https://github.com/laude-institute/harbor/pull/561",
+        "pr_title": "[Env] Add EnvironmentConfig.suppress_override_warnings and Terminus kwarg suppress_max_turns_warning",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/524",
+        "pr_title": "[terminus] Remove _logger and use BaseAgent logger directly",
+        "pr_type": "other"
       }
     ]
   },
@@ -1494,6 +626,237 @@
     ]
   },
   {
+    "github_handle": "Slimshilin",
+    "email": "",
+    "name": "Lin Shi",
+    "affiliation": "Cornell Tech",
+    "pr_count": 7,
+    "total_additions": 9179,
+    "total_deletions": 10887,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/580",
+        "pr_title": "Add parity API instructions for adapter experiments",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/579",
+        "pr_title": "[Ready to merge] OPENAI_BASE_URL support for codex.",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/516",
+        "pr_title": "remove aider-polyglot and livecodebench duplicates",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/263",
+        "pr_title": "Fix EvoEval Adapter forked_repo Link",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/98",
+        "pr_title": "Adapters readme template",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/83",
+        "pr_title": "Adapter README template",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/82",
+        "pr_title": "Fix -t to -p. Polish README",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "linhaowei1",
+    "email": "",
+    "name": "Haowei Lin",
+    "affiliation": "Peking University",
+    "pr_count": 6,
+    "total_additions": 6653,
+    "total_deletions": 47,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/440",
+        "pr_title": "[Ready for Review] Adapter: Algotune",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/438",
+        "pr_title": "[BugFix] Fix hello-world registry format",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/424",
+        "pr_title": "[FIX] Update Parity for Adapter: AutoCodeBench",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/292",
+        "pr_title": "[fix adapter] Revise the parity results for SLDBench",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/151",
+        "pr_title": "[adapter] Add SLDBench",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/106",
+        "pr_title": "Add Autocodebench adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "TheMikeMerrill",
+    "email": "",
+    "name": "Mike Merrill",
+    "affiliation": "Stanford University",
+    "pr_count": 6,
+    "total_additions": 6136,
+    "total_deletions": 1352,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/40",
+        "pr_title": "t2 context improperly queried",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/27",
+        "pr_title": "Fix token tracking",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/20",
+        "pr_title": "Mikeam/agents two",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/19",
+        "pr_title": "Add logging to terminus",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/16",
+        "pr_title": "Initial terminus2",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/2",
+        "pr_title": "Add DB implementation",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "harshraj172",
+    "email": "",
+    "name": "Harsh Raj",
+    "affiliation": "Khoury College, Northeastern University ",
+    "pr_count": 5,
+    "total_additions": 8873,
+    "total_deletions": 241,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/458",
+        "pr_title": "add codex trajectory.json back",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/115",
+        "pr_title": "Add swesmith adapter",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/86",
+        "pr_title": "claude-code atif formatting",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/77",
+        "pr_title": "Codex ATIF trajectory",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/58",
+        "pr_title": "Add the `aider-polyglot` adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "neginraoof",
+    "email": "",
+    "name": "Negin Raoof",
+    "affiliation": "UC Berkeley",
+    "pr_count": 5,
+    "total_additions": 4637,
+    "total_deletions": 302,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/279",
+        "pr_title": "Adding swe-agent",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/243",
+        "pr_title": "Inline swe-agent inference config",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/242",
+        "pr_title": "Add SWE-agent configuration example",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/49",
+        "pr_title": "updated terminus 2 summarization fallback",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/44",
+        "pr_title": "Swebench adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "chenzizhao",
+    "email": "",
+    "name": "Zizhao Chen",
+    "affiliation": "Cornell Tech",
+    "pr_count": 4,
+    "total_additions": 37076,
+    "total_deletions": 71989,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/518",
+        "pr_title": "Revise bixbench README with known issue and task details",
+        "pr_type": "task"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/472",
+        "pr_title": "Update registry with bixbench-cli",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/451",
+        "pr_title": "[ready for review] bixbench-cli addition",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/154",
+        "pr_title": "[Ready for review - final fix] Adapter: BixBench",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
     "github_handle": "mieciu",
     "email": "",
     "name": "Przemys\u0142aw Hejman",
@@ -1525,94 +888,84 @@
     ]
   },
   {
-    "github_handle": "dot-agi",
-    "email": "ps4534@nyu.edu",
-    "name": "Pratyush Shukla",
-    "affiliation": "Abundant AI",
-    "pr_count": 2,
-    "total_additions": 450,
-    "total_deletions": 21,
+    "github_handle": "LithiumDA",
+    "email": "",
+    "name": "Shanda Li",
+    "affiliation": "Carnegie Mellon University",
+    "pr_count": 4,
+    "total_additions": 1147,
+    "total_deletions": 15,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/589",
-        "pr_title": "Fix Docker environment directory nesting and stale container bugs",
-        "pr_type": "other"
+        "pr_url": "https://github.com/laude-institute/harbor/pull/466",
+        "pr_title": "fix (adapter): registery",
+        "pr_type": "adapter"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/539",
-        "pr_title": "Fix NVM sourcing failure with strict mode",
-        "pr_type": "engineering"
+        "pr_url": "https://github.com/laude-institute/harbor/pull/139",
+        "pr_title": "[Adapter] fix (codepde): remove tmux & asciinema from Dockerfile",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/102",
+        "pr_title": "[CodePDE Adapter] fix: linting",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/90",
+        "pr_title": "[Adapter] Adding CodePDE adapter",
+        "pr_type": "adapter"
       }
     ]
   },
   {
-    "github_handle": "connor-cognition",
+    "github_handle": "Ji-Pengliang",
     "email": "",
-    "name": "connor-cognition",
+    "name": "Pengliang Ji",
+    "affiliation": "Carnegie Mellon University",
+    "pr_count": 3,
+    "total_additions": 2230,
+    "total_deletions": 3,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/550",
+        "pr_title": "Add --n-attempts 2 to arc_agi_2 reproduction command",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/401",
+        "pr_title": "update arc-agi-2 parity test pr",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/220",
+        "pr_title": "[Ready for Review - fixing] Adapter: ARC-AGI-2 benchmark",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "RishiDesai",
+    "email": "",
+    "name": "Rishi Desai",
     "affiliation": "",
-    "pr_count": 2,
-    "total_additions": 293,
-    "total_deletions": 8,
+    "pr_count": 3,
+    "total_additions": 33046,
+    "total_deletions": 27018,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/470",
-        "pr_title": "feat: add secret and volume support to modal environment",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/512",
+        "pr_title": "registry for swe-gen-js",
         "pr_type": "other"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/457",
-        "pr_title": "chore: pin modal sdk to `1.3.1.dev9`",
-        "pr_type": "engineering"
-      }
-    ]
-  },
-  {
-    "github_handle": "CharlieFRuan",
-    "email": "",
-    "name": "Charlie Ruan",
-    "affiliation": "UC Berkeley",
-    "pr_count": 8,
-    "total_additions": 288,
-    "total_deletions": 94,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/686",
-        "pr_title": "[Terminus] Fix `n_episodes` counting when error out",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/653",
-        "pr_title": "[Terminus] Do not retry on ContextLengthExceededError when enable_summarize=False",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/651",
-        "pr_title": "[Env] Make sandbox lifecycle timeouts configurable via environment kwargs",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/230",
+        "pr_title": "Serialize Docker image builds to prevent parallel build race condition",
         "pr_type": "engineering"
       },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/650",
-        "pr_title": "[Modal] Add tenacity to modal just like daytona",
-        "pr_type": "engineering"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/593",
-        "pr_title": "[LLMs] Remove ParseError as it is not used anywhere",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/592",
-        "pr_title": "[Trial] Remove EnvironmentBuildTimeoutError since it is not used",
-        "pr_type": "engineering"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/561",
-        "pr_title": "[Env] Add EnvironmentConfig.suppress_override_warnings and Terminus kwarg suppress_max_turns_warning",
-        "pr_type": "engineering"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/524",
-        "pr_title": "[terminus] Remove _logger and use BaseAgent logger directly",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/200",
+        "pr_title": "Allow custom BaseLLM backend for Agent",
         "pr_type": "other"
       }
     ]
@@ -1620,8 +973,8 @@
   {
     "github_handle": "james-rl",
     "email": "",
-    "name": "james-rl",
-    "affiliation": "",
+    "name": "James",
+    "affiliation": "Run Loop",
     "pr_count": 3,
     "total_additions": 285,
     "total_deletions": 119,
@@ -1639,149 +992,6 @@
       {
         "pr_url": "https://github.com/laude-institute/harbor/pull/189",
         "pr_title": "Fixed runloop env",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "stared",
-    "email": "pmigdal@gmail.com",
-    "name": "Piotr Migda\u0142",
-    "affiliation": "ex: Quantum Flytrap CTO & cofounder",
-    "pr_count": 2,
-    "total_additions": 285,
-    "total_deletions": 27,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/367",
-        "pr_title": "Viewer cost estimate with LiteLLM",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/308",
-        "pr_title": "Add smart port handling for `harbor view`",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "dines-rl",
-    "email": "",
-    "name": "Alexander Dines",
-    "affiliation": "Run Loop",
-    "pr_count": 1,
-    "total_additions": 275,
-    "total_deletions": 1,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/46",
-        "pr_title": "Add Runloop Environment",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "rotemtam",
-    "email": "",
-    "name": "Rotem Tamir",
-    "affiliation": "honeybadge.co",
-    "pr_count": 2,
-    "total_additions": 220,
-    "total_deletions": 7,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/262",
-        "pr_title": "fix: `--agent-import-path` ignored when `-a` not specified",
-        "pr_type": "engineering"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/259",
-        "pr_title": "fix: add Alpine Linux support for claude-code agent",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "pashpashpash",
-    "email": "nik@cline.bot",
-    "name": "pashpashpash",
-    "affiliation": "vault77.ai",
-    "pr_count": 1,
-    "total_additions": 178,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/198",
-        "pr_title": "cline cli integration",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "anishathalye",
-    "email": "me@anishathalye.com",
-    "name": "Anish Athalye",
-    "affiliation": "@joinhandshake",
-    "pr_count": 1,
-    "total_additions": 174,
-    "total_deletions": 2,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/655",
-        "pr_title": "Add MCP support for OpenHands",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "pfbyjy",
-    "email": "",
-    "name": "Meji A",
-    "affiliation": "",
-    "pr_count": 2,
-    "total_additions": 109,
-    "total_deletions": 23,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/333",
-        "pr_title": "Update claude_code.py to allow access to all tools",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/75",
-        "pr_title": "Convert Terminal-Bench docker-compose to Harbor format in mapper",
-        "pr_type": "engineering"
-      }
-    ]
-  },
-  {
-    "github_handle": "richardzhuang0412",
-    "email": "",
-    "name": "Richard Zhuang",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 91,
-    "total_deletions": 0,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/181",
-        "pr_title": "Added patching fix for openhand when handling together context limit error",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "nandatheguntupalli",
-    "email": "",
-    "name": "Nanda Guntupalli",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 74,
-    "total_deletions": 11,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/399",
-        "pr_title": "Enhance documentation and structure in CLAUDE.md and README.md",
         "pr_type": "other"
       }
     ]
@@ -1813,204 +1023,28 @@
     ]
   },
   {
-    "github_handle": "bstee615",
-    "email": "benjaminjsteenhoek@gmail.com",
-    "name": "Benjamin Steenhoek",
-    "affiliation": "@Microsoft",
-    "pr_count": 1,
-    "total_additions": 43,
-    "total_deletions": 20,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/269",
-        "pr_title": "Support Azure OpenAI endpoints for LiteLLM agents",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "tlongwell-block",
+    "github_handle": "digitsisyph",
     "email": "",
-    "name": "tlongwell-block",
+    "name": "Gary?",
     "affiliation": "",
-    "pr_count": 2,
-    "total_additions": 41,
-    "total_deletions": 15,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/191",
-        "pr_title": "support additional inference providers for the goose agent to allow benching open models",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/188",
-        "pr_title": "enable goose developer and todo extensions in harbor recipe",
-        "pr_type": "engineering"
-      }
-    ]
-  },
-  {
-    "github_handle": "rootCircle",
-    "email": "",
-    "name": "Lab Rat",
-    "affiliation": "@uber, @iiitl ",
-    "pr_count": 1,
-    "total_additions": 40,
+    "pr_count": 3,
+    "total_additions": 7109,
     "total_deletions": 2,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/343",
-        "pr_title": "Fix: normalize `--path .` to absolute to prevent invalid Docker tags",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "luxinyu1",
-    "email": "",
-    "name": "Solaris",
-    "affiliation": "ISCAS",
-    "pr_count": 2,
-    "total_additions": 27,
-    "total_deletions": 11,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/506",
-        "pr_title": "Fix Claude Code trajectory extraction when subagents are used",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/236",
-        "pr_title": "Add custom API base URL support for claude code agent",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "rohitpaulk",
-    "email": "rohitpaulk@gmail.com",
-    "name": "Paul Kuruvilla",
-    "affiliation": "@codecrafters-io",
-    "pr_count": 1,
-    "total_additions": 23,
-    "total_deletions": 4,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/499",
-        "pr_title": "[Ready for review] Raise RuntimeError for agent setup failures",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "WingchunSiu",
-    "email": "",
-    "name": "Michael Siu",
-    "affiliation": "University of Southern California",
-    "pr_count": 1,
-    "total_additions": 21,
-    "total_deletions": 4,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/652",
-        "pr_title": "Add llm_call_kwargs to Terminus2 for per-call LLM parameter",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "josancamon19",
-    "email": "",
-    "name": "Joan Cabezas",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 18,
-    "total_deletions": 4,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/643",
-        "pr_title": "fix: Gemini CLI ATIF trajectory conversion for harbor view",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "avelanarius",
-    "email": "",
-    "name": "Piotr Grabowski",
-    "affiliation": "@QuesmaOrg",
-    "pr_count": 1,
-    "total_additions": 16,
-    "total_deletions": 16,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/275",
-        "pr_title": "[Adapter] Update CompileBench adapter, fixing oracle on Daytona",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/153",
+        "pr_title": "Add adapter init command",
         "pr_type": "adapter"
-      }
-    ]
-  },
-  {
-    "github_handle": "ZhengShenghan",
-    "email": "shenghan.zheng.gr@dartmouth.edu",
-    "name": "Shenghan Zheng",
-    "affiliation": "Dartmouth College",
-    "pr_count": 1,
-    "total_additions": 12,
-    "total_deletions": 1,
-    "pr_list": [
+      },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/535",
-        "pr_title": "[Ready for Review] BUG-FIX: fix gemini-cli skill loading failure",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/143",
+        "pr_title": "Add trajectory viewer",
         "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "Yiozolm",
-    "email": "m202310581@xs.ustb.edu.cn",
-    "name": "Fangzhou Yi",
-    "affiliation": "University of Science and Technology Beijing",
-    "pr_count": 1,
-    "total_additions": 10,
-    "total_deletions": 4,
-    "pr_list": [
+      },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/464",
-        "pr_title": "Add support for GLM models",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "MarcoRossignoli",
-    "email": "",
-    "name": "Marco Rossignoli",
-    "affiliation": "@microsoft",
-    "pr_count": 1,
-    "total_additions": 9,
-    "total_deletions": 2,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/507",
-        "pr_title": "Support large dataset downloads on Windows",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "ethanlshen",
-    "email": "ethans03@cs.washington.edu",
-    "name": "Ethan Shen",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 9,
-    "total_deletions": 1,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/94",
-        "pr_title": "Added summarization toggle",
-        "pr_type": "other"
+        "pr_url": "https://github.com/laude-institute/harbor/pull/69",
+        "pr_title": "Add adapter for evoeval",
+        "pr_type": "adapter"
       }
     ]
   },
@@ -2036,129 +1070,232 @@
     ]
   },
   {
-    "github_handle": "dpedchenko",
-    "email": "",
-    "name": "Dmitrii Pedchenko",
-    "affiliation": "FAIR @ Meta MSL",
-    "pr_count": 1,
-    "total_additions": 7,
-    "total_deletions": 4,
+    "github_handle": "jakozaur",
+    "email": "jacek@migdal.pl",
+    "name": "Jacek Migdal",
+    "affiliation": "",
+    "pr_count": 2,
+    "total_additions": 13564,
+    "total_deletions": 13120,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/194",
-        "pr_title": "Minor change to Modal backend",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/662",
+        "pr_title": "Add otel-bench benchmark to registry.json",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/661",
+        "pr_title": "Add binary-audit benchmark to registry.json",
         "pr_type": "other"
       }
     ]
   },
   {
-    "github_handle": "tmacie",
+    "github_handle": "dot-agi",
+    "email": "ps4534@nyu.edu",
+    "name": "Pratyush Shukla",
+    "affiliation": "Abundant AI",
+    "pr_count": 2,
+    "total_additions": 450,
+    "total_deletions": 21,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/589",
+        "pr_title": "Fix Docker environment directory nesting and stale container bugs",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/539",
+        "pr_title": "Fix NVM sourcing failure with strict mode",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "luxinyu1",
     "email": "",
-    "name": "tmacie",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 6,
+    "name": "Solaris",
+    "affiliation": "ISCAS",
+    "pr_count": 2,
+    "total_additions": 27,
+    "total_deletions": 11,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/506",
+        "pr_title": "Fix Claude Code trajectory extraction when subagents are used",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/236",
+        "pr_title": "Add custom API base URL support for claude code agent",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "michaelrglass",
+    "email": "",
+    "name": "Michael Glass",
+    "affiliation": "IBM",
+    "pr_count": 2,
+    "total_additions": 2,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/489",
+        "pr_title": "Fix docker environment to treat empty docker_image as no prebuilt image",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/456",
+        "pr_title": "Stderr was being lost by redirecting to stdout after the tee command",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "connor-cognition",
+    "email": "",
+    "name": "Connor Fogarty",
+    "affiliation": "Cognition AI",
+    "pr_count": 2,
+    "total_additions": 293,
     "total_deletions": 8,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/586",
-        "pr_title": "Fix modal gpu selection",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/470",
+        "pr_title": "feat: add secret and volume support to modal environment",
         "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/457",
+        "pr_title": "chore: pin modal sdk to `1.3.1.dev9`",
+        "pr_type": "engineering"
       }
     ]
   },
   {
-    "github_handle": "dzorlu",
+    "github_handle": "DannyGooo",
     "email": "",
-    "name": "Deniz",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 6,
-    "total_deletions": 0,
+    "name": "Yonghui Liu",
+    "affiliation": "Monash University",
+    "pr_count": 2,
+    "total_additions": 2716,
+    "total_deletions": 2,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/232",
-        "pr_title": "feat: store all messages",
-        "pr_type": "other"
+        "pr_url": "https://github.com/laude-institute/harbor/pull/452",
+        "pr_title": "[Ready for Review] Adapter: Spider2 - Experiment with Harbor-supported agents",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/436",
+        "pr_title": "[Ready for Review] Adapter: Spider2",
+        "pr_type": "adapter"
       }
     ]
   },
   {
-    "github_handle": "ai-jz",
+    "github_handle": "octaviaguo",
     "email": "",
-    "name": "ai-jz",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 6,
-    "total_deletions": 1,
+    "name": "Ruohao Guo",
+    "affiliation": "Georgia Institute of Technology",
+    "pr_count": 2,
+    "total_additions": 3471,
+    "total_deletions": 153,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/173",
-        "pr_title": "feat: Add Claude Code OAuth token support for subscription users",
-        "pr_type": "other"
+        "pr_url": "https://github.com/laude-institute/harbor/pull/446",
+        "pr_title": "Update StrongReject adapter with new registry",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/363",
+        "pr_title": "[Ready for Review] Adapter: StrongReject",
+        "pr_type": "adapter"
       }
     ]
   },
   {
-    "github_handle": "beran-t",
+    "github_handle": "HaishuoFang",
+    "email": "fanghaishuo@gmail.com",
+    "name": "Haishuo",
+    "affiliation": "TU Darmstadt",
+    "pr_count": 2,
+    "total_additions": 2966,
+    "total_deletions": 87,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/434",
+        "pr_title": "Fix ruff check error for financeagent Adapter",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/267",
+        "pr_title": "[Ready for Review - final discussion] Adapter: FinanceAgent",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "Anjiang-Wei",
     "email": "",
-    "name": "Berry",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 5,
-    "total_deletions": 1,
+    "name": "Anjiang Wei",
+    "affiliation": "Stanford University",
+    "pr_count": 2,
+    "total_additions": 13415,
+    "total_deletions": 10,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/627",
-        "pr_title": "Fix E2B exec() throwing on non-zero exit codes",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/418",
+        "pr_title": "Remove repository path setup from run_adapter.py to fix ruff error",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/395",
+        "pr_title": "[Ready for Review] Adapter: SATBench",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "stared",
+    "email": "pmigdal@gmail.com",
+    "name": "Piotr Migda\u0142",
+    "affiliation": "ex: Quantum Flytrap CTO & cofounder",
+    "pr_count": 2,
+    "total_additions": 285,
+    "total_deletions": 27,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/367",
+        "pr_title": "Viewer cost estimate with LiteLLM",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/308",
+        "pr_title": "Add smart port handling for `harbor view`",
         "pr_type": "other"
       }
     ]
   },
   {
-    "github_handle": "ifoukarakis",
+    "github_handle": "pfbyjy",
     "email": "",
-    "name": "Ioannis Foukarakis",
+    "name": "Meji A",
     "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 5,
-    "total_deletions": 4,
+    "pr_count": 2,
+    "total_additions": 109,
+    "total_deletions": 23,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/323",
-        "pr_title": "fix: default registry URL reference",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/333",
+        "pr_title": "Update claude_code.py to allow access to all tools",
         "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "KunWuLuan",
-    "email": "kunwuluan@gmail.com",
-    "name": "GreenHand",
-    "affiliation": "",
-    "pr_count": 1,
-    "total_additions": 4,
-    "total_deletions": 3,
-    "pr_list": [
+      },
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/658",
-        "pr_title": "fix(swe_agent): support multiple API key variables from model name",
-        "pr_type": "other"
-      }
-    ]
-  },
-  {
-    "github_handle": "xdotli",
-    "email": "xiangyi@benchflow.ai",
-    "name": "Xiangyi Li",
-    "affiliation": "@benchflow-ai",
-    "pr_count": 1,
-    "total_additions": 4,
-    "total_deletions": 1,
-    "pr_list": [
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/459",
-        "pr_title": "fix(claude-code): CLAUDE_CONFIG_DIR giving errors for accessing .claude folder",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/75",
+        "pr_title": "Convert Terminal-Bench docker-compose to Harbor format in mapper",
         "pr_type": "engineering"
       }
     ]
@@ -2181,6 +1318,90 @@
         "pr_url": "https://github.com/laude-institute/harbor/pull/121",
         "pr_title": "Enable OPENCODE_FAKE_VCS for OpenCode agent",
         "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "rotemtam",
+    "email": "",
+    "name": "Rotem Tamir",
+    "affiliation": "honeybadge.co",
+    "pr_count": 2,
+    "total_additions": 220,
+    "total_deletions": 7,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/262",
+        "pr_title": "fix: `--agent-import-path` ignored when `-a` not specified",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/259",
+        "pr_title": "fix: add Alpine Linux support for claude-code agent",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "paraliine",
+    "email": "",
+    "name": "Xiaoxuan Peng",
+    "affiliation": "CQU",
+    "pr_count": 2,
+    "total_additions": 2,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/216",
+        "pr_title": "Fix Terminus2 tmux logging path",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/215",
+        "pr_title": "Fix blocking tmux send-keys execution",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "giansegato",
+    "email": "",
+    "name": "gian",
+    "affiliation": "",
+    "pr_count": 2,
+    "total_additions": 999,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/212",
+        "pr_title": "feat: Add GKE/Kubernetes environment support",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/135",
+        "pr_title": "Add extended thinking mode support for Anthropic models",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "tlongwell-block",
+    "email": "",
+    "name": "tlongwell-block",
+    "affiliation": "",
+    "pr_count": 2,
+    "total_additions": 41,
+    "total_deletions": 15,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/191",
+        "pr_title": "support additional inference providers for the goose agent to allow benching open models",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/188",
+        "pr_title": "enable goose developer and todo extensions in harbor recipe",
+        "pr_type": "engineering"
       }
     ]
   },
@@ -2227,17 +1448,182 @@
     ]
   },
   {
-    "github_handle": "vatsj",
-    "email": "jacobstavrianos@gmail.com",
-    "name": "Jacob Stavrianos",
+    "github_handle": "EtashGuha",
+    "email": "",
+    "name": "Etash Guha",
+    "affiliation": "Stanford University",
+    "pr_count": 2,
+    "total_additions": 32570,
+    "total_deletions": 3336,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/113",
+        "pr_title": "update train on traces",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/38",
+        "pr_title": "added triage for together context limit issue",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "KunWuLuan",
+    "email": "kunwuluan@gmail.com",
+    "name": "GreenHand",
     "affiliation": "",
     "pr_count": 1,
-    "total_additions": 3,
+    "total_additions": 4,
+    "total_deletions": 3,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/658",
+        "pr_title": "fix(swe_agent): support multiple API key variables from model name",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "anishathalye",
+    "email": "me@anishathalye.com",
+    "name": "Anish Athalye",
+    "affiliation": "@joinhandshake",
+    "pr_count": 1,
+    "total_additions": 174,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/655",
+        "pr_title": "Add MCP support for OpenHands",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "WingchunSiu",
+    "email": "",
+    "name": "Michael Siu",
+    "affiliation": "University of Southern California",
+    "pr_count": 1,
+    "total_additions": 21,
+    "total_deletions": 4,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/652",
+        "pr_title": "Add llm_call_kwargs to Terminus2 for per-call LLM parameter",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "josancamon19",
+    "email": "",
+    "name": "Joan Cabezas",
+    "affiliation": "Based Hardware / Omi AI",
+    "pr_count": 1,
+    "total_additions": 18,
+    "total_deletions": 4,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/643",
+        "pr_title": "fix: Gemini CLI ATIF trajectory conversion for harbor view",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "beran-t",
+    "email": "",
+    "name": "Berry",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 5,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/627",
+        "pr_title": "Fix E2B exec() throwing on non-zero exit codes",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "tmacie",
+    "email": "",
+    "name": "tmacie",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 6,
+    "total_deletions": 8,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/586",
+        "pr_title": "Fix modal gpu selection",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "Michaelsqj",
+    "email": "shenqijia11@gmail.com",
+    "name": "Qijia Shen",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 8263,
     "total_deletions": 0,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/481",
-        "pr_title": "suppress daytona container auto-shutdown",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/577",
+        "pr_title": "add seta env to registry.json",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "self-supervisor",
+    "email": "",
+    "name": "Augustine Mavor-Parker",
+    "affiliation": "VmaxAI",
+    "pr_count": 1,
+    "total_additions": 6266,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/563",
+        "pr_title": "Vmax tasks",
+        "pr_type": "task"
+      }
+    ]
+  },
+  {
+    "github_handle": "neverSettles",
+    "email": "",
+    "name": "Chris Settles",
+    "affiliation": "Operative AI, Inc",
+    "pr_count": 1,
+    "total_additions": 1748,
+    "total_deletions": 122,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/549",
+        "pr_title": "ATIF 1.5->1.6: Support multimodal trajectories",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "ZhengShenghan",
+    "email": "shenghan.zheng.gr@dartmouth.edu",
+    "name": "Shenghan Zheng",
+    "affiliation": "Dartmouth College",
+    "pr_count": 1,
+    "total_additions": 12,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/535",
+        "pr_title": "[Ready for Review] BUG-FIX: fix gemini-cli skill loading failure",
         "pr_type": "other"
       }
     ]
@@ -2259,22 +1645,33 @@
     ]
   },
   {
-    "github_handle": "michaelrglass",
+    "github_handle": "MarcoRossignoli",
     "email": "",
-    "name": "Michael Glass",
-    "affiliation": "IBM",
-    "pr_count": 2,
-    "total_additions": 2,
+    "name": "Marco Rossignoli",
+    "affiliation": "@microsoft",
+    "pr_count": 1,
+    "total_additions": 9,
     "total_deletions": 2,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/489",
-        "pr_title": "Fix docker environment to treat empty docker_image as no prebuilt image",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/507",
+        "pr_title": "Support large dataset downloads on Windows",
         "pr_type": "other"
-      },
+      }
+    ]
+  },
+  {
+    "github_handle": "rohitpaulk",
+    "email": "rohitpaulk@gmail.com",
+    "name": "Paul Kuruvilla",
+    "affiliation": "@codecrafters-io",
+    "pr_count": 1,
+    "total_additions": 23,
+    "total_deletions": 4,
+    "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/456",
-        "pr_title": "Stderr was being lost by redirecting to stdout after the tee command",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/499",
+        "pr_title": "[Ready for review] Raise RuntimeError for agent setup failures",
         "pr_type": "other"
       }
     ]
@@ -2296,38 +1693,465 @@
     ]
   },
   {
-    "github_handle": "paraliine",
-    "email": "",
-    "name": "Xiaoxuan Peng",
-    "affiliation": "CQU",
-    "pr_count": 2,
-    "total_additions": 2,
-    "total_deletions": 2,
+    "github_handle": "vatsj",
+    "email": "jacobstavrianos@gmail.com",
+    "name": "Jacob Stavrianos",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 3,
+    "total_deletions": 0,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/216",
-        "pr_title": "Fix Terminus2 tmux logging path",
-        "pr_type": "other"
-      },
-      {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/215",
-        "pr_title": "Fix blocking tmux send-keys execution",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/481",
+        "pr_title": "suppress daytona container auto-shutdown",
         "pr_type": "other"
       }
     ]
   },
   {
-    "github_handle": "tyler-griggs",
-    "email": "",
-    "name": "Tyler Griggs",
-    "affiliation": "",
+    "github_handle": "Yiozolm",
+    "email": "m202310581@xs.ustb.edu.cn",
+    "name": "Fangzhou Yi",
+    "affiliation": "University of Science and Technology Beijing",
     "pr_count": 1,
-    "total_additions": 2,
+    "total_additions": 10,
+    "total_deletions": 4,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/464",
+        "pr_title": "Add support for GLM models",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "xdotli",
+    "email": "xiangyi@benchflow.ai",
+    "name": "Xiangyi Li",
+    "affiliation": "@benchflow-ai",
+    "pr_count": 1,
+    "total_additions": 4,
     "total_deletions": 1,
     "pr_list": [
       {
-        "pr_url": "https://github.com/laude-institute/harbor/pull/21",
-        "pr_title": "Update .gitignore",
+        "pr_url": "https://github.com/laude-institute/harbor/pull/459",
+        "pr_title": "fix(claude-code): CLAUDE_CONFIG_DIR giving errors for accessing .claude folder",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "killthefullmoon",
+    "email": "killthefullmoon@gmail.com",
+    "name": "Hui Shen",
+    "affiliation": "University of Michigan",
+    "pr_count": 1,
+    "total_additions": 7849,
+    "total_deletions": 904,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/432",
+        "pr_title": "[Ready for Review] Adapter: DS1000",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "1171-jpg",
+    "email": "",
+    "name": "140",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 1836,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/403",
+        "pr_title": "[Ready for Review] Adapter: Ineqmath",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "xianliu",
+    "email": "lxjsj@fedoraproject.org",
+    "name": "Xian Liu",
+    "affiliation": "Meetchances/ex-Bytedance/ex-Redhat",
+    "pr_count": 1,
+    "total_additions": 2116,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/402",
+        "pr_title": "[Ready for Review] Add crustbench adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "nandatheguntupalli",
+    "email": "",
+    "name": "Nanda Guntupalli",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 74,
+    "total_deletions": 11,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/399",
+        "pr_title": "Enhance documentation and structure in CLAUDE.md and README.md",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "hanxu12",
+    "email": "",
+    "name": "Han Xu",
+    "affiliation": "UIUC",
+    "pr_count": 1,
+    "total_additions": 7030,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/380",
+        "pr_title": "[Ready for Review] Adapter: LawBench",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "kanazawa-asyncio",
+    "email": "",
+    "name": "Kanaza",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 1208,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/376",
+        "pr_title": "feat(registry): add Alibaba terminal-bench-pro dataset",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "Ternura143",
+    "email": "",
+    "name": "Zixuan Zhu",
+    "affiliation": "NTU",
+    "pr_count": 1,
+    "total_additions": 24649,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/358",
+        "pr_title": "[Ready for Review - Final Fix] Adapter: bfcl",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "EstelYang",
+    "email": "ypyangrui@pku.edu.cn",
+    "name": "Rui Yang",
+    "affiliation": "Peking University",
+    "pr_count": 1,
+    "total_additions": 68583,
+    "total_deletions": 67032,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/351",
+        "pr_title": "[Ready for Review] Adapter: QCircuitBench",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "Hangzhi",
+    "email": "hangzhiweiwei@gmail.com",
+    "name": "Yiwei Dai",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 1768,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/346",
+        "pr_title": "[Ready for review  -Final Fix] Quixbugs adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "rootCircle",
+    "email": "",
+    "name": "Lab Rat",
+    "affiliation": "@uber, @iiitl ",
+    "pr_count": 1,
+    "total_additions": 40,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/343",
+        "pr_title": "Fix: normalize `--path .` to absolute to prevent invalid Docker tags",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "terryyz",
+    "email": "terryzhuo25@gmail.com",
+    "name": "Terry Yue Zhuo",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 10081,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/330",
+        "pr_title": "[Ready for Review - fixing] Adapter: BigCodeBench-Hard",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "ifoukarakis",
+    "email": "",
+    "name": "Ioannis Foukarakis",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 5,
+    "total_deletions": 4,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/323",
+        "pr_title": "fix: default registry URL reference",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "Rebabit",
+    "email": "",
+    "name": "Rebecca Deng",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 1883,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/311",
+        "pr_title": "[Ready for Review - Final Fix] Adapter: MMMLU",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "Waterpine",
+    "email": "sbian8@wisc.edu",
+    "name": "Song Bian",
+    "affiliation": "University of Wisconsin-Madison",
+    "pr_count": 1,
+    "total_additions": 25831,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/307",
+        "pr_title": "[Ready for Review] mmau adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "avelanarius",
+    "email": "",
+    "name": "Piotr Grabowski",
+    "affiliation": "@QuesmaOrg",
+    "pr_count": 1,
+    "total_additions": 16,
+    "total_deletions": 16,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/275",
+        "pr_title": "[Adapter] Update CompileBench adapter, fixing oracle on Daytona",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "bstee615",
+    "email": "benjaminjsteenhoek@gmail.com",
+    "name": "Benjamin Steenhoek",
+    "affiliation": "@Microsoft",
+    "pr_count": 1,
+    "total_additions": 43,
+    "total_deletions": 20,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/269",
+        "pr_title": "Support Azure OpenAI endpoints for LiteLLM agents",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "XuandongZhao",
+    "email": "csxuandongzhao@gmail.com",
+    "name": "Xuandong Zhao",
+    "affiliation": "UC Berkeley",
+    "pr_count": 1,
+    "total_additions": 1723,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/264",
+        "pr_title": "[Adapter] GPQA-Diamond Adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "kobe0938",
+    "email": "xiaokunchen0@gmail.com",
+    "name": "Kobe Chen",
+    "affiliation": "Stanford U",
+    "pr_count": 1,
+    "total_additions": 1761,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/257",
+        "pr_title": "[Ready for Review - fixing] Adapter: Humanevalfix",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "aht",
+    "email": "",
+    "name": "Hai-Anh Trinh",
+    "affiliation": "grammarly.com",
+    "pr_count": 1,
+    "total_additions": 5038,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/256",
+        "pr_title": "[Ready for Review] Adapter: REASONING GYM ",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "robertzhidealx",
+    "email": "0xrobertzhang@gmail.com",
+    "name": "Robert Zhang",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 9252,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/249",
+        "pr_title": "Adapters: SWE-bench Pro",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "dzorlu",
+    "email": "",
+    "name": "Deniz Zorlu",
+    "affiliation": "Contextual AI",
+    "pr_count": 1,
+    "total_additions": 6,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/232",
+        "pr_title": "feat: store all messages",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "crystalxyz",
+    "email": "",
+    "name": "Crystal Zhou",
+    "affiliation": "Cornell University",
+    "pr_count": 1,
+    "total_additions": 2124,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/201",
+        "pr_title": "[Ready for review - Final Review] Adapter: LAB-Bench FigQA",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "pashpashpash",
+    "email": "nik@cline.bot",
+    "name": "Nik Pash",
+    "affiliation": "OpenAI",
+    "pr_count": 1,
+    "total_additions": 178,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/198",
+        "pr_title": "cline cli integration",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "dpedchenko",
+    "email": "",
+    "name": "Dmitrii Pedchenko",
+    "affiliation": "FAIR @ Meta MSL",
+    "pr_count": 1,
+    "total_additions": 7,
+    "total_deletions": 4,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/194",
+        "pr_title": "Minor change to Modal backend",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "richardzhuang0412",
+    "email": "",
+    "name": "Richard Zhuang",
+    "affiliation": "Stanford University",
+    "pr_count": 1,
+    "total_additions": 91,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/181",
+        "pr_title": "Added patching fix for openhand when handling together context limit error",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "ai-jz",
+    "email": "",
+    "name": "ai-jz",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 6,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/173",
+        "pr_title": "feat: Add Claude Code OAuth token support for subscription users",
         "pr_type": "other"
       }
     ]
@@ -2349,6 +2173,22 @@
     ]
   },
   {
+    "github_handle": "orfeas-menis",
+    "email": "",
+    "name": "Orfeas Menis",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 887,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/149",
+        "pr_title": "Adapter for AIME",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
     "github_handle": "santaboi",
     "email": "",
     "name": "Yang Fan Chiang",
@@ -2360,6 +2200,166 @@
       {
         "pr_url": "https://github.com/laude-institute/harbor/pull/104",
         "pr_title": "Fix Terminal Bench 2.0 description typo",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "davidheineman",
+    "email": "david@davidheineman.com",
+    "name": "David Heineman",
+    "affiliation": "",
+    "pr_count": 1,
+    "total_additions": 8656,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/100",
+        "pr_title": "[Ready for Review] Adapter: SWE-Lancer",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "omi-n",
+    "email": "",
+    "name": "nabil",
+    "affiliation": "University of Washington, Microsoft",
+    "pr_count": 1,
+    "total_additions": 1771,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/99",
+        "pr_title": "[Adapter] Add mlgym-bench adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "junhongmit",
+    "email": "junhonghust@gmail.com",
+    "name": "Junhong Lin",
+    "affiliation": "Massachusetts Institute of Technology",
+    "pr_count": 1,
+    "total_additions": 3521,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/97",
+        "pr_title": "[Adapter] Adding USACO Adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "MichaelY310",
+    "email": "",
+    "name": "Michael Yang",
+    "affiliation": "UC Santa Barbara",
+    "pr_count": 1,
+    "total_additions": 15684,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/96",
+        "pr_title": "[Ready For Review]  Adding SWTBench Adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "ethanlshen",
+    "email": "ethans03@cs.washington.edu",
+    "name": "Ethan Shen",
+    "affiliation": "University of Washington",
+    "pr_count": 1,
+    "total_additions": 9,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/94",
+        "pr_title": "Added summarization toggle",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "Dongzhikang",
+    "email": "",
+    "name": "Zhikang Dong",
+    "affiliation": "Stony Brook University",
+    "pr_count": 1,
+    "total_additions": 2140,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/89",
+        "pr_title": "adapter for Deveval",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "audreycs",
+    "email": "",
+    "name": "Yuxin Wang",
+    "affiliation": "Dartmouth College",
+    "pr_count": 1,
+    "total_additions": 2158,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/88",
+        "pr_title": "[Adapter] Adding Livecodebench adpter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "dines-rl",
+    "email": "",
+    "name": "Alexander Dines",
+    "affiliation": "Run Loop",
+    "pr_count": 1,
+    "total_additions": 275,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/46",
+        "pr_title": "Add Runloop Environment",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "cliangyu",
+    "email": "",
+    "name": "Leon Chen",
+    "affiliation": "Stanford University",
+    "pr_count": 1,
+    "total_additions": 1197,
+    "total_deletions": 19,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/26",
+        "pr_title": "Migrate 11 agents from terminal-bench to sandboxes",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "tyler-griggs",
+    "email": "",
+    "name": "Tyler Griggs",
+    "affiliation": "UC Berkeley",
+    "pr_count": 1,
+    "total_additions": 2,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/laude-institute/harbor/pull/21",
+        "pr_title": "Update .gitignore",
         "pr_type": "other"
       }
     ]

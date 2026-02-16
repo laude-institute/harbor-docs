@@ -64,10 +64,6 @@ export default function ContributorsPage() {
                 key={`harbor-${c.github_handle}`}
                 name={c.name}
                 githubHandle={c.github_handle}
-                affiliation={c.affiliation}
-                prCount={c.pr_count}
-                totalAdditions={c.total_additions}
-                totalDeletions={c.total_deletions}
               />
             ))}
           </div>
@@ -85,10 +81,6 @@ export default function ContributorsPage() {
                 key={`adapter-${c.github_handle}`}
                 name={c.name}
                 githubHandle={c.github_handle}
-                affiliation={c.affiliation}
-                prCount={c.pr_count}
-                totalAdditions={c.total_additions}
-                totalDeletions={c.total_deletions}
               />
             ))}
           </div>
