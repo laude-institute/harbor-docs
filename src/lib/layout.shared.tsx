@@ -22,6 +22,11 @@ export function baseOptions(): BaseLayoutProps {
         active: "nested-url",
       },
       {
+        url: "/contributors",
+        text: "Contributors",
+        active: "nested-url",
+      },
+      {
         url: "https://discord.gg/6xWPKhGDbA",
         text: "Discord",
         active: "none",
