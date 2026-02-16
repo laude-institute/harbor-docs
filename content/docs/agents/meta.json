@@ -1,4 +1,4 @@
 {
     "title": "Agents",
-    "pages": ["index", "terminus-2", "trajectory-format"]
+    "pages": ["index", "agent-flags", "terminus-2", "trajectory-format"]
 }

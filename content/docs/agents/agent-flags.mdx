@@ -1,0 +1,305 @@
+---
+title: Agent Flags
+description: Configuring installed agents via AgentConfig.kwargs
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Accordions, Accordion } from 'fumadocs-ui/components/accordion';
+
+Harbor uses a generic passthrough pattern to configure installed agents. Rather than adding bespoke keyword arguments for every agent, all agent-specific flags are passed through `AgentConfig.kwargs` — a flat dictionary that each agent validates and consumes independently.
+
+## How it works
+
+Every installed agent receives an `AgentConfig` with a `kwargs` dict. The agent parses out the flags it supports and ignores (or rejects) the rest. This means:
+
+- **Adding a flag to one agent doesn't touch any other agent.**
+- **The framework interface stays stable** — `kwargs` is always `dict[str, Any]`.
+- **Each agent owns its own validation** — unknown flags are surfaced at the agent level.
+
+```python
+from harbor.models.trial.config import AgentConfig
+
+agent_config = AgentConfig(
+    name="claude-code",
+    model_name="anthropic/claude-sonnet-4-20250514",
+    kwargs={
+        # Agent-specific flags go here
+        "max_turns": 30,
+        "permission_mode": "bypassPermissions",
+        "append_system_prompt": "Focus on writing tests.",
+    }
+)
+```
+
+<Callout title="CLI usage">
+When using `harbor run`, agent kwargs are passed via `--agent-kwargs` as a JSON string or via a YAML config file with `--config`.
+</Callout>
+
+## Claude Code
+
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code) is Anthropic's agentic coding tool. When running as an installed agent, Harbor invokes it in headless mode via `claude -p`.
+
+### Supported kwargs
+
+| kwarg | Type | Default | Description |
+|-------|------|---------|-------------|
+| `max_turns` | `int` | None (unlimited) | Maximum number of agentic turns before exiting |
+| `max_budget_usd` | `float` | None (unlimited) | Maximum dollar spend on API calls |
+| `permission_mode` | `str` | `"bypassPermissions"` | Permission mode: `"default"`, `"acceptEdits"`, `"bypassPermissions"`, `"plan"` |
+| `allowed_tools` | `list[str]` | None | Tools auto-approved without prompting (e.g., `["Bash", "Read", "Edit"]`) |
+| `disallowed_tools` | `list[str]` | None | Tools completely removed from context |
+| `system_prompt` | `str` | None | **Replaces** the entire default system prompt |
+| `append_system_prompt` | `str` | None | **Appends** to the default system prompt (recommended over replacing) |
+| `output_format` | `str` | `"json"` | Output format: `"text"`, `"json"`, `"stream-json"` |
+| `model` | `str` | From `model_name` | Override model (e.g., `"opus"`, `"sonnet"`, `"claude-opus-4-6"`) |
+| `fallback_model` | `str` | None | Fallback model when primary is overloaded |
+| `mcp_config` | `str` | None | Path to MCP server configuration JSON |
+
+### Example
+
+```python
+AgentConfig(
+    name="claude-code",
+    model_name="anthropic/claude-sonnet-4-20250514",
+    kwargs={
+        "max_turns": 30,
+        "max_budget_usd": 5.0,
+        "permission_mode": "bypassPermissions",
+        "append_system_prompt": "Always run tests after making changes.",
+        "output_format": "json",
+    }
+)
+```
+
+### Environment variables
+
+These are set in the container environment and are not part of `kwargs`:
+
+| Variable | Description |
+|----------|-------------|
+| `ANTHROPIC_API_KEY` | API key for authentication (required) |
+| `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC` | Disable auto-updater and telemetry (recommended for containers) |
+| `DISABLE_AUTOUPDATER` | Disable the auto-updater |
+
+<Callout title="Reference">
+See the full [Claude Code CLI reference](https://docs.anthropic.com/en/docs/claude-code/cli-usage) for all available flags.
+</Callout>
+
+---
+
+## Codex CLI
+
+[Codex CLI](https://github.com/openai/codex) is OpenAI's agentic coding tool. Harbor invokes it in non-interactive mode via `codex exec`.
+
+### Supported kwargs
+
+| kwarg | Type | Default | Description |
+|-------|------|---------|-------------|
+| `model` | `str` | From `model_name` | Model to use (e.g., `"gpt-5-codex"`, `"o4-mini"`) |
+| `approval_mode` | `str` | `"never"` | When to prompt for approval: `"untrusted"`, `"on-failure"`, `"on-request"`, `"never"` |
+| `sandbox` | `str` | `"danger-full-access"` | Sandbox policy: `"read-only"`, `"workspace-write"`, `"danger-full-access"` |
+| `full_auto` | `bool` | False | Shortcut for `approval_mode="on-request"` + `sandbox="workspace-write"` |
+| `output_schema` | `str` | None | Path to a JSON Schema file for structured output |
+| `skip_git_repo_check` | `bool` | True | Allow running outside a Git repository |
+| `ephemeral` | `bool` | True | Don't persist session files to disk |
+| `add_dir` | `list[str]` | None | Additional directories with write access |
+
+### Example
+
+```python
+AgentConfig(
+    name="codex",
+    model_name="openai/gpt-5-codex",
+    kwargs={
+        "approval_mode": "never",
+        "sandbox": "danger-full-access",
+        "skip_git_repo_check": True,
+        "ephemeral": True,
+    }
+)
+```
+
+### Environment variables
+
+| Variable | Description |
+|----------|-------------|
+| `CODEX_API_KEY` | API key for authentication in `codex exec` mode (required) |
+
+<Callout title="Reference">
+See the full [Codex CLI reference](https://developers.openai.com/codex/cli/reference/) for all available flags.
+</Callout>
+
+---
+
+## Gemini CLI
+
+[Gemini CLI](https://github.com/google-gemini/gemini-cli) is Google's agentic coding tool. Harbor invokes it in non-interactive mode by passing a positional prompt.
+
+### Supported kwargs
+
+| kwarg | Type | Default | Description |
+|-------|------|---------|-------------|
+| `model` | `str` | From `model_name` | Model to use (e.g., `"gemini-2.5-pro"`) |
+| `yolo` | `bool` | True | Auto-approve all tool calls without prompting. Enables sandbox automatically. |
+| `approval_mode` | `str` | `"yolo"` | Approval mode: `"default"`, `"auto_edit"`, `"yolo"`, `"plan"` |
+| `sandbox` | `bool` | True | Enable sandbox mode (Docker/Podman isolation) |
+| `sandbox_image` | `str` | None | Custom sandbox container image URI |
+| `output_format` | `str` | `"json"` | Output format: `"text"`, `"json"`, `"stream-json"` |
+| `all_files` | `bool` | False | Recursively include all files as context |
+| `checkpointing` | `bool` | False | Enable file edit checkpointing (allows `/restore`) |
+| `include_directories` | `list[str]` | None | Additional directories to include in workspace context (max 5) |
+| `extensions` | `str` | None | Extensions to load (use `"none"` to disable all) |
+| `allowed_tools` | `list[str]` | None | Tool names that bypass confirmation (e.g., `["ShellTool(git status)"]`) |
+
+### Example
+
+```python
+AgentConfig(
+    name="gemini-cli",
+    model_name="google/gemini-2.5-pro",
+    kwargs={
+        "yolo": True,
+        "sandbox": True,
+        "output_format": "json",
+        "checkpointing": True,
+    }
+)
+```
+
+### Environment variables
+
+| Variable | Description |
+|----------|-------------|
+| `GEMINI_API_KEY` | API key for the Gemini API (required) |
+| `GOOGLE_GENAI_USE_VERTEXAI` | Set to `"true"` to use Vertex AI backend |
+| `GOOGLE_CLOUD_PROJECT` | Google Cloud project ID (for Vertex AI) |
+| `SANDBOX_FLAGS` | Custom flags passed to Docker/Podman for sandbox containers |
+
+<Callout title="Reference">
+See the full [Gemini CLI documentation](https://github.com/google-gemini/gemini-cli) for all available flags.
+</Callout>
+
+---
+
+## OpenHands
+
+[OpenHands](https://github.com/All-Hands-AI/OpenHands) (formerly OpenDevin) is an autonomous AI software engineer. Harbor invokes it in headless mode via `openhands --headless`.
+
+### Supported kwargs
+
+| kwarg | Type | Default | Description |
+|-------|------|---------|-------------|
+| `model` | `str` | From `model_name` | LLM model identifier (e.g., `"anthropic/claude-sonnet-4-20250514"`) |
+| `max_iterations` | `int` | 500 | Maximum number of agent iterations |
+| `max_budget_per_task` | `float` | 0.0 (unlimited) | Maximum dollar spend per task |
+| `agent` | `str` | `"CodeActAgent"` | Agent type to use |
+| `enable_browsing` | `bool` | True | Enable the browsing tool |
+| `enable_jupyter` | `bool` | True | Enable Jupyter execution |
+| `sandbox_image` | `str` | None | Custom base container image for the sandbox |
+| `sandbox_timeout` | `int` | 120 | Sandbox timeout in seconds |
+| `temperature` | `float` | None | LLM sampling temperature |
+| `top_p` | `float` | None | LLM top-p sampling |
+| `max_output_tokens` | `int` | None | Maximum output tokens per LLM call |
+| `condenser_type` | `str` | None | History condensation strategy: `"noop"`, `"observation_masking"`, `"recent"`, `"llm"`, `"amortized"` |
+
+### Example
+
+```python
+AgentConfig(
+    name="openhands",
+    model_name="anthropic/claude-sonnet-4-20250514",
+    kwargs={
+        "max_iterations": 100,
+        "max_budget_per_task": 10.0,
+        "agent": "CodeActAgent",
+        "enable_browsing": False,
+        "condenser_type": "llm",
+    }
+)
+```
+
+### Environment variables
+
+| Variable | Description |
+|----------|-------------|
+| `LLM_API_KEY` | API key for the LLM provider (required) |
+| `LLM_BASE_URL` | Custom API base URL (for local LLMs, vLLM, etc.) |
+| `GITHUB_TOKEN` | Required for GitHub repository operations |
+| `SANDBOX_VOLUMES` | Mount host directories into the sandbox (format: `host:container:mode`) |
+
+<Callout title="Reference">
+See the full [OpenHands configuration docs](https://docs.openhands.dev/openhands/usage/advanced/configuration-options) for all available options.
+</Callout>
+
+---
+
+## Mini-SWE-Agent
+
+Mini-SWE-Agent is a lightweight agent included directly in Harbor. It uses a minimal tool set and a simple execution loop. Configuration is handled through the standard `AgentConfig.kwargs`.
+
+### Supported kwargs
+
+| kwarg | Type | Default | Description |
+|-------|------|---------|-------------|
+| `model` | `str` | From `model_name` | LLM model identifier |
+| `max_turns` | `int` | 30 | Maximum number of agent turns |
+| `temperature` | `float` | 0.0 | LLM sampling temperature |
+
+---
+
+## Passing kwargs via CLI
+
+### JSON string
+
+```bash
+harbor run \
+  -d "terminal-bench@2.0" \
+  -m "anthropic/claude-sonnet-4-20250514" \
+  -a "claude-code" \
+  --agent-kwargs '{"max_turns": 30, "permission_mode": "bypassPermissions"}'
+```
+
+### YAML config file
+
+```yaml title="config.yaml"
+agent:
+  name: claude-code
+  model_name: anthropic/claude-sonnet-4-20250514
+  kwargs:
+    max_turns: 30
+    permission_mode: bypassPermissions
+    append_system_prompt: "Always run tests after making changes."
+```
+
+```bash
+harbor run -d "terminal-bench@2.0" --config config.yaml
+```
+
+## Integrating flags for custom agents
+
+If you are building a custom installed agent, we recommend using a typed Pydantic model to validate your kwargs:
+
+```python title="my_agent.py"
+from pydantic import BaseModel
+from harbor.agents.installed.base import BaseInstalledAgent
+
+class MyAgentConfig(BaseModel):
+    max_retries: int = 3
+    verbose: bool = False
+    custom_prompt: str | None = None
+
+class MyAgent(BaseInstalledAgent):
+    def __init__(self, agent_config: AgentConfig):
+        super().__init__(agent_config)
+        self.config = MyAgentConfig(**agent_config.kwargs)
+
+    def create_run_agent_commands(self, instruction: str) -> list[ExecInput]:
+        cmd = f"my-agent --max-retries {self.config.max_retries}"
+        if self.config.verbose:
+            cmd += " --verbose"
+        if self.config.custom_prompt:
+            cmd += f" --prompt {shlex.quote(self.config.custom_prompt)}"
+        # ...
+```
+
+This pattern keeps the framework interface stable while letting each agent define exactly what flags it accepts with full type safety and validation.
