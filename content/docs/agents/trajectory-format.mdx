@@ -34,7 +34,7 @@ The following agents in Harbor automatically generate ATIF-compliant trajectorie
 
 - **Terminus-2** - Harbor's reference agent implementation
 - **OpenHands** - Converts OpenHands event logs to ATIF format
-- **Mini-SWE-Agent** - Software engineering agent with trajectory support
+- **[Mini-SWE-Agent](/docs/agents/mini-swe-agent)** - Software engineering agent with trajectory support (converts `mini-swe-agent-1.1` format to ATIF)
 - **Gemini CLI** - Google's Gemini agent interface
 - **Claude Code** - Anthropic's code agent
 - **Codex** - OpenAI's Codex agent with trajectory support
@@ -72,6 +72,46 @@ The conversion process:
 3. Converts accumulated metrics to per-step deltas
 4. Creates a complete `Trajectory` object using Pydantic models
 5. Exports to JSON format
+
+### Mini-SWE-Agent Example
+
+[Mini-SWE-Agent](/docs/agents/mini-swe-agent) v2 produces trajectories in its native `mini-swe-agent-1.1` format, which Harbor converts to ATIF. The v2 format uses tool-calling (messages with `"role": "tool"` and `tool_call_id`) rather than the v1 text-based format (which used `"role": "user"` for observations and parsed ```` ```bash ```` blocks from assistant messages):
+
+```python
+# From harbor/agents/installed/mini_swe_agent.py
+def populate_context_post_run(self, context: AgentContext) -> None:
+    """Convert Mini-SWE-Agent v2 trajectory to ATIF format."""
+    mini_trajectory_path = self.logs_dir / "mini-swe-agent.trajectory.json"
+    mini_trajectory = json.loads(mini_trajectory_path.read_text())
+
+    # Extract token usage from v2 format
+    # v2 stores cost in extra.cost per assistant message
+    # and actions in extra.actions (not parsed from text)
+    for message in mini_trajectory.get("messages") or []:
+        role = message.get("role")
+        extra = message.get("extra") or {}
+
+        if role == "assistant":
+            # v2: actions are structured, not parsed from bash blocks
+            actions = extra.get("actions", [])
+            step_cost = extra.get("cost", 0)
+
+        elif role == "tool":
+            # v2: observations are "tool" messages with JSON content
+            tool_call_id = message.get("tool_call_id")
+            content = json.loads(message.get("content", "{}"))
+            returncode = content.get("returncode")
+            output = content.get("output")
+
+    # Convert to ATIF and save
+    convert_and_save_trajectory(
+        mini_swe_agent_trajectory_path=mini_trajectory_path,
+        atif_trajectory_path=self.logs_dir / "trajectory.json",
+        session_id=str(uuid.uuid4()),
+    )
+```
+
+The conversion maps Mini-SWE-Agent v2 messages to ATIF steps: `system` and `user` messages become system/user steps, `assistant` messages become agent steps with structured `tool_calls` from `extra.actions`, `tool` messages become `observation` results on the preceding agent step, and `exit` messages capture the final submission status.
 
 ## Data Classes
 

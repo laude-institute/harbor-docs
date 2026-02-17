@@ -1,0 +1,185 @@
+---
+title: Mini-SWE-Agent
+description: Lightweight software engineering agent with trajectory support
+---
+
+## Overview
+
+[Mini-SWE-Agent](https://github.com/SWE-agent/mini-swe-agent) is a lightweight, extensible software engineering agent from the SWE-agent team. It uses LLMs to autonomously solve coding tasks by executing bash commands in sandboxed environments. Harbor integrates Mini-SWE-Agent as an **installed agent** — it is installed directly into the container environment and executed in headless mode.
+
+## Installation
+
+Mini-SWE-Agent is installed from the official [SWE-agent/mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent) PyPI package. Harbor handles the installation automatically when you use the `--agent mini-swe-agent` flag.
+
+The install process:
+1. Installs [uv](https://docs.astral.sh/uv/) (the Python package manager)
+2. Installs `mini-swe-agent` from PyPI via `uv tool install mini-swe-agent`
+3. Optionally pins a specific version via `uv tool install mini-swe-agent==<version>`
+
+import { Callout } from 'fumadocs-ui/components/callout';
+
+<Callout title="Official Repository">
+Harbor installs Mini-SWE-Agent from the official [SWE-agent/mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent) repository (published as `mini-swe-agent` on PyPI). The CLI provides two equivalent entry points: `mini` and `mini-swe-agent`.
+</Callout>
+
+## Using Mini-SWE-Agent with Harbor
+
+### Basic Usage
+
+Run Mini-SWE-Agent on a task:
+
+```bash
+harbor run \
+  --agent mini-swe-agent \
+  --model anthropic/claude-sonnet-4-5-20250929 \
+  --path examples/tasks/ \
+  --task-name hello-world
+```
+
+### Job Configuration
+
+Example YAML configuration for running Mini-SWE-Agent:
+
+```yaml title="mini-swe-agent-job.yaml"
+jobs_dir: jobs
+n_attempts: 1
+timeout_multiplier: 1.0
+orchestrator:
+  type: local
+  n_concurrent_trials: 1
+  quiet: false
+environment:
+  type: docker
+  force_build: true
+  delete: true
+agents:
+  - name: mini-swe-agent
+    model_name: anthropic/claude-sonnet-4-5-20250929
+datasets:
+  - path: examples/tasks
+```
+
+### Environment Variables
+
+| Variable | Description |
+|----------|-------------|
+| `MSWEA_API_KEY` | API key for the LLM provider. If not set, Harbor infers the correct key variable from the model name (e.g., `ANTHROPIC_API_KEY` for Anthropic models). |
+| `OPENAI_API_BASE` | Custom API base URL, passed through to the agent if set. |
+
+## CLI Interface
+
+When Harbor runs Mini-SWE-Agent inside a container, it invokes the `mini-swe-agent` CLI with these flags:
+
+```bash
+mini-swe-agent \
+  --yolo \                    # Non-interactive mode (no confirmation prompts)
+  --model=<provider/model> \  # LLM model in litellm format
+  --task=<instruction> \      # Task description
+  --output=<path> \           # Trajectory output path
+  --cost-limit=0 \            # Disable cost limit (Harbor manages limits)
+  --exit-immediately          # Exit when done instead of prompting for new task
+```
+
+### Available CLI Flags
+
+The full Mini-SWE-Agent v2 CLI supports:
+
+| Flag | Short | Description |
+|------|-------|-------------|
+| `--model` | `-m` | Model to use (e.g., `anthropic/claude-sonnet-4-5-20250929`) |
+| `--task` | `-t` | Task/problem statement |
+| `--yolo` | `-y` | Run without confirmation prompts |
+| `--cost-limit` | `-l` | Cost limit in USD (0 to disable) |
+| `--output` | `-o` | Output trajectory file path |
+| `--config` | `-c` | Config file paths or key-value pairs |
+| `--model-class` | | Model class (e.g., `litellm`, `openrouter`, `portkey`) |
+| `--agent-class` | | Agent class (e.g., `interactive`, `default`) |
+| `--environment-class` | | Environment class (e.g., `local`, `docker`, `singularity`) |
+| `--exit-immediately` | | Exit when agent finishes |
+
+## Trajectory Format
+
+Mini-SWE-Agent v2 produces trajectories in the `mini-swe-agent-1.1` format. Harbor automatically converts these to [ATIF](/docs/agents/trajectory-format) format.
+
+### Native Trajectory Structure (v2)
+
+Mini-SWE-Agent v2 uses tool-calling and produces trajectories with this structure:
+
+```json
+{
+  "info": {
+    "model_stats": { "instance_cost": 0.45, "api_calls": 12 },
+    "config": {
+      "agent": { "system_template": "...", "mode": "yolo", ... },
+      "agent_type": "minisweagent.agents.interactive.InteractiveAgent",
+      "environment": { "cwd": "", "timeout": 30, ... },
+      "environment_type": "minisweagent.environments.local.LocalEnvironment",
+      "model": { "model_name": "anthropic/claude-sonnet-4-5-20250929", ... },
+      "model_type": "minisweagent.models.litellm_model.LitellmModel"
+    },
+    "mini_version": "2.1.0",
+    "exit_status": "Submitted",
+    "submission": "..."
+  },
+  "messages": [
+    { "role": "system", "content": "You are a helpful assistant..." },
+    { "role": "user", "content": "Please solve this issue: ..." },
+    {
+      "role": "assistant",
+      "content": "I need to understand the structure...",
+      "extra": {
+        "actions": [{ "command": "ls -la" }],
+        "cost": 0.03,
+        "timestamp_start": "...",
+        "timestamp_end": "..."
+      }
+    },
+    {
+      "role": "tool",
+      "content": "{\"returncode\": 0, \"output\": \"...\"}",
+      "tool_call_id": "..."
+    },
+    {
+      "role": "exit",
+      "content": "...",
+      "extra": { "exit_status": "Submitted", "submission": "..." }
+    }
+  ],
+  "trajectory_format": "mini-swe-agent-1.1"
+}
+```
+
+### Key Differences from v1
+
+Mini-SWE-Agent v2 (`mini-swe-agent-1.1`) introduces several changes from v1 (`mini-swe-agent-1`):
+
+| Aspect | v1 | v2 |
+|--------|----|----|
+| **Format version** | `mini-swe-agent-1` | `mini-swe-agent-1.1` |
+| **Observations** | `"role": "user"` with text content | `"role": "tool"` with JSON content and `tool_call_id` |
+| **Actions** | Parsed from `` ```bash `` blocks in assistant text | Structured in `extra.actions` array |
+| **Cost tracking** | Per-message in `extra.response.usage` | Per-message in `extra.cost` |
+| **Exit** | User message with sentinel | `"role": "exit"` with structured `extra` |
+| **Finish sentinel** | `MINI_SWE_AGENT_FINAL_OUTPUT` or `COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT` | Only `COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT` |
+
+### ATIF Conversion
+
+Harbor's `convert_mini_swe_agent_to_atif()` function handles the conversion from Mini-SWE-Agent's native format to [ATIF](/docs/agents/trajectory-format):
+
+| Mini-SWE-Agent | ATIF |
+|----------------|------|
+| `"role": "system"` message | `source: "system"` step |
+| `"role": "user"` (first) | `source: "user"` step |
+| `"role": "assistant"` with actions | `source: "agent"` step with `tool_calls` |
+| `"role": "tool"` response | `observation` on preceding agent step |
+| `"role": "exit"` | Final step with submission data |
+| `info.model_stats.instance_cost` | `final_metrics.total_cost_usd` |
+| Per-message token usage | Per-step `metrics` on agent steps |
+
+The converted trajectory is saved as `trajectory.json` alongside the original `mini-swe-agent.trajectory.json` in the agent logs directory.
+
+## Related Documentation
+
+- [Agents Overview](/docs/agents) — General agent integration guide
+- [Agent Trajectory Format](/docs/agents/trajectory-format) — ATIF specification and usage
+- [Mini-SWE-Agent GitHub](https://github.com/SWE-agent/mini-swe-agent) — Official repository
