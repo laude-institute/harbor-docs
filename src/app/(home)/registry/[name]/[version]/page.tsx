@@ -27,6 +27,8 @@ import type { SearchParams } from "nuqs/server";
 import { searchParamsCache } from "./searchParams";
 import { TaskCard } from "./task-card";
 
+export const revalidate = 60;
+
 type Dataset = Tables<"dataset">;
 type DatasetTask = Tables<"dataset_task">;
 

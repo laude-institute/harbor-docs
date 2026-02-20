@@ -5,6 +5,8 @@ import type { Tables } from "@/lib/supabase/types";
 import type { Metadata } from "next";
 import { DatasetCard } from "./dataset-card";
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "Harbor Registry",
   description: "Browse datasets available in the Harbor registry",
