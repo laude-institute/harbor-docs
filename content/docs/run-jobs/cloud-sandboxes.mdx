@@ -21,8 +21,8 @@ harbor run -d "<dataset@version>" \
 
 We run up to 100 trials in parallel on a MacBook Pro with 14 cores.
 
-## Limitations
+## Multi-container deployments
 
-All cloud sandbox providers we have tried do not support multi-container environments. Until one does, or you are willing to implement from scratch using Kubernetes (please submit a PR), you won't be able to run multi-container tasks in the cloud.
+Daytona supports multi-container deployments. To use multi-container tasks with Daytona, include an `environment/docker-compose.yaml` file in your task definition.
 
-However, the Docker environment still supports multi-container tasks. Just make sure to include an `environment/docker-compose.yaml` file in your task definiton.
+Other cloud sandbox providers (Modal, E2B) do not currently support multi-container environments. For those providers, you will need to use single-container tasks or switch to Daytona or the local Docker environment.

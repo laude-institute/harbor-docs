@@ -9,7 +9,7 @@ We plan to integrate with most popular RL frameworks. For now, we have worked wi
 
 In general, performing RL on Harbor tasks requires generating rollouts and recording tokens and rewards. This usually involves implementing an RL framework's rollout interface.
 
-We recommend using the `TrialConfig` or `JobConfig` classes to configure the rollouts. We also recommend using [cloud sandboxes](/docs/cloud) for scaling rollouts and reducing startup/teardown overhead.
+We recommend using the `TrialConfig` or `JobConfig` classes to configure the rollouts. We also recommend using [cloud sandboxes](/docs/run-jobs/cloud-sandboxes) for scaling rollouts and reducing startup/teardown overhead.
 
 Rollout interfaces typically receive batches of data to be used for the rollouts. We recommend using the `TaskConfig` class as the batch object. These configs can point to remote or local tasks.
 

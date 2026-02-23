@@ -4,12 +4,12 @@
         "getting-started",
         "core-concepts",
         "migration",
-        "agents",
+        "run-jobs",
         "tasks",
         "datasets",
-        "cloud",
-        "examples",
-        "use-cases",
+        "agents",
+        "training-workflows",
+        "tutorials",
         "contributing"
     ]
 }
