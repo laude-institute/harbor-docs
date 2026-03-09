@@ -1,0 +1,311 @@
+[
+  {
+    "github_handle": "li-boxuan",
+    "name": "Boxuan Li",
+    "affiliation": "Independent",
+    "email": "boxuanli@alumni.cmu.edu", 
+    "rank": 10000000,
+    "role": "Co-lead"
+  },
+  {
+    "github_handle": "alexgshaw",
+    "name": "Alex Shaw",
+    "affiliation": "Laude Institute",
+    "email": "alexgshaw64@gmail.com",
+    "rank": 10000000,
+    "role": "Co-lead"
+  },
+  {
+    "github_handle": "penfever",
+    "name": "Benjamin Feuer",
+    "affiliation": "Stanford University",
+    "email": "bf996@nyu.edu"
+  },
+  {
+    "github_handle": "StevenDillmann",
+    "name": "Steven Dillmann",
+    "affiliation": "Stanford University",
+    "email": "stevendi@stanford.edu"
+  },
+  {
+    "github_handle": "CharlieFRuan",
+    "name": "Charlie Ruan",
+    "affiliation": "UC Berkeley",
+    "email": "charlieruan@berkeley.edu"
+  },
+  {
+    "github_handle": "ibercovich",
+    "name": "Ivan Bercovich",
+    "affiliation": "Independent",
+    "email": "ibercovich@gmail.com"
+  },
+  {
+    "github_handle": "Slimshilin",
+    "name": "Lin Shi",
+    "affiliation": "Cornell Tech",
+    "email": "ls2282@cornell.edu",
+    "adapter_rank": 110000,
+    "role": "Adapter Lead"
+  },
+  {
+    "github_handle": "linhaowei1",
+    "name": "Haowei Lin",
+    "affiliation": "Peking University",
+    "email": "linhaowei@pku.edu.cn",
+    "adapter_rank": 100000, 
+    "role": "Co-lead"
+  },
+  {
+    "github_handle": "TheMikeMerrill",
+    "name": "Mike A. Merrill",
+    "affiliation": "Stanford University",
+    "email": "mikeam1@stanford.edu", 
+    "rank": 10000000,
+    "role": "Co-lead"
+  },
+  {
+    "github_handle": "harshraj172",
+    "name": "Harsh Raj",
+    "affiliation": "Northeastern University",
+    "email": "harsh777111raj@gmail.com"
+  },
+  {
+    "github_handle": "neginraoof",
+    "name": "Negin Raoof",
+    "affiliation": "UC Berkeley",
+    "email": "negin_raoof@berkeley.edu"
+  },
+  {
+    "github_handle": "chenzizhao",
+    "name": "Zizhao Chen",
+    "affiliation": "Cornell Tech",
+    "email": "czz@cs.cornell.edu"
+  },
+  {
+    "github_handle": "mieciu",
+    "name": "Przemys\u0142aw Hejman",
+    "affiliation": "Quesma",
+    "email": "przemyslaw.hejman@quesma.com"
+  },
+  {
+    "github_handle": "LithiumDA",
+    "name": "Shanda Li",
+    "affiliation": "Carnegie Mellon University",
+    "email": "shandal@cs.cmu.edu"
+  },
+  {
+    "github_handle": "james-rl",
+    "name": "James Chainey",
+    "affiliation": "Runloop",
+    "email": "james@runloop.ai"
+  },
+  {
+    "github_handle": "AkshayVenkataraman",
+    "name": "Akshay Venkataraman",
+    "affiliation": "Leeds Beckett University",
+    "email": "akshayv2k@gmail.com"
+  },
+  {
+    "github_handle": "jakozaur",
+    "name": "Jacek Migdal",
+    "affiliation": "Quesma",
+    "email": "jacek@quesma.com"
+  },
+  {
+    "github_handle": "dot-agi",
+    "name": "Pratyush Shukla",
+    "affiliation": "New York University",
+    "email": "ps4534@nyu.edu"
+  },
+  {
+    "github_handle": "michaelrglass",
+    "name": "Michael Glass",
+    "affiliation": "IBM",
+    "email": "mrglass@us.ibm.com"
+  },
+  {
+    "github_handle": "DannyGooo",
+    "name": "Yonghui Liu",
+    "affiliation": "Australian National University",
+    "email": "Yonghui.Liu@anu.edu.au"
+  },
+  {
+    "github_handle": "ZhengShenghan",
+    "name": "Shenghan Zheng",
+    "affiliation": "Dartmouth College",
+    "email": "shenghan.zheng.gr@dartmouth.edu"
+  },
+  {
+    "github_handle": "likaixin2000",
+    "name": "Kaixin Li",
+    "affiliation": "National University of Singapore",
+    "email": "likaixin@u.nus.edu"
+  },
+  {
+    "github_handle": "killthefullmoon",
+    "name": "Hui Shen",
+    "affiliation": "University of Michigan",
+    "email": "killthefullmoon@gmail.com"
+  },
+  {
+    "github_handle": "xianliu",
+    "name": "Xian Liu",
+    "affiliation": "Meetchances",
+    "email": "lxjsj@fedoraproject.org"
+  },
+  {
+    "github_handle": "hanxu12",
+    "name": "Han Xu",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "email": "hanxu8@illinois.edu"
+  },
+  {
+    "github_handle": "Ternura143",
+    "name": "Zixuan Zhu",
+    "affiliation": "Nanyang Technological University",
+    "email": "zzx18742002@gmail.com",
+    "adapter_rank": 1000 
+  },
+  {
+    "github_handle": "EstelYang",
+    "name": "Rui Yang",
+    "affiliation": "Peking University",
+    "email": "ypyangrui@pku.edu.cn"
+  },
+  {
+    "github_handle": "Hangzhi",
+    "name": "Yiwei Dai",
+    "affiliation": "Cornell University",
+    "email": "yd223@cornell.edu",
+    "adapter_rank": 500
+  },
+  {
+    "github_handle": "terryyz",
+    "name": "Terry Yue Zhuo",
+    "affiliation": "Monash University",
+    "email": "terryzhuo25@gmail.com"
+  },
+  {
+    "github_handle": "Rebabit",
+    "name": "Rebecca Deng",
+    "affiliation": "Cornell Tech",
+    "email": "rd629@cornell.edu"
+  },
+  {
+    "github_handle": "Waterpine",
+    "name": "Song Bian",
+    "affiliation": "University of Wisconsin-Madison",
+    "email": "sbian8@wisc.edu"
+  },
+  {
+    "github_handle": "avelanarius",
+    "name": "Piotr Grabowski",
+    "affiliation": "Quesma",
+    "email": "piotr@quesma.com"
+  },
+  {
+    "github_handle": "bstee615",
+    "name": "Benjamin Steenhoek",
+    "affiliation": "Microsoft",
+    "email": "benjaminjsteenhoek@gmail.com"
+  },
+  {
+    "github_handle": "XuandongZhao",
+    "name": "Xuandong Zhao",
+    "affiliation": "UC Berkeley",
+    "email": "csxuandongzhao@gmail.com"
+  },
+  {
+    "github_handle": "kobe0938",
+    "name": "Xiaokun Chen",
+    "affiliation": "Stanford University",
+    "email": "xiaokunchen0@gmail.com"
+  },
+  {
+    "github_handle": "aht",
+    "name": "Hai-Anh Trinh",
+    "affiliation": "Independent",
+    "email": "anh.hai.trinh@gmail.com"
+  },
+  {
+    "github_handle": "robertzhidealx",
+    "name": "Robert Zhang",
+    "affiliation": "University of Texas at Austin",
+    "email": "robertz@cs.utexas.edu"
+  },
+  {
+    "github_handle": "crystalxyz",
+    "name": "Crystal Zhou",
+    "affiliation": "Cornell University",
+    "email": "xz957@cornell.edu", 
+    "adapter_rank": 1000
+  },
+  {
+    "github_handle": "orfeas-menis",
+    "name": "Orfeas Menis Mastromichalakis",
+    "affiliation": "Instituto de Telecomunica\u00e7\u00f5es",
+    "email": "menisorfeas@gmail.com"
+  },
+  {
+    "github_handle": "davidheineman",
+    "name": "David Heineman",
+    "affiliation": "Allen Institute for AI",
+    "email": "davidh@allenai.org"
+  },
+  {
+    "github_handle": "omi-n",
+    "name": "Nabil Omi",
+    "affiliation": "University of Washington",
+    "email": "nabilomi@cs.washington.edu"
+  },
+  {
+    "github_handle": "junhongmit",
+    "name": "Junhong Lin",
+    "affiliation": "Massachusetts Institute of Technology",
+    "email": "junhonghust@gmail.com"
+  },
+  {
+    "github_handle": "MichaelY310",
+    "name": "Michael Yang",
+    "affiliation": "UC Santa Barbara",
+    "email": "yang335@ucsb.edu"
+  },
+  {
+    "github_handle": "ethanlshen",
+    "name": "Ethan Shen",
+    "affiliation": "University of Washington",
+    "email": "ethans03@cs.washington.edu"
+  },
+  {
+    "github_handle": "Dongzhikang",
+    "name": "Zhikang Dong",
+    "affiliation": "Stony Brook University",
+    "email": "zhikang.dong.1@stonybrook.edu"
+  },
+  {
+    "github_handle": "audreycs",
+    "name": "Yuxin Wang",
+    "affiliation": "Dartmouth College",
+    "email": "yuxin.wang.gr@dartmouth.edu"
+  },
+  {
+    "github_handle": "ekellbuch",
+    "name": "Kelly Buchanan",
+    "affiliation": "Stanford University",
+    "email": "ekb@stanford.edu"
+  },
+  {
+    "github_handle": "speed1313",
+    "name": "Issa Sugiura",
+    "affiliation": "Kyoto University",
+    "email": "sugiura.issa.q29@kyoto-u.jp"
+  },
+  {
+    "github_handle": "ludwigschmidt", 
+    "name": "Ludwig Schmidt", 
+    "affiliation": "Stanford University",
+    "email": "ludwigschmidt2@gmail.com",
+    "role": "Advisor", 
+    "rank": -100 
+  }
+]

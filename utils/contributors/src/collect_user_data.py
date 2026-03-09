@@ -9,8 +9,11 @@ Outputs raw_github_users_data.json with fields:
 """
 
 import json
+import os
 import subprocess
 import sys
+
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 
 
 def get_user_info(handle: str) -> dict:
@@ -24,7 +27,7 @@ def get_user_info(handle: str) -> dict:
 
 
 def main():
-    with open("raw_pr_data.json") as f:
+    with open(os.path.join(DATA_DIR, "raw_pr_data.json")) as f:
         pr_data = json.load(f)
 
     # Collect unique author handles
@@ -43,7 +46,7 @@ def main():
             "affiliation": info.get("company") or "",
         })
 
-    output_path = "raw_github_users_data.json"
+    output_path = os.path.join(DATA_DIR, "raw_github_users_data.json")
     with open(output_path, "w") as f:
         json.dump(users, f, indent=2)
 

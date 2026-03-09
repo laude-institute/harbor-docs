@@ -1,0 +1,3677 @@
+[
+  {
+    "github_handle": "li-boxuan",
+    "email": "boxuanli@alumni.cmu.edu",
+    "name": "Boxuan Li",
+    "affiliation": "Independent",
+    "role": "Co-lead",
+    "rank": 10000000,
+    "adapter_rank": 0,
+    "pr_count": 47,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 47,
+    "total_additions": 18670,
+    "total_deletions": 6305,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/475",
+        "pr_title": "Revert litellm hack for OpenHands",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/420",
+        "pr_title": "Fix: Remove duplicate error_msg in OutputLengthExceededError handling",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/364",
+        "pr_title": "Fix unit test failure in lite_llm.py",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/350",
+        "pr_title": "Add get model limit utility and fix Terminus-2 error message",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/341",
+        "pr_title": "Bump OpenHands to 1.0.0 in tests and update gold trajectories & traces",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/313",
+        "pr_title": "Fix ruff check on fork",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/274",
+        "pr_title": "Add CI gate for ruff linter on modified files",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/272",
+        "pr_title": "Do not pass host env variables to Docker environment",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/265",
+        "pr_title": "Terminus-2: Support optional interleaved thinking",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/237",
+        "pr_title": "GPU support + example task that requires GPU",
+        "pr_type": "task"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/225",
+        "pr_title": "Trajectories & traces for OpenHands: handle tool calling",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/184",
+        "pr_title": "Terminus-2 Trajectory: raw_content & linear_history modes",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/183",
+        "pr_title": "Export SFT traces from trajectories",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/177",
+        "pr_title": "Fix error message in Terminus trajectory",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/174",
+        "pr_title": "Add integration tests for exported traces",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/169",
+        "pr_title": "OpenHands trajectory fixes: tool call definitions and bookkeeping steps",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/156",
+        "pr_title": "Terminus-2: Add model_info parameter to register LLM info",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/141",
+        "pr_title": "Terminus-2: Full trajectories, rollout details, bug fixes and E2E tests",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/132",
+        "pr_title": "Terminus trajectory: Remove first user message",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/125",
+        "pr_title": "Terminus 2: prompt token ids and reasoning content",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/122",
+        "pr_title": "Fix metric discrepancy in openhands golden trajectory",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/118",
+        "pr_title": "Clean up integration tests + Drop source_call_id for terminus trajectory",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/117",
+        "pr_title": "Terminus-2: Include erroneous json response in trajectory message field",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/105",
+        "pr_title": "Fix test.sh in example task",
+        "pr_type": "task"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/95",
+        "pr_title": "CI: remove redundant test stage",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/93",
+        "pr_title": "Gemini-CLI to generate trajectory in ATIF",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/84",
+        "pr_title": "Terminus-2 to return rollout details (completion_token_ids, log_probs)",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/81",
+        "pr_title": "Terminus-2: Remove token counting hack",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/79",
+        "pr_title": "Fix token counting in terminus_2 summarisation subagent",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/78",
+        "pr_title": "Mini SWE Agent: use forked version + generate trajectory following ATIF spec",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/76",
+        "pr_title": "Polish trajectory model field descriptions",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/71",
+        "pr_title": "Openhands to generate trajectory in ATIF",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/65",
+        "pr_title": "Add trajectory validator and tests",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/62",
+        "pr_title": "Handle exceptions on non-critical paths",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/60",
+        "pr_title": "Terminus-2 Agent: metrics reporting & trajectory generation",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/56",
+        "pr_title": "[RFC] Agent Trajectory Interchange Format (ATIF) Specification",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/55",
+        "pr_title": "Fix docker exec deadlock for tasks with large output",
+        "pr_type": "task"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/51",
+        "pr_title": "Fix ruff violations and add linting to CI",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/50",
+        "pr_title": "Terminus-2 to pass session_id",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/48",
+        "pr_title": "Regenerate corrupt uv.lock",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/45",
+        "pr_title": "Include logprobs in AgentContext",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/37",
+        "pr_title": "Return cost in AgentResult",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/33",
+        "pr_title": "Port docker cache clean up logic from terminal-bench",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/32",
+        "pr_title": "Add token count for OpenHands agent",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/31",
+        "pr_title": "Fix & clean up tests",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/30",
+        "pr_title": "Minor change to openhands agent",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/29",
+        "pr_title": "Agent refactoring - jinja2 templating, versioning, tests, CI, and more",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "alexgshaw",
+    "email": "alexgshaw64@gmail.com",
+    "name": "Alex Shaw",
+    "affiliation": "Laude Institute",
+    "role": "Co-lead",
+    "rank": 10000000,
+    "adapter_rank": 0,
+    "pr_count": 25,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 25,
+    "total_additions": 20555,
+    "total_deletions": 11093,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/911",
+        "pr_title": "Enable skills in agents.",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/772",
+        "pr_title": "Add comprehensive trajectory conversion for mini-swe-agent formats",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/603",
+        "pr_title": "Add Responses API support for Terminus",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/495",
+        "pr_title": "Claude/add package dashboard lxufb",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/476",
+        "pr_title": "Improve terminal bench mapper functionality",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/468",
+        "pr_title": "feat(hooks): add job-level named hook methods for trial lifecycle events",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/394",
+        "pr_title": "Remove verbose flag and show task counts",
+        "pr_type": "task"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/388",
+        "pr_title": "Postgres registry",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/362",
+        "pr_title": "Fix AttributeError when accessing default environment type in CLI",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/361",
+        "pr_title": "Change -a shorthand in start-env from --agent to --all",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/360",
+        "pr_title": "Restrict environment variables passed to Oracle container",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/359",
+        "pr_title": "Add include-standard-metadata option to tasks init",
+        "pr_type": "task"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/327",
+        "pr_title": "Make internet configurable from task config",
+        "pr_type": "task"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/326",
+        "pr_title": "Add CLAUDE.md documentation for AI assistants",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/325",
+        "pr_title": "feat: add support for custom environment implementations via import path",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/318",
+        "pr_title": "Revert to include env vars in docker.",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/70",
+        "pr_title": "Alexgshaw/support docker compose",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/52",
+        "pr_title": "Warn users about Modal Python installation",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/43",
+        "pr_title": "QOL upgrades from running a billion ICLR experiments",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/24",
+        "pr_title": "Rename package, strip out db, reformat results and configs, change base environment methods.",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/22",
+        "pr_title": "Daytona",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/18",
+        "pr_title": "Alex-temp",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/14",
+        "pr_title": "Add Claude Code GitHub Workflow",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/9",
+        "pr_title": "Create cli command for single trial",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/1",
+        "pr_title": "Working branch",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "penfever",
+    "email": "bf996@nyu.edu",
+    "name": "Benjamin Feuer",
+    "affiliation": "Stanford University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 17,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 17,
+    "total_additions": 4050,
+    "total_deletions": 211,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/527",
+        "pr_title": "Queue orchestrator",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/526",
+        "pr_title": "OpenHands Improvements",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/465",
+        "pr_title": "[FEATURE] Close old log handlers after trial returns",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/339",
+        "pr_title": "[FEATURE] Improve LiteLLM Handling of vLLM Hosted Models ",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/337",
+        "pr_title": "[TINY] Increase tmux history limit",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/336",
+        "pr_title": "[TINY] Warn user if required model_info is left unset",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/276",
+        "pr_title": "[FEATURE] Make asciinema recording optional",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/235",
+        "pr_title": "add verifier output and instructions",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/217",
+        "pr_title": "Extract result during trace exports",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/163",
+        "pr_title": "Enhance episode conversation extraction logic",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/160",
+        "pr_title": "BUGFIX: Numeric rather than lexical sorting of episodes",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/147",
+        "pr_title": "Robust termination of aiohttp events wrapping Daytona containers",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/144",
+        "pr_title": "Oracle Agent Hardening",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/142",
+        "pr_title": "Penfever/handle vllm context length errors correctly",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/119",
+        "pr_title": "guard traces format acquisition",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/42",
+        "pr_title": "Penfever/all scripts",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/36",
+        "pr_title": "Penfever/working",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "xiaoxiangmoe",
+    "email": "",
+    "name": "ZHAO Jin-Xiang",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 11,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 11,
+    "total_additions": 350,
+    "total_deletions": 162,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/963",
+        "pr_title": "Add `--agent-env` support to all agents",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/902",
+        "pr_title": "Lock ruff and ty version",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/870",
+        "pr_title": "Add `--environment-import-path` to job config",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/804",
+        "pr_title": "Set pull_policy to build in docker-compose build",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/795",
+        "pr_title": "Add specific phase timeout multipliers",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/777",
+        "pr_title": "Wait for the actual container startup in DockerEnvironment.start",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/776",
+        "pr_title": "Fix the bug that `| tee` in verifier call may hang forever",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/757",
+        "pr_title": "Allow prompts starting with `-`",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/755",
+        "pr_title": "add procps to prevent process crashes when claude-code call tree-kill",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/722",
+        "pr_title": "Use `bach -c` rather than `bash -lc`",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/240",
+        "pr_title": "Run script directly to respect shebang",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "StevenDillmann",
+    "email": "stevendi@stanford.edu",
+    "name": "Steven Dillmann",
+    "affiliation": "Stanford University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 10,
+    "adapter_pr_count": 2,
+    "non_adapter_pr_count": 8,
+    "total_additions": 2601,
+    "total_deletions": 28,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/638",
+        "pr_title": "Revise citation section in README.md",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/637",
+        "pr_title": "Remove version in CITATION.cff",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/566",
+        "pr_title": "Update CITATION.cff",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/564",
+        "pr_title": "Update title in citation section in README.md",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/560",
+        "pr_title": "Fix author formatting in citation",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/556",
+        "pr_title": "Update citation section in README.md",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/444",
+        "pr_title": "Make reasoning parameters configurable via kwargs",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/260",
+        "pr_title": "Add initial CITATION.cff file",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/146",
+        "pr_title": "[Adapter] Update ReplicationBench to include masked manuscripts of papers",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/92",
+        "pr_title": "[Adapter] Adding ReplicationBench adapter to Harbor",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "ibercovich",
+    "email": "ibercovich@gmail.com",
+    "name": "Ivan Bercovich",
+    "affiliation": "Independent",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 9,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 9,
+    "total_additions": 678,
+    "total_deletions": 66,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/435",
+        "pr_title": "Fix graceful shutdown on SIGTERM",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/319",
+        "pr_title": "feat(viewer): round rewards to 4 decimal places",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/298",
+        "pr_title": "made newline a requirement in prompt since small LLMs were failing",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/251",
+        "pr_title": "feat(mini-swe-agent): pass through OPENAI_API_BASE for custom endpoints",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/148",
+        "pr_title": "Updated checker and debugger",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/74",
+        "pr_title": "Update model name in gemini-cli-job.yaml",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/73",
+        "pr_title": "Replace 'sb' with 'harbor' in README",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/68",
+        "pr_title": "Update sandbox creation timeout configuration",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/47",
+        "pr_title": "porting sb tasks check and debug from terminal-bench",
+        "pr_type": "task"
+      }
+    ]
+  },
+  {
+    "github_handle": "CharlieFRuan",
+    "email": "charlieruan@berkeley.edu",
+    "name": "Charlie Ruan",
+    "affiliation": "UC Berkeley",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 8,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 8,
+    "total_additions": 288,
+    "total_deletions": 94,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/686",
+        "pr_title": "[Terminus] Fix `n_episodes` counting when error out",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/653",
+        "pr_title": "[Terminus] Do not retry on ContextLengthExceededError when enable_summarize=False",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/651",
+        "pr_title": "[Env] Make sandbox lifecycle timeouts configurable via environment kwargs",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/650",
+        "pr_title": "[Modal] Add tenacity to modal just like daytona",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/593",
+        "pr_title": "[LLMs] Remove ParseError as it is not used anywhere",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/592",
+        "pr_title": "[Trial] Remove EnvironmentBuildTimeoutError since it is not used",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/561",
+        "pr_title": "[Env] Add EnvironmentConfig.suppress_override_warnings and Terminus kwarg suppress_max_turns_warning",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/524",
+        "pr_title": "[terminus] Remove _logger and use BaseAgent logger directly",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "Ternura143",
+    "email": "zzx18742002@gmail.com",
+    "name": "Zixuan Zhu",
+    "affiliation": "Nanyang Technological University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 1000,
+    "pr_count": 8,
+    "adapter_pr_count": 3,
+    "non_adapter_pr_count": 5,
+    "total_additions": 358099,
+    "total_deletions": 293018,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/1009",
+        "pr_title": "[Ready for Review] Add kimi-cli agent",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/998",
+        "pr_title": "[Ready for Review] Standardize registry.json, add CI check, and fix sync",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/983",
+        "pr_title": "[Ready for Review] Fix pagination bug in sync_registry_to_supabase",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/973",
+        "pr_title": "[Ready for Review] Restore 9 deleted dataset entries",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/905",
+        "pr_title": "[Ready For Review] Fix Claude Code double-counting input tokens",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/857",
+        "pr_title": "[Ready for Review] Add automated adapter review bot for PR validation",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/797",
+        "pr_title": "[Ready for Review] Update parity comparison table in adapter readme template",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/358",
+        "pr_title": "[Ready for Review - Final Fix] Adapter: bfcl",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "Slimshilin",
+    "email": "ls2282@cornell.edu",
+    "name": "Lin Shi",
+    "affiliation": "Cornell Tech",
+    "role": "Adapter Lead",
+    "rank": 0,
+    "adapter_rank": 110000,
+    "pr_count": 7,
+    "adapter_pr_count": 4,
+    "non_adapter_pr_count": 3,
+    "total_additions": 9179,
+    "total_deletions": 10887,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/580",
+        "pr_title": "Add parity API instructions for adapter experiments",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/579",
+        "pr_title": "[Ready to merge] OPENAI_BASE_URL support for codex.",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/516",
+        "pr_title": "remove aider-polyglot and livecodebench duplicates",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/263",
+        "pr_title": "Fix EvoEval Adapter forked_repo Link",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/98",
+        "pr_title": "Adapters readme template",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/83",
+        "pr_title": "Adapter README template",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/82",
+        "pr_title": "Fix -t to -p. Polish README",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "linhaowei1",
+    "email": "linhaowei@pku.edu.cn",
+    "name": "Haowei Lin",
+    "affiliation": "Peking University",
+    "role": "Co-lead",
+    "rank": 0,
+    "adapter_rank": 100000,
+    "pr_count": 6,
+    "adapter_pr_count": 5,
+    "non_adapter_pr_count": 1,
+    "total_additions": 6653,
+    "total_deletions": 47,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/440",
+        "pr_title": "[Ready for Review] Adapter: Algotune",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/438",
+        "pr_title": "[BugFix] Fix hello-world registry format",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/424",
+        "pr_title": "[FIX] Update Parity for Adapter: AutoCodeBench",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/292",
+        "pr_title": "[fix adapter] Revise the parity results for SLDBench",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/151",
+        "pr_title": "[adapter] Add SLDBench",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/106",
+        "pr_title": "Add Autocodebench adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "TheMikeMerrill",
+    "email": "mikeam1@stanford.edu",
+    "name": "Mike A. Merrill",
+    "affiliation": "Stanford University",
+    "role": "Co-lead",
+    "rank": 10000000,
+    "adapter_rank": 0,
+    "pr_count": 6,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 6,
+    "total_additions": 6136,
+    "total_deletions": 1352,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/40",
+        "pr_title": "t2 context improperly queried",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/27",
+        "pr_title": "Fix token tracking",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/20",
+        "pr_title": "Mikeam/agents two",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/19",
+        "pr_title": "Add logging to terminus",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/16",
+        "pr_title": "Initial terminus2",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/2",
+        "pr_title": "Add DB implementation",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "neginraoof",
+    "email": "negin_raoof@berkeley.edu",
+    "name": "Negin Raoof",
+    "affiliation": "UC Berkeley",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 6,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 5,
+    "total_additions": 5244,
+    "total_deletions": 302,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/817",
+        "pr_title": "Add OT-TerminalBench-Dev dataset (100 tasks)",
+        "pr_type": "task"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/279",
+        "pr_title": "Adding swe-agent",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/243",
+        "pr_title": "Inline swe-agent inference config",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/242",
+        "pr_title": "Add SWE-agent configuration example",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/49",
+        "pr_title": "updated terminus 2 summarization fallback",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/44",
+        "pr_title": "Swebench adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "harshraj172",
+    "email": "harsh777111raj@gmail.com",
+    "name": "Harsh Raj",
+    "affiliation": "Northeastern University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 5,
+    "adapter_pr_count": 2,
+    "non_adapter_pr_count": 3,
+    "total_additions": 8873,
+    "total_deletions": 241,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/458",
+        "pr_title": "add codex trajectory.json back",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/115",
+        "pr_title": "Add swesmith adapter",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/86",
+        "pr_title": "claude-code atif formatting",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/77",
+        "pr_title": "Codex ATIF trajectory",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/58",
+        "pr_title": "Add the `aider-polyglot` adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "chenzizhao",
+    "email": "czz@cs.cornell.edu",
+    "name": "Zizhao Chen",
+    "affiliation": "Cornell Tech",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 4,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 3,
+    "total_additions": 37076,
+    "total_deletions": 71989,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/518",
+        "pr_title": "Revise bixbench README with known issue and task details",
+        "pr_type": "task"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/472",
+        "pr_title": "Update registry with bixbench-cli",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/451",
+        "pr_title": "[ready for review] bixbench-cli addition",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/154",
+        "pr_title": "[Ready for review - final fix] Adapter: BixBench",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "Chesars",
+    "email": "",
+    "name": "Cesar Garcia",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 4,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 3,
+    "total_additions": 7,
+    "total_deletions": 4,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/989",
+        "pr_title": "Fix typos in README.md",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/861",
+        "pr_title": "Fix typo in adapter template README",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/176",
+        "pr_title": "fix: flaky terminus_2 timeout test",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/175",
+        "pr_title": "docs: Fix broken link in README.md",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "michaelrglass",
+    "email": "mrglass@us.ibm.com",
+    "name": "Michael Glass",
+    "affiliation": "IBM",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 4,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 4,
+    "total_additions": 121,
+    "total_deletions": 13,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/885",
+        "pr_title": "View image artifacts in harbor view",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/631",
+        "pr_title": "Support default values in env var templates",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/489",
+        "pr_title": "Fix docker environment to treat empty docker_image as no prebuilt image",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/456",
+        "pr_title": "Stderr was being lost by redirecting to stdout after the tee command",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "mieciu",
+    "email": "przemyslaw.hejman@quesma.com",
+    "name": "Przemys\u0142aw Hejman",
+    "affiliation": "Quesma",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 4,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 3,
+    "total_additions": 612,
+    "total_deletions": 54,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/515",
+        "pr_title": "Fix openrouter model name ",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/246",
+        "pr_title": "Support `--env daytona --ek network_block_all=true` in `harbor run`",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/214",
+        "pr_title": "Fix `--no-delete` in Docker environment",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/170",
+        "pr_title": "Adding CompileBench dataset/adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "LithiumDA",
+    "email": "shandal@cs.cmu.edu",
+    "name": "Shanda Li",
+    "affiliation": "Carnegie Mellon University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 4,
+    "adapter_pr_count": 4,
+    "non_adapter_pr_count": 0,
+    "total_additions": 1147,
+    "total_deletions": 15,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/466",
+        "pr_title": "fix (adapter): registery",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/139",
+        "pr_title": "[Adapter] fix (codepde): remove tmux & asciinema from Dockerfile",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/102",
+        "pr_title": "[CodePDE Adapter] fix: linting",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/90",
+        "pr_title": "[Adapter] Adding CodePDE adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "anishathalye",
+    "email": "me@anishathalye.com",
+    "name": "Anish Athalye",
+    "affiliation": "@joinhandshake",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 3,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 3,
+    "total_additions": 219,
+    "total_deletions": 9,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/898",
+        "pr_title": "Fix MCP support for Cline",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/859",
+        "pr_title": "Add type checking to CI",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/655",
+        "pr_title": "Add MCP support for OpenHands",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "josancamon19",
+    "email": "",
+    "name": "Joan Cabezas",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 3,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 3,
+    "total_additions": 1392,
+    "total_deletions": 79,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/967",
+        "pr_title": "Add first-class Tinker LLM backend for Terminus-2",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/705",
+        "pr_title": "feat: add multi-job support to harbor jobs summarize",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/643",
+        "pr_title": "fix: Gemini CLI ATIF trajectory conversion for harbor view",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "james-rl",
+    "email": "james@runloop.ai",
+    "name": "James Chainey",
+    "affiliation": "Runloop",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 3,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 3,
+    "total_additions": 285,
+    "total_deletions": 119,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/467",
+        "pr_title": "Prefer prebuilt images when running with runloop env",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/210",
+        "pr_title": "Added resource config for runloop env",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/189",
+        "pr_title": "Fixed runloop env",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "RishiDesai",
+    "email": "",
+    "name": "Rishi Desai",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 3,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 3,
+    "total_additions": 33046,
+    "total_deletions": 27018,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/512",
+        "pr_title": "registry for swe-gen-js",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/230",
+        "pr_title": "Serialize Docker image builds to prevent parallel build race condition",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/200",
+        "pr_title": "Allow custom BaseLLM backend for Agent",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "digitsisyph",
+    "email": "",
+    "name": "digitsi",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 3,
+    "adapter_pr_count": 2,
+    "non_adapter_pr_count": 1,
+    "total_additions": 7109,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/153",
+        "pr_title": "Add adapter init command",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/143",
+        "pr_title": "Add trajectory viewer",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/69",
+        "pr_title": "Add adapter for evoeval",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "Ji-Pengliang",
+    "email": "",
+    "name": "Pengliang Ji",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 3,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 2,
+    "total_additions": 2230,
+    "total_deletions": 3,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/550",
+        "pr_title": "Add --n-attempts 2 to arc_agi_2 reproduction command",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/401",
+        "pr_title": "update arc-agi-2 parity test pr",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/220",
+        "pr_title": "[Ready for Review - fixing] Adapter: ARC-AGI-2 benchmark",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "luxinyu1",
+    "email": "",
+    "name": "Solaris",
+    "affiliation": "Institute of Software, Chinese Academy of Sciences",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 3,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 3,
+    "total_additions": 31,
+    "total_deletions": 11,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/900",
+        "pr_title": "Pass through CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING env var to claude code agent",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/506",
+        "pr_title": "Fix Claude Code trajectory extraction when subagents are used",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/236",
+        "pr_title": "Add custom API base URL support for claude code agent",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "AkshayVenkataraman",
+    "email": "akshayv2k@gmail.com",
+    "name": "Akshay Venkataraman",
+    "affiliation": "Leeds Beckett University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 3,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 3,
+    "total_additions": 45,
+    "total_deletions": 9,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/247",
+        "pr_title": "initial commit to enable agent setup timeout override",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/226",
+        "pr_title": "improved workdir parse logic",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/195",
+        "pr_title": "made tmux viewport size configurable",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "rynewang",
+    "email": "",
+    "name": "Ruiyang Wang",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 3,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 3,
+    "total_additions": 1051,
+    "total_deletions": 238,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/771",
+        "pr_title": "Fix hello-alpine reward.txt containing pytest output",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/769",
+        "pr_title": "Add Docker Compose (DinD) support for Daytona environment",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/767",
+        "pr_title": "Fix hello-mcp example to use streamable-http transport",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "pfbyjy",
+    "email": "",
+    "name": "Meji A",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 109,
+    "total_deletions": 23,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/333",
+        "pr_title": "Update claude_code.py to allow access to all tools",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/75",
+        "pr_title": "Convert Terminal-Bench docker-compose to Harbor format in mapper",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "arafatkatze",
+    "email": "arafat.da.khan@gmail.com",
+    "name": "Ara",
+    "affiliation": "Cline",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 1210,
+    "total_deletions": 32,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/1019",
+        "pr_title": "cline-cli: recover usage from task history",
+        "pr_type": "task"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/585",
+        "pr_title": "Fix Cline Provider to support new Auth/CLI config",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "jrvb-rl",
+    "email": "rob@runloop.ai",
+    "name": "Rob von Behren",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 96,
+    "total_deletions": 31,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/876",
+        "pr_title": "Improve Runloop blueprint handling.",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/862",
+        "pr_title": "Improve error handling and implement correct delete behavior for runloop environment.",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "connor-cognition",
+    "email": "",
+    "name": "connor-cognition",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 293,
+    "total_deletions": 8,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/470",
+        "pr_title": "feat: add secret and volume support to modal environment",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/457",
+        "pr_title": "chore: pin modal sdk to `1.3.1.dev9`",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "thdxr",
+    "email": "mail@thdxr.com",
+    "name": "Dax",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 4,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/316",
+        "pr_title": "Change opencode command to output JSON format",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/121",
+        "pr_title": "Enable OPENCODE_FAKE_VCS for OpenCode agent",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "EtashGuha",
+    "email": "",
+    "name": "EtashGuha",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 32570,
+    "total_deletions": 3336,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/113",
+        "pr_title": "update train on traces",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/38",
+        "pr_title": "added triage for together context limit issue",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "giansegato",
+    "email": "",
+    "name": "gian",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 999,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/212",
+        "pr_title": "feat: Add GKE/Kubernetes environment support",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/135",
+        "pr_title": "Add extended thinking mode support for Anthropic models",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "HaishuoFang",
+    "email": "fanghaishuo@gmail.com",
+    "name": "Haishuo",
+    "affiliation": "TU Darmstadt",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 2,
+    "non_adapter_pr_count": 0,
+    "total_additions": 2966,
+    "total_deletions": 87,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/434",
+        "pr_title": "Fix ruff check error for financeagent Adapter",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/267",
+        "pr_title": "[Ready for Review - final discussion] Adapter: FinanceAgent",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "HiromuHota",
+    "email": "hiromu.hota@gmail.com",
+    "name": "Hiromu Hota",
+    "affiliation": "https://snorkel.ai/",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 4,
+    "total_deletions": 7,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/131",
+        "pr_title": "Add content from run-tests.sh correctly during migration",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/130",
+        "pr_title": "Allow difficulty: unknown for compat w/TB1.0",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "DannyGooo",
+    "email": "Yonghui.Liu@anu.edu.au",
+    "name": "Yonghui Liu",
+    "affiliation": "Australian National University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 2,
+    "non_adapter_pr_count": 0,
+    "total_additions": 2716,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/452",
+        "pr_title": "[Ready for Review] Adapter: Spider2 - Experiment with Harbor-supported agents",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/436",
+        "pr_title": "[Ready for Review] Adapter: Spider2",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "lurf21",
+    "email": "",
+    "name": "Ruofan Lu",
+    "affiliation": "The Chinese University of Hong Kong",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 7,
+    "total_deletions": 5,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/700",
+        "pr_title": "fix openhands reasoning_effort",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/284",
+        "pr_title": "fix: pass env variables when oracle agent executes the command",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "RyanMarten",
+    "email": "",
+    "name": "Ryan Marten",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 153,
+    "total_deletions": 174,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/1010",
+        "pr_title": "Give quality checker agent access to full task directory via tools",
+        "pr_type": "task"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/971",
+        "pr_title": "Strip canary markers from instruction text",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "jakozaur",
+    "email": "jacek@quesma.com",
+    "name": "Jacek Migdal",
+    "affiliation": "Quesma",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 13564,
+    "total_deletions": 13120,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/662",
+        "pr_title": "Add otel-bench benchmark to registry.json",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/661",
+        "pr_title": "Add binary-audit benchmark to registry.json",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "stared",
+    "email": "pmigdal@gmail.com",
+    "name": "Piotr Migda\u0142",
+    "affiliation": "ex: Quantum Flytrap CTO & cofounder",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 285,
+    "total_deletions": 27,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/367",
+        "pr_title": "Viewer cost estimate with LiteLLM",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/308",
+        "pr_title": "Add smart port handling for `harbor view`",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "octaviaguo",
+    "email": "",
+    "name": "octaviaguo",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 2,
+    "non_adapter_pr_count": 0,
+    "total_additions": 3471,
+    "total_deletions": 153,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/446",
+        "pr_title": "Update StrongReject adapter with new registry",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/363",
+        "pr_title": "[Ready for Review] Adapter: StrongReject",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "paraliine",
+    "email": "",
+    "name": "Xiaoxuan Peng",
+    "affiliation": "CQU",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 2,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/216",
+        "pr_title": "Fix Terminus2 tmux logging path",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/215",
+        "pr_title": "Fix blocking tmux send-keys execution",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "dot-agi",
+    "email": "ps4534@nyu.edu",
+    "name": "Pratyush Shukla",
+    "affiliation": "New York University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 450,
+    "total_deletions": 21,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/589",
+        "pr_title": "Fix Docker environment directory nesting and stale container bugs",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/539",
+        "pr_title": "Fix NVM sourcing failure with strict mode",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "rotemtam",
+    "email": "",
+    "name": "Rotem Tamir",
+    "affiliation": "honeybadge.co",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 220,
+    "total_deletions": 7,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/262",
+        "pr_title": "fix: `--agent-import-path` ignored when `-a` not specified",
+        "pr_type": "engineering"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/259",
+        "pr_title": "fix: add Alpine Linux support for claude-code agent",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "tlongwell-block",
+    "email": "",
+    "name": "tlongwell-block",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 2,
+    "total_additions": 41,
+    "total_deletions": 15,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/191",
+        "pr_title": "support additional inference providers for the goose agent to allow benching open models",
+        "pr_type": "other"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/188",
+        "pr_title": "enable goose developer and todo extensions in harbor recipe",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "Anjiang-Wei",
+    "email": "",
+    "name": "Anjiang Wei",
+    "affiliation": "Stanford University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 2,
+    "non_adapter_pr_count": 0,
+    "total_additions": 13415,
+    "total_deletions": 10,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/418",
+        "pr_title": "Remove repository path setup from run_adapter.py to fix ruff error",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/395",
+        "pr_title": "[Ready for Review] Adapter: SATBench",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "ZhengShenghan",
+    "email": "shenghan.zheng.gr@dartmouth.edu",
+    "name": "Shenghan Zheng",
+    "affiliation": "Dartmouth College",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 2,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 1,
+    "total_additions": 22,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/632",
+        "pr_title": "[FIX] add -max-turn support in claude adapter",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/535",
+        "pr_title": "[Ready for Review] BUG-FIX: fix gemini-cli skill loading failure",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "crystalxyz",
+    "email": "xz957@cornell.edu",
+    "name": "Crystal Zhou",
+    "affiliation": "Cornell University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 1000,
+    "pr_count": 2,
+    "adapter_pr_count": 2,
+    "non_adapter_pr_count": 0,
+    "total_additions": 2129,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/780",
+        "pr_title": "[Ready for Review] Update adapter readme template for authors and contributions section",
+        "pr_type": "adapter"
+      },
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/201",
+        "pr_title": "[Ready for review - Final Review] Adapter: LAB-Bench FigQA",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "1171-jpg",
+    "email": "",
+    "name": "140",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 1836,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/403",
+        "pr_title": "[Ready for Review] Adapter: Ineqmath",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "alexandraabbas",
+    "email": "",
+    "name": "Alexandra Abbas",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 1359,
+    "total_deletions": 1359,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/1020",
+        "pr_title": "Fix task paths in registry.json for swtbench-verified and swe-lancer-diamond",
+        "pr_type": "task"
+      }
+    ]
+  },
+  {
+    "github_handle": "ai-jz",
+    "email": "",
+    "name": "ai-jz",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 6,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/173",
+        "pr_title": "feat: Add Claude Code OAuth token support for subscription users",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "George-ao",
+    "email": "",
+    "name": "Yuyi Ao",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 40,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/949",
+        "pr_title": "Fix Claude Code trajectory JSONL",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "BauerJustin",
+    "email": "",
+    "name": "Justin Bauer",
+    "affiliation": "@snorkel-ai ",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 557,
+    "total_deletions": 126,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/815",
+        "pr_title": "Update tasks check to use Claude Agents SDK + ingest rubrics file",
+        "pr_type": "task"
+      }
+    ]
+  },
+  {
+    "github_handle": "bd317",
+    "email": "",
+    "name": "Benedikt",
+    "affiliation": "@ellamind",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 237,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/915",
+        "pr_title": "Fix Claude Code thinking blocks lost in ATIF trajectory conversion",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "beran-t",
+    "email": "",
+    "name": "Berry",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 5,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/627",
+        "pr_title": "Fix E2B exec() throwing on non-zero exit codes",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "Waterpine",
+    "email": "sbian8@wisc.edu",
+    "name": "Song Bian",
+    "affiliation": "University of Wisconsin-Madison",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 25831,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/307",
+        "pr_title": "[Ready for Review] mmau adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "ekellbuch",
+    "email": "ekb@stanford.edu",
+    "name": "Kelly Buchanan",
+    "affiliation": "Stanford University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 48,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/853",
+        "pr_title": "Add Ollama configuration example",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "bochencs",
+    "email": "",
+    "name": "Bo Chen",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 1916,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/581",
+        "pr_title": "[Ready for review] Adapter: GAIA",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "kobe0938",
+    "email": "xiaokunchen0@gmail.com",
+    "name": "Xiaokun Chen",
+    "affiliation": "Stanford University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 1761,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/257",
+        "pr_title": "[Ready for Review - fixing] Adapter: Humanevalfix",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "cliangyu",
+    "email": "",
+    "name": "Leon Chen",
+    "affiliation": "Stanford University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 1197,
+    "total_deletions": 19,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/26",
+        "pr_title": "Migrate 11 agents from terminal-bench to sandboxes",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "santaboi",
+    "email": "",
+    "name": "Jeffrey Yang Fan Chiang",
+    "affiliation": "University of Maryland College Park",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 1,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/104",
+        "pr_title": "Fix Terminal Bench 2.0 description typo",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "Hangzhi",
+    "email": "yd223@cornell.edu",
+    "name": "Yiwei Dai",
+    "affiliation": "Cornell University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 500,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 1768,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/346",
+        "pr_title": "[Ready for review  -Final Fix] Quixbugs adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "Rebabit",
+    "email": "rd629@cornell.edu",
+    "name": "Rebecca Deng",
+    "affiliation": "Cornell Tech",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 1883,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/311",
+        "pr_title": "[Ready for Review - Final Fix] Adapter: MMMLU",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "dzorlu",
+    "email": "",
+    "name": "Deniz",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 6,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/232",
+        "pr_title": "feat: store all messages",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "dines-rl",
+    "email": "",
+    "name": "Alexander Dines",
+    "affiliation": "Run Loop",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 275,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/46",
+        "pr_title": "Add Runloop Environment",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "Dongzhikang",
+    "email": "zhikang.dong.1@stonybrook.edu",
+    "name": "Zhikang Dong",
+    "affiliation": "Stony Brook University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 2140,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/89",
+        "pr_title": "adapter for Deveval",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "elainelau-hs",
+    "email": "",
+    "name": "elainelau-hs",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 35,
+    "total_deletions": 20,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/1021",
+        "pr_title": "opencode: register model in opencode config to avoid ProviderModelNotFoundError",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "ifoukarakis",
+    "email": "",
+    "name": "Ioannis Foukarakis",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 5,
+    "total_deletions": 4,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/323",
+        "pr_title": "fix: default registry URL reference",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "avelanarius",
+    "email": "piotr@quesma.com",
+    "name": "Piotr Grabowski",
+    "affiliation": "Quesma",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 16,
+    "total_deletions": 16,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/275",
+        "pr_title": "[Adapter] Update CompileBench adapter, fixing oracle on Daytona",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "KunWuLuan",
+    "email": "kunwuluan@gmail.com",
+    "name": "GreenHand",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 4,
+    "total_deletions": 3,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/658",
+        "pr_title": "fix(swe_agent): support multiple API key variables from model name",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "tyler-griggs",
+    "email": "",
+    "name": "Tyler Griggs",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 2,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/21",
+        "pr_title": "Update .gitignore",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "Guangy627",
+    "email": "",
+    "name": "Guangy627",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 2,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/485",
+        "pr_title": "Fix/trajectorydump",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "nandatheguntupalli",
+    "email": "",
+    "name": "Nanda Guntupalli",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 74,
+    "total_deletions": 11,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/399",
+        "pr_title": "Enhance documentation and structure in CLAUDE.md and README.md",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "davidheineman",
+    "email": "davidh@allenai.org",
+    "name": "David Heineman",
+    "affiliation": "Allen Institute for AI",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 8656,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/100",
+        "pr_title": "[Ready for Review] Adapter: SWE-Lancer",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "HOU-SZ",
+    "email": "",
+    "name": "Shizheng Hou",
+    "affiliation": "National University of Singapore",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 257013,
+    "total_deletions": 251746,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/415",
+        "pr_title": "[Ready for Review] Adapter: BIRD-Bench",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "huangkicn",
+    "email": "huangkicn@gmail.com",
+    "name": "Ke Huang",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 218,
+    "total_deletions": 4,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/737",
+        "pr_title": "Add Amazon Bedrock support for Claude Code agent",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "kanazawa-asyncio",
+    "email": "",
+    "name": "Kanaza",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 1208,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/376",
+        "pr_title": "feat(registry): add Alibaba terminal-bench-pro dataset",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "rohitpaulk",
+    "email": "rohitpaulk@gmail.com",
+    "name": "Paul Kuruvilla",
+    "affiliation": "@codecrafters-io",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 23,
+    "total_deletions": 4,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/499",
+        "pr_title": "[Ready for review] Raise RuntimeError for agent setup failures",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "Evangelink",
+    "email": "evangelink@gmail.com",
+    "name": "Amaury Lev\u00e9",
+    "affiliation": "@microsoft ",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 285,
+    "total_deletions": 99,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/525",
+        "pr_title": "Add support for running harbor on Windows",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "AlienKevin",
+    "email": "",
+    "name": "Kevin Xiang Li",
+    "affiliation": "Stanford University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 4572,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/628",
+        "pr_title": "[Ready for Review] Adapter: MedAgentBench",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "likaixin2000",
+    "email": "likaixin@u.nus.edu",
+    "name": "Kaixin Li",
+    "affiliation": "National University of Singapore",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 2,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/513",
+        "pr_title": "Fix error message formatting for invalid agent names",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "xdotli",
+    "email": "xiangyi@benchflow.ai",
+    "name": "Xiangyi Li",
+    "affiliation": "@benchflow-ai",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 4,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/459",
+        "pr_title": "fix(claude-code): CLAUDE_CONFIG_DIR giving errors for accessing .claude folder",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "lijrjyan",
+    "email": "",
+    "name": "lijrjyan",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 67264,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/414",
+        "pr_title": "[Ready for Review] Adapter: KUMO",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "EazyReal",
+    "email": "maxwill@meta.com",
+    "name": "Maxwill Lin",
+    "affiliation": "@facebook",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 11,
+    "total_deletions": 5,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/1039",
+        "pr_title": "Fix agent install scripts failing when uv env file doesn't exist",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "junhongmit",
+    "email": "junhonghust@gmail.com",
+    "name": "Junhong Lin",
+    "affiliation": "Massachusetts Institute of Technology",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 3521,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/97",
+        "pr_title": "[Adapter] Adding USACO Adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "xianliu",
+    "email": "lxjsj@fedoraproject.org",
+    "name": "Xian Liu",
+    "affiliation": "Meetchances",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 2116,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/402",
+        "pr_title": "[Ready for Review] Add crustbench adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "liyuyun-lyy",
+    "email": "",
+    "name": "liyuyun-lyy",
+    "affiliation": "Alibaba",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 1,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/168",
+        "pr_title": "fix: use yolo mode to pass hello world test",
+        "pr_type": "engineering"
+      }
+    ]
+  },
+  {
+    "github_handle": "orfeas-menis",
+    "email": "menisorfeas@gmail.com",
+    "name": "Orfeas Menis Mastromichalakis",
+    "affiliation": "Instituto de Telecomunica\u00e7\u00f5es",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 887,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/149",
+        "pr_title": "Adapter for AIME",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "minjie-cohere",
+    "email": "",
+    "name": "Minjie",
+    "affiliation": "Cohere",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 284,
+    "total_deletions": 12,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/887",
+        "pr_title": "Fix silent tmux send-keys failure on long commands",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "neubig",
+    "email": "",
+    "name": "Graham Neubig",
+    "affiliation": "Carnegie Mellon University / All Hands AI",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 709,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/738",
+        "pr_title": "Add OpenHands v1 SDK agent adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "robinnewhouse",
+    "email": "",
+    "name": "Robin Newhouse",
+    "affiliation": "Cline",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 0,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/803",
+        "pr_title": "cline: remove unsupported 'cline instance kill -a' command",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "omi-n",
+    "email": "nabilomi@cs.washington.edu",
+    "name": "Nabil Omi",
+    "affiliation": "University of Washington",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 1771,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/99",
+        "pr_title": "[Adapter] Add mlgym-bench adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "pashpashpash",
+    "email": "nik@cline.bot",
+    "name": "pashpashpash",
+    "affiliation": "vault77.ai",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 178,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/198",
+        "pr_title": "cline cli integration",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "dpedchenko",
+    "email": "",
+    "name": "Dmitrii Pedchenko",
+    "affiliation": "FAIR @ Meta MSL",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 7,
+    "total_deletions": 4,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/194",
+        "pr_title": "Minor change to Modal backend",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "rootCircle",
+    "email": "",
+    "name": "Lab Rat",
+    "affiliation": "@uber, @iiitl ",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 40,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/343",
+        "pr_title": "Fix: normalize `--path .` to absolute to prevent invalid Docker tags",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "Riatre",
+    "email": "",
+    "name": "Riatre",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 1,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/886",
+        "pr_title": "Do not escape value of docker exec `-e` arguments",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "MarcoRossignoli",
+    "email": "",
+    "name": "Marco Rossignoli",
+    "affiliation": "@microsoft",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 9,
+    "total_deletions": 2,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/507",
+        "pr_title": "Support large dataset downloads on Windows",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "emrousselle",
+    "email": "",
+    "name": "Emmanuel Rousselle",
+    "affiliation": "Hashicorp",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 2,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/986",
+        "pr_title": "Add support for Openrouter (OPENROUTER_API_KEY) in OpenCode agent",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "asadoughi",
+    "email": "",
+    "name": "Amir Sadoughi",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 194,
+    "total_deletions": 4,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/640",
+        "pr_title": "Support passing arbitrary env vars",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "ssatia",
+    "email": "",
+    "name": "Sanyam Satia",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 100,
+    "total_deletions": 3,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/1022",
+        "pr_title": "Add reasoning_effort support (--effort flag) to Claude Code agent",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "self-supervisor",
+    "email": "",
+    "name": "self-supervisor",
+    "affiliation": "@VmaxAI ",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 6266,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/563",
+        "pr_title": "Vmax tasks",
+        "pr_type": "task"
+      }
+    ]
+  },
+  {
+    "github_handle": "neverSettles",
+    "email": "",
+    "name": "Chris Settles",
+    "affiliation": "Operative AI, Inc",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 1748,
+    "total_deletions": 122,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/549",
+        "pr_title": "ATIF 1.5->1.6: Support multimodal trajectories",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "Michaelsqj",
+    "email": "shenqijia11@gmail.com",
+    "name": "Qijia Shen",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 8263,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/577",
+        "pr_title": "add seta env to registry.json",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "killthefullmoon",
+    "email": "killthefullmoon@gmail.com",
+    "name": "Hui Shen",
+    "affiliation": "University of Michigan",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 7849,
+    "total_deletions": 904,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/432",
+        "pr_title": "[Ready for Review] Adapter: DS1000",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "ethanlshen",
+    "email": "ethans03@cs.washington.edu",
+    "name": "Ethan Shen",
+    "affiliation": "University of Washington",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 9,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/94",
+        "pr_title": "Added summarization toggle",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "WingchunSiu",
+    "email": "",
+    "name": "Michael Siu",
+    "affiliation": "University of Southern California",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 21,
+    "total_deletions": 4,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/652",
+        "pr_title": "Add llm_call_kwargs to Terminus2 for per-call LLM parameter",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "vatsj",
+    "email": "jacobstavrianos@gmail.com",
+    "name": "Jacob Stavrianos",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 3,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/481",
+        "pr_title": "suppress daytona container auto-shutdown",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "steadyworksai",
+    "email": "founders@steadyworks.ai",
+    "name": "Steadyworks",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 13,
+    "total_deletions": 13,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/837",
+        "pr_title": "fix: use line-buffered tee for real-time agent log monitoring",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "bstee615",
+    "email": "benjaminjsteenhoek@gmail.com",
+    "name": "Benjamin Steenhoek",
+    "affiliation": "Microsoft",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 43,
+    "total_deletions": 20,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/269",
+        "pr_title": "Support Azure OpenAI endpoints for LiteLLM agents",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "speed1313",
+    "email": "sugiura.issa.q29@kyoto-u.jp",
+    "name": "Issa Sugiura",
+    "affiliation": "Kyoto University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 26791,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/530",
+        "pr_title": "[Ready for Review] Adapter: SimpleQA",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "ThomAub",
+    "email": "github.thomaub@gmail.com",
+    "name": "Thomas",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 15,
+    "total_deletions": 12,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/1042",
+        "pr_title": "Improve Harbor CLI startup time with lazy imports",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "tmacie",
+    "email": "",
+    "name": "tmacie",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 6,
+    "total_deletions": 8,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/586",
+        "pr_title": "Fix modal gpu selection",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "aht",
+    "email": "anh.hai.trinh@gmail.com",
+    "name": "Hai-Anh Trinh",
+    "affiliation": "Independent",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 5038,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/256",
+        "pr_title": "[Ready for Review] Adapter: REASONING GYM ",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "audreycs",
+    "email": "yuxin.wang.gr@dartmouth.edu",
+    "name": "Yuxin Wang",
+    "affiliation": "Dartmouth College",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 2158,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/88",
+        "pr_title": "[Adapter] Adding Livecodebench adpter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "harvenstar",
+    "email": "",
+    "name": "Hudson Xing",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 3859,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/629",
+        "pr_title": "[Ready for Review] Adapter: DABstep",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "hanxu12",
+    "email": "hanxu8@illinois.edu",
+    "name": "Han Xu",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 7030,
+    "total_deletions": 1,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/380",
+        "pr_title": "[Ready for Review] Adapter: LawBench",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "EstelYang",
+    "email": "ypyangrui@pku.edu.cn",
+    "name": "Rui Yang",
+    "affiliation": "Peking University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 68583,
+    "total_deletions": 67032,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/351",
+        "pr_title": "[Ready for Review] Adapter: QCircuitBench",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "MichaelY310",
+    "email": "yang335@ucsb.edu",
+    "name": "Michael Yang",
+    "affiliation": "UC Santa Barbara",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 15684,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/96",
+        "pr_title": "[Ready For Review]  Adding SWTBench Adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "Yiozolm",
+    "email": "m202310581@xs.ustb.edu.cn",
+    "name": "Fangzhou Yi",
+    "affiliation": "University of Science and Technology Beijing",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 10,
+    "total_deletions": 4,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/464",
+        "pr_title": "Add support for GLM models",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "zjysteven",
+    "email": "",
+    "name": "Jingyang Zhang",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 21403,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/846",
+        "pr_title": "Add TermiGen environments (https://github.com/ucsb-mlsec/terminal-bench-env)",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "robertzhidealx",
+    "email": "robertz@cs.utexas.edu",
+    "name": "Robert Zhang",
+    "affiliation": "University of Texas at Austin",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 9252,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/249",
+        "pr_title": "Adapters: SWE-bench Pro",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "XuandongZhao",
+    "email": "csxuandongzhao@gmail.com",
+    "name": "Xuandong Zhao",
+    "affiliation": "UC Berkeley",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 1723,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/264",
+        "pr_title": "[Adapter] GPQA-Diamond Adapter",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "richardzhuang0412",
+    "email": "",
+    "name": "Richard Zhuang",
+    "affiliation": "",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 1,
+    "total_additions": 91,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/181",
+        "pr_title": "Added patching fix for openhand when handling together context limit error",
+        "pr_type": "other"
+      }
+    ]
+  },
+  {
+    "github_handle": "terryyz",
+    "email": "terryzhuo25@gmail.com",
+    "name": "Terry Yue Zhuo",
+    "affiliation": "Monash University",
+    "role": "Contributor",
+    "rank": 0,
+    "adapter_rank": 0,
+    "pr_count": 1,
+    "adapter_pr_count": 1,
+    "non_adapter_pr_count": 0,
+    "total_additions": 10081,
+    "total_deletions": 0,
+    "pr_list": [
+      {
+        "pr_url": "https://github.com/harbor-framework/harbor/pull/330",
+        "pr_title": "[Ready for Review - fixing] Adapter: BigCodeBench-Hard",
+        "pr_type": "adapter"
+      }
+    ]
+  },
+  {
+    "github_handle": "ludwigschmidt",
+    "email": "ludwigschmidt2@gmail.com",
+    "name": "Ludwig Schmidt",
+    "affiliation": "Stanford University",
+    "role": "Advisor",
+    "rank": -100,
+    "adapter_rank": 0,
+    "pr_count": 0,
+    "adapter_pr_count": 0,
+    "non_adapter_pr_count": 0,
+    "total_additions": 0,
+    "total_deletions": 0,
+    "pr_list": []
+  }
+]

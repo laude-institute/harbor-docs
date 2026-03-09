@@ -12,10 +12,22 @@
     "affiliation": ""
   },
   {
+    "github_handle": "AlienKevin",
+    "email": "",
+    "name": "Kevin Xiang Li",
+    "affiliation": "Stanford University"
+  },
+  {
     "github_handle": "Anjiang-Wei",
     "email": "",
     "name": "Anjiang Wei",
     "affiliation": "Stanford University"
+  },
+  {
+    "github_handle": "BauerJustin",
+    "email": "",
+    "name": "Justin Bauer",
+    "affiliation": "@snorkel-ai "
   },
   {
     "github_handle": "CharlieFRuan",
@@ -42,6 +54,12 @@
     "affiliation": ""
   },
   {
+    "github_handle": "EazyReal",
+    "email": "maxwill@meta.com",
+    "name": "Maxwill Lin",
+    "affiliation": "@facebook"
+  },
+  {
     "github_handle": "EstelYang",
     "email": "",
     "name": "EstelYang",
@@ -54,10 +72,28 @@
     "affiliation": ""
   },
   {
+    "github_handle": "Evangelink",
+    "email": "evangelink@gmail.com",
+    "name": "Amaury Lev\u00e9",
+    "affiliation": "@microsoft "
+  },
+  {
+    "github_handle": "George-ao",
+    "email": "",
+    "name": "Yuyi Ao",
+    "affiliation": ""
+  },
+  {
     "github_handle": "Guangy627",
     "email": "",
     "name": "Guangy627",
     "affiliation": ""
+  },
+  {
+    "github_handle": "HOU-SZ",
+    "email": "",
+    "name": "Shizheng Hou",
+    "affiliation": "National University of Singapore"
   },
   {
     "github_handle": "HaishuoFang",
@@ -120,9 +156,21 @@
     "affiliation": ""
   },
   {
+    "github_handle": "Riatre",
+    "email": "",
+    "name": "Riatre",
+    "affiliation": ""
+  },
+  {
     "github_handle": "RishiDesai",
     "email": "",
     "name": "Rishi Desai",
+    "affiliation": ""
+  },
+  {
+    "github_handle": "RyanMarten",
+    "email": "",
+    "name": "Ryan Marten",
     "affiliation": ""
   },
   {
@@ -147,6 +195,12 @@
     "github_handle": "TheMikeMerrill",
     "email": "",
     "name": "TheMikeMerrill",
+    "affiliation": ""
+  },
+  {
+    "github_handle": "ThomAub",
+    "email": "github.thomaub@gmail.com",
+    "name": "Thomas",
     "affiliation": ""
   },
   {
@@ -192,6 +246,12 @@
     "affiliation": ""
   },
   {
+    "github_handle": "alexandraabbas",
+    "email": "",
+    "name": "Alexandra Abbas",
+    "affiliation": ""
+  },
+  {
     "github_handle": "alexgshaw",
     "email": "alexgshaw64@gmail.com",
     "name": "Alex Shaw",
@@ -202,6 +262,18 @@
     "email": "me@anishathalye.com",
     "name": "Anish Athalye",
     "affiliation": "@joinhandshake"
+  },
+  {
+    "github_handle": "arafatkatze",
+    "email": "arafat.da.khan@gmail.com",
+    "name": "Ara",
+    "affiliation": "Cline"
+  },
+  {
+    "github_handle": "asadoughi",
+    "email": "",
+    "name": "Amir Sadoughi",
+    "affiliation": ""
   },
   {
     "github_handle": "audreycs",
@@ -216,9 +288,21 @@
     "affiliation": "@QuesmaOrg"
   },
   {
+    "github_handle": "bd317",
+    "email": "",
+    "name": "Benedikt",
+    "affiliation": "@ellamind"
+  },
+  {
     "github_handle": "beran-t",
     "email": "",
     "name": "Berry",
+    "affiliation": ""
+  },
+  {
+    "github_handle": "bochencs",
+    "email": "",
+    "name": "Bo Chen",
     "affiliation": ""
   },
   {
@@ -260,7 +344,7 @@
   {
     "github_handle": "digitsisyph",
     "email": "",
-    "name": "Gary?",
+    "name": "digitsi",
     "affiliation": ""
   },
   {
@@ -288,6 +372,24 @@
     "affiliation": ""
   },
   {
+    "github_handle": "ekellbuch",
+    "email": "",
+    "name": "E. Kelly Buchanan",
+    "affiliation": ""
+  },
+  {
+    "github_handle": "elainelau-hs",
+    "email": "",
+    "name": "elainelau-hs",
+    "affiliation": ""
+  },
+  {
+    "github_handle": "emrousselle",
+    "email": "",
+    "name": "Emmanuel Rousselle",
+    "affiliation": "Hashicorp"
+  },
+  {
     "github_handle": "ethanlshen",
     "email": "ethans03@cs.washington.edu",
     "name": "Ethan Shen",
@@ -310,6 +412,18 @@
     "email": "",
     "name": "Harsh Raj",
     "affiliation": "Khoury College, Northeastern University "
+  },
+  {
+    "github_handle": "harvenstar",
+    "email": "",
+    "name": "Hudson Xing",
+    "affiliation": ""
+  },
+  {
+    "github_handle": "huangkicn",
+    "email": "huangkicn@gmail.com",
+    "name": "Ke Huang",
+    "affiliation": ""
   },
   {
     "github_handle": "ibercovich",
@@ -342,6 +456,12 @@
     "affiliation": ""
   },
   {
+    "github_handle": "jrvb-rl",
+    "email": "rob@runloop.ai",
+    "name": "Rob von Behren",
+    "affiliation": ""
+  },
+  {
     "github_handle": "junhongmit",
     "email": "junhonghust@gmail.com",
     "name": "Junhong Lin",
@@ -363,13 +483,19 @@
     "github_handle": "kobe0938",
     "email": "xiaokunchen0@gmail.com",
     "name": "Kobe Chen",
-    "affiliation": "Stanford U"
+    "affiliation": "Stanford Univerisity"
   },
   {
     "github_handle": "li-boxuan",
     "email": "",
     "name": "Boxuan Li",
     "affiliation": "Microsoft"
+  },
+  {
+    "github_handle": "lijrjyan",
+    "email": "",
+    "name": "lijrjyan",
+    "affiliation": ""
   },
   {
     "github_handle": "likaixin2000",
@@ -399,7 +525,7 @@
     "github_handle": "luxinyu1",
     "email": "",
     "name": "Solaris",
-    "affiliation": "ISCAS"
+    "affiliation": "Institute of Software, Chinese Academy of Sciences"
   },
   {
     "github_handle": "michaelrglass",
@@ -414,6 +540,12 @@
     "affiliation": "blindroot.com"
   },
   {
+    "github_handle": "minjie-cohere",
+    "email": "",
+    "name": "Minjie",
+    "affiliation": "Cohere"
+  },
+  {
     "github_handle": "nandatheguntupalli",
     "email": "",
     "name": "Nanda Guntupalli",
@@ -424,6 +556,12 @@
     "email": "",
     "name": "Negin Raoof",
     "affiliation": "UC Berkeley"
+  },
+  {
+    "github_handle": "neubig",
+    "email": "",
+    "name": "Graham Neubig",
+    "affiliation": "Carnegie Mellon University / All Hands AI"
   },
   {
     "github_handle": "neverSettles",
@@ -440,7 +578,7 @@
   {
     "github_handle": "omi-n",
     "email": "",
-    "name": "nabil",
+    "name": "Nabil Omi",
     "affiliation": "University of Washington, Microsoft"
   },
   {
@@ -486,6 +624,12 @@
     "affiliation": ""
   },
   {
+    "github_handle": "robinnewhouse",
+    "email": "",
+    "name": "Robin Newhouse",
+    "affiliation": "Cline"
+  },
+  {
     "github_handle": "rohitpaulk",
     "email": "rohitpaulk@gmail.com",
     "name": "Paul Kuruvilla",
@@ -504,9 +648,15 @@
     "affiliation": "honeybadge.co"
   },
   {
+    "github_handle": "rynewang",
+    "email": "",
+    "name": "Ruiyang Wang",
+    "affiliation": ""
+  },
+  {
     "github_handle": "santaboi",
     "email": "",
-    "name": "Yang Fan Chiang",
+    "name": "Jeffrey Yang Fan Chiang",
     "affiliation": "University of Maryland College Park"
   },
   {
@@ -516,10 +666,28 @@
     "affiliation": "@VmaxAI "
   },
   {
+    "github_handle": "speed1313",
+    "email": "",
+    "name": "Issa Sugiura",
+    "affiliation": "Kyoto University"
+  },
+  {
+    "github_handle": "ssatia",
+    "email": "",
+    "name": "Sanyam Satia",
+    "affiliation": ""
+  },
+  {
     "github_handle": "stared",
     "email": "pmigdal@gmail.com",
     "name": "Piotr Migda\u0142",
     "affiliation": "ex: Quantum Flytrap CTO & cofounder"
+  },
+  {
+    "github_handle": "steadyworksai",
+    "email": "founders@steadyworks.ai",
+    "name": "Steadyworks",
+    "affiliation": ""
   },
   {
     "github_handle": "terryyz",
@@ -568,5 +736,17 @@
     "email": "lxjsj@fedoraproject.org",
     "name": "Xian Liu",
     "affiliation": "Meetchances/ex-Bytedance/ex-Redhat"
+  },
+  {
+    "github_handle": "xiaoxiangmoe",
+    "email": "",
+    "name": "ZHAO Jin-Xiang",
+    "affiliation": ""
+  },
+  {
+    "github_handle": "zjysteven",
+    "email": "",
+    "name": "Jingyang Zhang",
+    "affiliation": ""
   }
 ]

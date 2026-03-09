@@ -6,10 +6,11 @@ Outputs raw_pr_data.json with fields:
 """
 
 import json
+import os
 import subprocess
 import sys
 
-
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 REPO = "laude-institute/harbor"
 PER_PAGE = 100
 
@@ -107,7 +108,7 @@ def main():
     # Sort by PR number descending
     pr_data.sort(key=lambda x: x["pr_number"], reverse=True)
 
-    output_path = "raw_pr_data.json"
+    output_path = os.path.join(DATA_DIR, "raw_pr_data.json")
     with open(output_path, "w") as f:
         json.dump(pr_data, f, indent=2)
 

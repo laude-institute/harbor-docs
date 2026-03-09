@@ -1,4 +1,4 @@
-import contributionData from "../../../../public/harbor_contribution.json";
+import contributionData from "../../../../utils/contributors/data/harbor_contribution.json";
 import { ContributorCard } from "./contributor-card";
 import Link from "next/link";
 
@@ -7,10 +7,20 @@ interface Contributor {
   email: string;
   name: string;
   affiliation: string;
+  role: string;
+  rank: number;
+  adapter_rank: number;
   pr_count: number;
+  adapter_pr_count: number;
+  non_adapter_pr_count: number;
   total_additions: number;
   total_deletions: number;
   pr_list: { pr_url: string; pr_title: string; pr_type: string }[];
+}
+
+function lastName(c: Contributor): string {
+  const parts = c.name.trim().split(/\s+/);
+  return (parts[parts.length - 1] ?? c.github_handle).toLowerCase();
 }
 
 function partitionContributors(data: Contributor[]) {
@@ -18,16 +28,21 @@ function partitionContributors(data: Contributor[]) {
   const adapterContributors: Contributor[] = [];
 
   for (const c of data) {
-    const hasAdapter = c.pr_list.some((pr) => pr.pr_type === "adapter");
-    const hasNonAdapter = c.pr_list.some((pr) => pr.pr_type !== "adapter");
-
-    if (hasNonAdapter) {
+    if (c.non_adapter_pr_count > 0 || c.rank !== 0) {
       harborContributors.push(c);
     }
-    if (hasAdapter) {
+    if (c.adapter_pr_count > 0 || c.adapter_rank !== 0) {
       adapterContributors.push(c);
     }
   }
+
+  // Rank first takes priority (descending), then PR count, then last name
+  harborContributors.sort(
+    (a, b) => b.rank - a.rank || b.non_adapter_pr_count - a.non_adapter_pr_count || lastName(a).localeCompare(lastName(b)),
+  );
+  adapterContributors.sort(
+    (a, b) => b.adapter_rank - a.adapter_rank || b.adapter_pr_count - a.adapter_pr_count || lastName(a).localeCompare(lastName(b)),
+  );
 
   return { harborContributors, adapterContributors };
 }
@@ -64,10 +79,7 @@ export default function ContributorsPage() {
                 key={`harbor-${c.github_handle}`}
                 name={c.name}
                 githubHandle={c.github_handle}
-                affiliation={c.affiliation}
-                prCount={c.pr_count}
-                totalAdditions={c.total_additions}
-                totalDeletions={c.total_deletions}
+                role={c.role}
               />
             ))}
           </div>
@@ -85,10 +97,7 @@ export default function ContributorsPage() {
                 key={`adapter-${c.github_handle}`}
                 name={c.name}
                 githubHandle={c.github_handle}
-                affiliation={c.affiliation}
-                prCount={c.pr_count}
-                totalAdditions={c.total_additions}
-                totalDeletions={c.total_deletions}
+                role={c.role}
               />
             ))}
           </div>

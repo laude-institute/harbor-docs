@@ -9,20 +9,12 @@ import {
 interface ContributorCardProps {
   name: string;
   githubHandle: string;
-  affiliation: string;
-  prCount: number;
-  totalAdditions: number;
-  totalDeletions: number;
+  role: string;
 }
 
-export function ContributorCard({
-  name,
-  githubHandle,
-  affiliation,
-  prCount,
-  totalAdditions,
-  totalDeletions,
-}: ContributorCardProps) {
+export function ContributorCard({ name, githubHandle, role }: ContributorCardProps) {
+  const hasName = name && name !== githubHandle;
+
   return (
     <Link
       href={`https://github.com/${githubHandle}`}
@@ -32,16 +24,12 @@ export function ContributorCard({
     >
       <Card className="shadow-none rounded-none h-full hover:bg-sidebar dark:hover:bg-accent transition-colors">
         <CardHeader>
-          <CardTitle className="font-code text-lg">{name}</CardTitle>
+          <CardTitle className="font-code text-lg">
+            {hasName ? name : `@${githubHandle}`}
+          </CardTitle>
           <CardDescription className="font-code text-xs">
-            @{githubHandle}
+            {hasName ? `@${githubHandle} · ${role}` : role}
           </CardDescription>
-          {affiliation && (
-            <p className="text-xs text-muted-foreground">{affiliation}</p>
-          )}
-          <p className="text-xs text-muted-foreground font-code pt-1">
-            {prCount} PRs &middot; +{totalAdditions.toLocaleString()} / &minus;{totalDeletions.toLocaleString()}
-          </p>
         </CardHeader>
       </Card>
     </Link>
