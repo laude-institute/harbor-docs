@@ -1,0 +1,143 @@
+# Skills in Harbor
+
+Benchmarking agent skills has become a common use case (e.g., [skillsbench.ai](http://skillsbench.ai)). Harbor now provides first-class support for skills, making it easy to evaluate how well agents can discover, understand, and use custom skills.
+
+## Overview
+
+In Harbor, a skill is a reusable tool or command that an agent can invoke to accomplish part of a task. Skills are defined as structured documents and packaged in a directory that Harbor distributes to agents during task execution.
+
+## Configuring Skills in a Task
+
+To enable skills in a Harbor task, add the `skills_dir` field to the `[environment]` section of your `task.toml`:
+
+```toml
+[environment]
+skills_dir = "/skills"
+```
+
+The `skills_dir` specifies the path **inside the container** where skills are located. Harbor will pass this path to agents via their `__init__` method, and agents are responsible for registering the skills in their expected location.
+
+## Defining Skills
+
+Skills are organized in a directory structure. Each skill is a subdirectory containing a `SKILL.md` file with metadata and instructions:
+
+```
+environment/skills/
+├── skill-one/
+│   └── SKILL.md
+├── skill-two/
+│   └── SKILL.md
+└── ...
+```
+
+### SKILL.md Format
+
+Each skill's `SKILL.md` file should have YAML frontmatter followed by markdown documentation:
+
+```markdown
+---
+name: skill-name
+description: Brief description of what this skill does
+---
+
+# Skill Name
+
+Detailed description and usage instructions for the agent.
+
+## Instructions
+
+Step-by-step guide or examples showing how to use this skill.
+```
+
+The `name` field is how agents discover and reference the skill. The `description` field helps agents understand what the skill does. The markdown body provides detailed instructions for using the skill.
+
+## Packaging Skills in the Container
+
+In your `Dockerfile`, copy the skills directory into the container at the path specified in `task.toml`:
+
+```dockerfile
+# Copy skills into the container at /skills so Harbor can distribute them
+# to the agent's skills directory via the skills_dir config.
+COPY skills/ /skills/
+```
+
+## Agent Registration
+
+When an agent is initialized, Harbor passes the `skills_dir` path in the agent's `__init__` method. The agent is responsible for registering skills—typically by copying them to the agent's expected skills location.
+
+For example, the Claude Code agent's `setup()` method includes:
+
+```python
+def _build_register_skills_command(self) -> str | None:
+    """Copy skills from the environment to Claude's config directory."""
+    if not self.skills_dir:
+        return None
+    return (
+        f"(cp -r {shlex.quote(self.skills_dir)}/* "
+        "$CLAUDE_CONFIG_DIR/skills/ 2>/dev/null || true)"
+    )
+```
+
+This copies all skills from the container's skills directory to `~/.claude/skills/` so Claude Code can discover and use them.
+
+## Example: Hello Skills Task
+
+Harbor includes an example task that demonstrates skills usage in `examples/tasks/hello-skills/`:
+
+```
+hello-skills/
+├── task.toml                          # Sets skills_dir = "/skills"
+├── instruction.md                     # Task description
+├── environment/
+│   ├── Dockerfile                     # Copies skills/ to /skills
+│   └── skills/
+│       └── generate-greeting/
+│           └── SKILL.md               # Skill definition
+├── tests/
+│   └── test.sh                        # Verification script
+└── solution/
+    └── solve.sh                       # Reference solution
+```
+
+The instruction tells the agent to discover the `generate-greeting` skill and use it. The agent registers the skill in its setup phase, discovers it, and invokes it to complete the task.
+
+## Best Practices
+
+1. **Clear Skill Names**: Use descriptive, kebab-case names for skills (e.g., `fetch-data`, `analyze-results`)
+
+2. **Detailed Instructions**: Provide clear, step-by-step instructions in the `SKILL.md` that help agents understand how to invoke the skill
+
+3. **Skill Discovery**: Phrase task instructions to encourage agents to explore available skills rather than hardcoding skill names
+
+4. **Consistent Structure**: Keep all skills in the same directory structure for predictable discovery
+
+## Running Tasks with Skills
+
+Tasks with skills work like any other Harbor task:
+
+```bash
+harbor run --task examples/tasks/hello-skills \
+  --agent claude-code \
+  --model anthropic/claude-opus-4-6
+```
+
+Harbor automatically:
+1. Reads `skills_dir` from the task configuration
+2. Passes it to the agent during initialization
+3. Agents register skills during setup
+4. The task runs with skills available to the agent
+
+## Advanced: Custom Agents with Skills
+
+When implementing a custom agent, ensure your `setup()` or `run()` method handles skill registration:
+
+```python
+async def setup(self, environment: BaseEnvironment) -> None:
+    """Register skills from self.skills_dir to the agent's config."""
+    if self.skills_dir:
+        # Copy skills from environment to agent's expected location
+        cmd = f"cp -r {self.skills_dir}/* /path/to/agent/skills/"
+        await environment.run_command(cmd)
+```
+
+Refer to the `BaseAgent` class documentation for more details on how `skills_dir` is provided to agents.
