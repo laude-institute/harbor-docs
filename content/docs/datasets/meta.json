@@ -5,6 +5,7 @@
         "registering-datasets",
         "publishing",
         "adapters",
+        "adapters-human",
         "metrics"
     ]
 }
