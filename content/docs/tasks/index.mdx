@@ -67,9 +67,11 @@ tags = ["trivial"]
 [verifier]
 timeout_sec = 120.0
 env = { API_KEY = "sk-test-123" }
+user = "root"  # optional: run the verifier as this OS user
 
 [agent]
 timeout_sec = 120.0
+user = "agent"  # optional: run the agent as this OS user
 
 [solution]
 env = { API_KEY = "sk-test-123" }
@@ -120,11 +122,23 @@ import { TypeTable } from 'fumadocs-ui/components/type-table';
       default: "{}",
       path: "verifier.env"
     },
+    "verifier.user": {
+      description: "Username or UID to run the verifier as. When set, the environment's default user is configured accordingly before verification. If not set, the environment's container default (typically root) is used.",
+      type: "string | int | null",
+      default: null,
+      path: "verifier.user"
+    },
     "agent.timeout_sec": {
       description: "Timeout in seconds for the agent.",
       type: "number",
       default: 600.0,
       path: "agent.timeout_sec"
+    },
+    "agent.user": {
+      description: "Username or UID to run the agent as. When set, the environment's default user is configured accordingly before agent setup and execution. If not set, the environment's container default (typically root) is used.",
+      type: "string | int | null",
+      default: null,
+      path: "agent.user"
     },
     "solution.env": {
       description: "Environment variables to set when running the solution.",
@@ -180,11 +194,23 @@ import { TypeTable } from 'fumadocs-ui/components/type-table';
       default: true,
       path: "environment.allow_internet"
     },
+    "environment.env": {
+      description: 'Environment variables required for the task, resolved from the host at runtime. Supports ${VAR} and ${VAR:-default} template syntax.',
+      type: "object",
+      default: "{}",
+      path: "environment.env"
+    },
     "environment.mcp_servers": {
       description: 'List of MCP servers to make available to the agent. Each entry has a name, transport ("sse", "streamable-http", or "stdio"), and transport-specific fields (url for sse/streamable-http, command/args for stdio). Compatible agents will register these servers automatically.',
       type: "list[MCPServerConfig]",
       default: "[]",
       path: "environment.mcp_servers"
+    },
+    "environment.skills_dir": {
+      description: "Path to a skills directory in the environment. Contents are copied to the agent's skills config directory.",
+      type: "string | null",
+      default: null,
+      path: "environment.skills_dir"
     },
     "source": {
       description: "Optional source string for task provenance.",
