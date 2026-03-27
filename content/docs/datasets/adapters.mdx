@@ -21,18 +21,28 @@ See [this section](#translating-terminal-bench-adapters-to-harbor) to learn abou
 
 ## Quick Start
 
+First, install the Harbor CLI:
 ```bash
-# List available datasets
-harbor datasets list
-
-# Start the interactive wizard to create a new adapter
-harbor adapters init
-
-# Initialize with specific arguments (skipping some prompts)
-harbor adapters init my-adapter --name "My Benchmark"
+uv tool install harbor@0.3.0a1
 ```
 
-Use the above commands to view our supported datasets and start creating your new ones. The `harbor adapters init` command will create starter code and template files.
+Then use the following commands to get started:
+```bash
+# List available datasets
+harbor dataset list
+
+# Start the interactive wizard to create a new adapter
+harbor adapter init
+
+# Initialize with specific arguments (skipping some prompts)
+harbor adapter init my-adapter --name "My Benchmark"
+```
+
+Use the above commands to view our supported datasets and start creating your new ones. The `harbor adapter init` command will create starter code and template files.
+
+<Callout title="CLI command changes">
+Harbor CLI commands have moved from plural to singular form (e.g., `harbor datasets` → `harbor dataset`, `harbor adapters` → `harbor adapter`, `harbor jobs` → `harbor job`, `harbor trials` → `harbor trial`). The old plural forms are still supported for backwards compatibility.
+</Callout>
 
 For more details about what adapters are and how we ensure equivalance between the original benchmark and its harbor adapter, please continue reading.
 
@@ -49,7 +59,7 @@ Here's a quick look at the typical steps:
 5.  **[Run Parity Experiments](#5-run-parity-experiments):** Run parity experiments to verify your adapter's performance against the original benchmark baseline results.
 6.  **[Record Parity Results](#6-record-parity-results):** Formally document the performance comparison in `parity_experiment.json`.
 7.  **[Upload Parity Results](#7-upload-parity-results):** Upload parity and oracle results to the HuggingFace dataset repository.
-8.  **[Register the Dataset](#8-register-the-dataset):** Add your new tasks to the official dataset repository and registry, then verify with `--registry-path`.
+8.  **[Register the Dataset](#8-register-the-dataset):** Prepare your dataset for the [Harbor Registry](https://registry.harborframework.com) using `harbor init` and `dataset.toml`, then coordinate with the Harbor team to publish.
 9.  **[Document and Submit](#9-document-and-submit):** Document your adapter's usage, parity results, and comprehensive adaptation details in a `README.md`, then submit your work through a pull request.
 
 We'll break down each step in detail below. Let's get started!
@@ -193,44 +203,42 @@ There are several ways to run Harbor harness on your adapter:
 **Option 1: Using individual trials (for testing single tasks)**
 ```bash
 # Run oracle agent on a single task
-uv run harbor trials start -p datasets/<your-adapter-name>/<task-id>
+harbor trial start -p datasets/<your-adapter-name>/<task-id>
 
 # Run with specific agent and model
-uv run harbor trials start -p datasets/<your-adapter-name>/<task-id> -a <agent-name> -m <model-name>
+harbor trial start -p datasets/<your-adapter-name>/<task-id> -a <agent-name> -m <model-name>
 ```
 
 **Option 2: Using jobs with local dataset path**
 ```bash
 # Run on entire local dataset
-uv run harbor jobs start -p datasets/<your-adapter-name> -a <agent-name> -m <model-name>
+harbor job start -p datasets/<your-adapter-name> -a <agent-name> -m <model-name>
 ```
 
 **Option 3: Using jobs with configuration file**. Refer to [harbor/examples/configs](https://github.com/laude-institute/harbor/tree/main/examples/configs) for configuration examples. It's highly recommended to write a reference config file for your adapter to ensure reproducibility.
 ```bash
 # Create a job config YAML (see harbor/examples/configs/ for examples)
-uv run harbor jobs start -c adapters/<your-adapter-name>/<config>.yaml -a <agent-name> -m <model-name>
+harbor job start -c adapters/<your-adapter-name>/<config>.yaml -a <agent-name> -m <model-name>
 ```
 
-**Option 4: Using local registry after your [dataset registry PR](#8-register-the-dataset) gets merged**. This step is required to check the correctness of (1) your registered dataset and (2) your updated `registry.json` in the Harbor repository. If this run successfully passes all oracle tests, then after your adapter PR gets merged, people can directly use `-d` without `--registry-path` to run evaluation (the same way as Option 5).
+**Option 4: Using registry dataset (after [publishing](#8-publish-to-the-registry))**. Registry testing is only available after the dataset has been published, which ensures the correct data structure.
 ```bash
 # Run from registry
-uv run harbor jobs start -d <your-adapter-name> --registry-path registry.json -a <agent-name> -m "<model-name>"
+# Single task
+harbor run -t terminal-bench/adaptive-rejection-sampler -a <agent-name> -m <model-name>
+
+# Entire dataset
+harbor run -d terminal-bench/terminal-bench-2 -a <agent-name> -m <model-name>
 ```
 
-**Option 5: Using registry dataset (after registration and all PRs merged)**
-```bash
-# Run from registry
-uv run harbor jobs start -d <your-adapter-name> -a <agent-name> -m "<model-name>"
-```
-
-You should include instructions for running in multiple ways in the `README.md` for your adapter, following the [Harbor adapter README template](https://github.com/laude-institute/harbor/blob/main/docs/adapters/templates/README.md). **Note that the order of these options is organized differently in the final adapter README**. This is because from the user's perspective, Option 5 is the primary way to run the adapter without needing to prepare task directories; the adapter code and other running methods are mainly used for development and reproduction.
+You should include instructions for running in multiple ways in the `README.md` for your adapter, following the [Harbor adapter README template](https://github.com/laude-institute/harbor/blob/main/docs/adapters/templates/README.md). **Note that the order of these options is organized differently in the final adapter README**. This is because from the user's perspective, Option 4 (registry) is the primary way to run the adapter without needing to prepare task directories; the adapter code and other running methods are mainly used for development and reproduction.
 
 #### 3.1 Verify Oracle Solutions Pass 100%
 
 Before proceeding further, you must ensure that all oracle solutions pass with a 100% reward. Run the oracle agent on your entire dataset:
 
 ```bash
-uv run harbor jobs start -p datasets/<your-adapter-name>
+harbor job start -p datasets/<your-adapter-name>
 ```
 
 Once you've verified that all oracle solutions pass, you can create a Work-In-Progress (WIP) pull request to the Harbor repository:
@@ -286,7 +294,7 @@ This approach has two important implications:
   uv run run_adapter.py --output-dir /path/to/output
   ```
 
-2. **Registry Version Naming:** When uploading the dataset to the registry, use the version name `"parity"` instead of `"1.0"` or `"2.0"` to avoid confusion. This allows users to run parity reproduction using `-d <adapter_name>@parity` while keeping the full dataset available separately.
+2. **Registry Version Naming:** When publishing the dataset to the [Harbor Registry](https://registry.harborframework.com), use the version name `"parity"` instead of `"1.0"` or `"2.0"` in your `dataset.toml` to avoid confusion. This allows users to run parity reproduction using `-d <adapter_name>@parity` while keeping the full dataset available separately.
 
 
 </Callout>
@@ -379,6 +387,7 @@ adapters/
 
 ### 8. Register the Dataset
 
+#### 8.1 Generate dataset
 Once your adapter correctly generates tasks and you verify the parity experiments, you should add them to the official [Harbor datasets repository](https://github.com/laude-institute/harbor-datasets).
 
 - **Fork and clone the dataset repository:**
@@ -392,56 +401,54 @@ Once your adapter correctly generates tasks and you verify the parity experiment
   # Specify custom path to the harbor-datasets repo
   uv run run_adapter.py --output-dir /path/to/harbor-datasets/datasets/<your-adapter-name>
   ```
+- Generate `dataset.toml`:
+  ```bash
+  # Initialize the dataset (creates dataset.toml, auto-detects tasks in the directory)
+  cd harbor-datasets/datasets/<your-adapter-name>
+  harbor init
+  # Select "dataset" when prompted
+  ```
+- Edit the generated `dataset.toml` to fill in the required metadata. Your dataset description should include:
+  - **Parity experiment results:** A summary of your parity findings (see [Step 6](#6-record-parity-results))
+  - **Adapter author credits:** Names and contact information for the adapter contributors
+  - **Any other acknowledgment:** i.e. funding support
 - **Pull Request:** Create a pull request to the `harbor-datasets` repository. It's recommended to link the original benchmark's GitHub repository in your PR. Request @Slimshilin for review, and he will merge it so you can try `--registry-path` for the `harbor` harness. You may always submit another PR to update the dataset registry.
 
+**Version naming:** Use `"1.0"` by default. If the original benchmark has named versions (e.g., "verified", "lite"), follow their naming. If you ran parity experiments on a subset (see [Section 4](#4-discuss-parity-plans-and-implement-agents)), use `"parity"` for the parity subset to allow users to run `-d <adapter_name>@parity` for parity reproduction.
 
-Then you should navigate to the `harbor` repository (not the dataset repo!) and add a new entry to the `registry.json` file in the root. **Note:** Harbor's registry format uses task-level entries with Git URLs.
-
-**Version naming:** Use `"version": "1.0"` by default. If there's a version naming of the original benchmark (e.g., "verified", "lite"), then please follow their naming. If you ran parity experiments on a subset (see [Section 4](#4-discuss-parity-plans-and-implement-agents)), use `"version": "parity"` for the parity subset to allow users to run `-d <adapter_name>@parity` for parity reproduction.
-
-For example:
-```json
-[
-    // existing entries...
-    {
-        "name": "<your-adapter-name>",
-        "version": "1.0",  // or "parity" if this is a parity subset; if there are named splits from the original benchmark, use them accordingly
-        "description": "A brief description of the adapter. Original benchmark: [URL]. More details at [adapter README URL].",
-        "tasks": [
-            {
-                "name": "<task-id-1>",
-                "git_url": "https://github.com/laude-institute/harbor-datasets.git",
-                "git_commit_id": "<commit-hash>",
-                "path": "datasets/<your-adapter-name>/<task-id-1>"
-            },
-            {
-                "name": "<task-id-2>",
-                "git_url": "https://github.com/laude-institute/harbor-datasets.git",
-                "git_commit_id": "<commit-hash>",
-                "path": "datasets/<your-adapter-name>/<task-id-2>"
-            }
-            // ... more tasks
-        ]
-    }
-]
-```
-
-For initial development, you can use `"git_commit_id": "head"` to reference the latest commit, but for production you should pin to a specific commit hash for reproducibility.
-
-#### 8.1 Verify Registry Configuration
-
-**Important:** After your dataset registry PR is merged, you must verify that your registered dataset and `registry.json` are correctly configured. Run the following command to test oracle solutions using the registry:
+#### 8.2 Test Locally
+Before submitting for publishing, verify your dataset works correctly using the `-p` path parameter:
 
 ```bash
-# Run from registry
-uv run harbor jobs start -d <your-adapter-name> --registry-path registry.json
+# Run oracle agent on your local dataset
+harbor job start -p /path/to/your/dataset
 ```
 
-Once the oracle tests pass successfully, **take a screenshot of your terminal** showing both:
-- The command you ran
-- The successful oracle test logs/results
+<Callout title="Registry testing is only available post-publish">
+You cannot test against the registry (using `-d`) until the dataset has been published. This ensures the published data structure is correct. Use `-p` (local path) for all pre-publish testing.
+</Callout>
 
-**Paste this screenshot in your adapter PR** to demonstrate that the registry configuration is correct and that the dataset can be successfully loaded from the registry.
+#### 8.3 Submit for Publishing
+Include your tasks directory and `dataset.toml` in your adapter PR.
+
+Once your adapter PR gets approved, the Harbor team will review and publish the dataset to the registry:
+
+```bash
+# (Harbor team) Authenticate with the registry via GitHub
+harbor auth login
+
+# (Harbor team) Publish the dataset (supports optional tags and concurrency settings)
+harbor publish
+```
+
+#### 8.4 Verify Post-Publish
+
+Once the dataset is published to the registry, verify that it loads and runs correctly:
+
+```bash
+# Run oracle agent from the registry
+harbor run -d <your-adapter-name>
+```
 
 ### 9. Document and Submit
 
@@ -531,7 +538,7 @@ The following table summarizes the main differences between Terminal-Bench and H
 | **Docker Compose** | `docker-compose.yaml` in task root | Not typically used per-task |
 | **Default Output Directory** | `tasks/<adapter-name>` | `datasets/<adapter-name>` |
 | **Registry Format** | Dataset-level with `dataset_path` | Task-level with `git_url` and `path` per task |
-| **CLI Commands** | `tb run --dataset` / `tb run --dataset-path` | `harbor jobs start -d` / `harbor trials start -p` |
+| **CLI Commands** | `tb run --dataset` / `tb run --dataset-path` | `harbor run -d` / `harbor run -t` / `harbor job start -p` |
 | **Metrics** | Resolved rate (binary pass/fail per task) | Rewards that support multiple metrics and float-type values |
 
 **IMPORTANT:** If the Terminal-Bench adapter used a tweaked metric (e.g., threshold-based scoring, ignoring certain metrics), then you'll need to re-implement the adapter for Harbor to support the **original** metrics used by the benchmark, as Harbor now supports multiple metrics as rewards.
@@ -665,6 +672,8 @@ fi
 
 #### Step 5: Update Registry Format
 
+Terminal-Bench uses a `registry.json` file with dataset-level entries. Harbor uses the [Harbor Registry](https://registry.harborframework.com) with `dataset.toml` configuration and the `harbor publish` workflow.
+
 **Terminal-Bench registry.json:**
 ```json
 {
@@ -677,23 +686,18 @@ fi
 }
 ```
 
-**Harbor registry.json:**
-```json
-{
-    "name": "my-adapter",
-    "version": "1.0",
-    "description": "...",
-    "tasks": [
-        {
-            "name": "task-1",
-            "git_url": "https://github.com/laude-institute/harbor-datasets.git",
-            "git_commit_id": "abc123",
-            "path": "datasets/my-adapter/task-1"
-        }
-        // ... one entry per task
-    ]
-}
+**Harbor registry (dataset.toml + publish):**
+```bash
+# Initialize dataset configuration (auto-detects tasks)
+harbor init  # select "dataset"
+
+# Edit dataset.toml with descriptions, authors, credits
+# Then submit to Harbor team for publishing
+harbor auth login
+harbor publish
 ```
+
+See [Step 8: Register the Dataset](#8-register-the-dataset) for the full publishing workflow.
 
 ### Getting Help
 
