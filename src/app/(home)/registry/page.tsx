@@ -64,8 +64,8 @@ export default async function RegistryPage() {
           </CardContent>
         </Card>
       ) : (
-        <div className="border rounded-xl overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2 -m-px bg-card">
+        <div className="border-l border-t rounded-xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 bg-card">
             {datasets.map((dataset) => (
               <DatasetCard
                 key={`${dataset.name}:${dataset.version}`}

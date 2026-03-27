@@ -213,8 +213,8 @@ export default async function DatasetPage({
           </Card>
         ) : (
           <>
-            <div className="border rounded-xl overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-2 -m-px bg-card">
+            <div className="border-l border-t rounded-xl overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 bg-card">
                 {tasks.map((task) => (
                   <TaskCard
                     key={task.id}

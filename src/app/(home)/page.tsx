@@ -9,11 +9,11 @@ export default function HomePage() {
         <h1 className="text-8xl tracking-tighter font-code font-medium">
           harbor
         </h1>
-        <p className="text-sm px-3 rounded-lg border py-1 bg-muted">
-          From the makers of Terminal-Bench.
+        <p className="text-sm px-3 rounded-lg border py-1 bg-muted font-mono">
+          from the makers of terminal-bench
         </p>
-        <p className="text-lg text-muted-foreground text-center">
-          A framework for evaluating and optimizing agents and models in
+        <p className="text-lg text-muted-foreground text-center font-mono">
+          a framework for evaluating and optimizing agents and models in
           container environments.
         </p>
         <CodeBlock lang="bash" code={`uv tool install harbor`} />

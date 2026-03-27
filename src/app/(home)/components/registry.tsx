@@ -33,12 +33,12 @@ export function Registry() {
       <h2 className="font-serif text-4xl text-center">
         Run the most popular agent benchmarks
       </h2>
-      <div className=" border rounded-xl overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 -m-px bg-card">
+      <div className="border-l border-t rounded-xl overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-card">
           {benchmarks.map((benchmark) => (
             <Card
               key={benchmark.name}
-              className="shadow-none rounded-none -mr-px -mt-px"
+              className="shadow-none rounded-none border-0 border-b border-r"
             >
               <CardHeader>
                 <CardTitle>{benchmark.name}</CardTitle>

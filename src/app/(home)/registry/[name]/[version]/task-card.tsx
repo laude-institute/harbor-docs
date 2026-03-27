@@ -55,9 +55,9 @@ export function TaskCard({
       href={gitLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="-mr-px -mt-px"
+      className="block border-b border-r"
     >
-      <Card className="shadow-none rounded-none h-full hover:bg-sidebar dark:hover:bg-accent transition-colors group flex flex-col">
+      <Card className="shadow-none rounded-none border-0 h-full hover:bg-sidebar dark:hover:bg-accent transition-colors group flex flex-col">
         <CardHeader>
           <div className="flex items-center justify-between gap-2">
             <CardTitle className="text-base font-code truncate flex items-center gap-1.5">

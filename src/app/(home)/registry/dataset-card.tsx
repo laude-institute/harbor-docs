@@ -33,9 +33,9 @@ export function DatasetCard({
       href={`/registry/${encodeURIComponent(name)}/${encodeURIComponent(
         version
       )}`}
-      className="-mr-px -mt-px"
+      className="block border-b border-r"
     >
-      <Card className="shadow-none rounded-none h-full hover:bg-sidebar dark:hover:bg-accent transition-colors">
+      <Card className="shadow-none rounded-none border-0 h-full hover:bg-sidebar dark:hover:bg-accent transition-colors">
         <CardHeader>
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-1.5 min-w-0">
