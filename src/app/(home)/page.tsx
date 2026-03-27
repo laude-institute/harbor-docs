@@ -6,10 +6,10 @@ export default function HomePage() {
   return (
     <main className="flex flex-1 flex-col justify-center space-y-12 max-w-6xl mx-auto px-4 py-6 sm:pt-12">
       <div className="space-y-6 flex flex-col items-center">
-        <h1 className="text-8xl tracking-tighter font-code font-medium">
+        <h1 className="text-8xl tracking-tighter font-code">
           harbor
         </h1>
-        <p className="text-sm px-3 rounded-lg border py-1 bg-muted font-mono">
+        <p className="text-sm px-3 py-1 rounded-lg bg-muted border font-mono dark:border-transparent">
           from the makers of terminal-bench
         </p>
         <p className="text-lg text-muted-foreground text-center font-mono">

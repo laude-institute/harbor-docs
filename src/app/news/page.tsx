@@ -22,10 +22,10 @@ export default function NewsPage() {
       <div className="flex flex-col gap-6">
         {posts.map((post) => (
           <Link key={post.url} href={post.url} className="block w-full">
-            <Card className="w-full transition-colors hover:bg-fd-accent">
+            <Card className="w-full transition-colors hover:bg-fd-accent shadow-none">
               <CardHeader>
                 <div className="mb-2 flex items-start justify-between gap-4">
-                  <CardTitle className="text-xl font-medium">
+                  <CardTitle className="text-xl">
                     {post.data.title}
                   </CardTitle>
                   <Badge variant="default" className="w-fit">
