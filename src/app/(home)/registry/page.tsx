@@ -4,6 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import type { Tables } from "@/lib/supabase/types";
 import type { Metadata } from "next";
 import { DatasetCard } from "./dataset-card";
+import registryMeta from "./registry-meta.json";
 
 export const revalidate = 60;
 
@@ -66,15 +67,20 @@ export default async function RegistryPage() {
       ) : (
         <div className="border-l border-t rounded-xl overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2">
-            {datasets.map((dataset) => (
-              <DatasetCard
-                key={`${dataset.name}:${dataset.version}`}
-                name={dataset.name}
-                version={dataset.version}
-                description={dataset.description}
-                taskCount={dataset.dataset_task[0]?.count ?? 0}
-              />
-            ))}
+            {datasets.map((dataset) => {
+              const meta = (registryMeta as Record<string, { contributors: { name: string; email: string }[]; acknowledgement: string }>)[dataset.name];
+              return (
+                <DatasetCard
+                  key={`${dataset.name}:${dataset.version}`}
+                  name={dataset.name}
+                  version={dataset.version}
+                  description={dataset.description}
+                  taskCount={dataset.dataset_task[0]?.count ?? 0}
+                  contributors={meta?.contributors}
+                  acknowledgement={meta?.acknowledgement}
+                />
+              );
+            })}
           </div>
         </div>
       )}

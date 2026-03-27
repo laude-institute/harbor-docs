@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Heart, User } from "lucide-react";
 import Link from "next/link";
 import { toast } from "sonner";
 
@@ -18,6 +19,8 @@ interface DatasetCardProps {
   version: string;
   description: string | null;
   taskCount: number;
+  contributors?: { name: string; email: string }[];
+  acknowledgement?: string;
 }
 
 export function DatasetCard({
@@ -25,6 +28,8 @@ export function DatasetCard({
   version,
   description,
   taskCount,
+  contributors,
+  acknowledgement,
 }: DatasetCardProps) {
   const datasetString = `${name}@${version}`;
 
@@ -64,6 +69,22 @@ export function DatasetCard({
           </CardDescription>
         </CardHeader>
         <CardContent className="gap-4 flex-1 flex flex-col justify-between">
+          {(contributors?.length || acknowledgement) && (
+            <div className="flex flex-col gap-1.5 text-xs text-muted-foreground font-code">
+              {contributors?.map((c, i) => (
+                <span key={i} className="flex items-center gap-1.5">
+                  <User className="size-3 shrink-0" />
+                  {c.name}
+                </span>
+              ))}
+              {acknowledgement && (
+                <span className="flex items-center gap-1.5">
+                  <Heart className="size-3 shrink-0" />
+                  {acknowledgement}
+                </span>
+              )}
+            </div>
+          )}
           <div
             className="cursor-default"
             onClick={(e) => {

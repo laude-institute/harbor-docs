@@ -1,0 +1,14 @@
+{
+  "terminal-bench": {
+    "contributors": [
+      { "name": "Harbor Team", "email": "" }
+    ],
+    "acknowledgement": "2077AI"
+  },
+  "swebench-verified": {
+    "contributors": [
+      { "name": "Harbor Team", "email": "" }
+    ],
+    "acknowledgement": "2077AI"
+  }
+}
