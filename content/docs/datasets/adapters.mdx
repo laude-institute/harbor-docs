@@ -34,10 +34,6 @@ harbor adapter init my-adapter --name "My Benchmark"
 
 Use the above commands to view our supported datasets and start creating your new ones. The `harbor adapter init` command will create starter code and template files.
 
-<Callout title="CLI command changes">
-Harbor CLI commands have moved from plural to singular form (e.g., `harbor datasets` → `harbor dataset`, `harbor adapters` → `harbor adapter`, `harbor jobs` → `harbor job`, `harbor trials` → `harbor trial`). The old plural forms are still supported for backwards compatibility.
-</Callout>
-
 For more details about what adapters are and how we ensure equivalance between the original benchmark and its harbor adapter, please continue reading.
 
 ## Overview
@@ -206,13 +202,13 @@ harbor trial start -p datasets/<your-adapter-name>/<task-id> -a <agent-name> -m 
 **Option 2: Using jobs with local dataset path**
 ```bash
 # Run on entire local dataset
-harbor job start -p datasets/<your-adapter-name> -a <agent-name> -m <model-name>
+harbor run -p datasets/<your-adapter-name> -a <agent-name> -m <model-name>
 ```
 
 **Option 3: Using jobs with configuration file**. Refer to [harbor/examples/configs](https://github.com/laude-institute/harbor/tree/main/examples/configs) for configuration examples. It's highly recommended to write a reference config file for your adapter to ensure reproducibility.
 ```bash
 # Create a job config YAML (see harbor/examples/configs/ for examples)
-harbor job start -c adapters/<your-adapter-name>/<config>.yaml -a <agent-name> -m <model-name>
+harbor run -c adapters/<your-adapter-name>/<config>.yaml -a <agent-name> -m <model-name>
 ```
 
 **Option 4: Using registry dataset (after [publishing](#8-publish-to-the-registry))**. Registry testing is only available after the dataset has been published, which ensures the correct data structure.
@@ -232,7 +228,7 @@ You should include instructions for running in multiple ways in the `README.md` 
 Before proceeding further, you must ensure that all oracle solutions pass with a 100% reward. Run the oracle agent on your entire dataset:
 
 ```bash
-harbor job start -p datasets/<your-adapter-name>
+harbor run -p datasets/<your-adapter-name>
 ```
 
 Once you've verified that all oracle solutions pass, you can create a Work-In-Progress (WIP) pull request to the Harbor repository:
@@ -415,7 +411,7 @@ Before submitting for publishing, verify your dataset works correctly using the 
 
 ```bash
 # Run oracle agent on your local dataset
-harbor job start -p /path/to/your/dataset
+harbor run -p /path/to/your/dataset
 ```
 
 <Callout title="Registry testing is only available post-publish">
@@ -425,15 +421,7 @@ You cannot test against the registry (using `-d`) until the dataset has been pub
 #### 8.3 Submit for Publishing
 Include your tasks directory and `dataset.toml` in your adapter PR.
 
-Once your adapter PR gets approved, the Harbor team will review and publish the dataset to the registry:
-
-```bash
-# (Harbor team) Authenticate with the registry via GitHub
-harbor auth login
-
-# (Harbor team) Publish the dataset (supports optional tags and concurrency settings)
-harbor publish
-```
+Once your adapter PR gets approved, the Harbor team will review and publish the dataset to the registry.
 
 #### 8.4 Verify Post-Publish
 
@@ -532,7 +520,7 @@ The following table summarizes the main differences between Terminal-Bench and H
 | **Docker Compose** | `docker-compose.yaml` in task root | Not typically used per-task |
 | **Default Output Directory** | `tasks/<adapter-name>` | `datasets/<adapter-name>` |
 | **Registry Format** | Dataset-level with `dataset_path` | Task-level with `git_url` and `path` per task |
-| **CLI Commands** | `tb run --dataset` / `tb run --dataset-path` | `harbor run -d` / `harbor run -t` / `harbor job start -p` |
+| **CLI Commands** | `tb run --dataset` / `tb run --dataset-path` | `harbor run -d` / `harbor run -t` / `harbor run -p` |
 | **Metrics** | Resolved rate (binary pass/fail per task) | Rewards that support multiple metrics and float-type values |
 
 **IMPORTANT:** If the Terminal-Bench adapter used a tweaked metric (e.g., threshold-based scoring, ignoring certain metrics), then you'll need to re-implement the adapter for Harbor to support the **original** metrics used by the benchmark, as Harbor now supports multiple metrics as rewards.
