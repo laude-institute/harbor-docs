@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Heart } from "lucide-react";
 import Link from "next/link";
 import { toast } from "sonner";
 
@@ -64,6 +65,16 @@ export function DatasetCard({
           </CardDescription>
         </CardHeader>
         <CardContent className="gap-4 flex-1 flex flex-col justify-between">
+          <a
+            href="https://www.2077ai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-xs text-muted-foreground font-code hover:text-foreground transition-colors"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Heart className="size-3 shrink-0" />
+            2077AI
+          </a>
           <div
             className="cursor-default"
             onClick={(e) => {
