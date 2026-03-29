@@ -116,12 +116,53 @@ Develop your adapter under `adapters/{adapter-name}/`. Refer to existing adapter
 | `src/<pkg_name>/main.py` | CLI entry point. Must support `--output-dir`, `--limit`, `--overwrite`, `--task-ids`. |
 | `src/<pkg_name>/task-template/` | Template files copied into each generated task. |
 | `parity_experiment.json` | Parity results — see [Step 6](#step-6-record-parity-results) for full schema. |
+| `run_{adapter-name}.yaml` | Reference config to run the full adapted dataset |
 | `README.md` | Write last before PR submission. Follow the [README template](https://github.com/laude-institute/harbor/blob/main/docs/adapters/templates/README.md). |
 | Metrics / Rewards | Harbor supports multiple float-valued metrics as rewards (RL-compatible). Use the same metrics as the original benchmark. |
 
 ### GPU tasks
 
 If your benchmark includes tasks that require GPU (e.g., CUDA, Triton kernels), add a `docker-compose.yaml` in the task's `environment/` directory with nvidia device reservations for Docker runs. For cloud/Modal runs, also set `gpus` in `task.toml`. See the [featurebench adapter](https://github.com/laude-institute/harbor/tree/main/adapters/featurebench) for a comprehensive example — it handles 44 GPU tasks across multiple repos with separate CPU/GPU/Modal config files.
+
+### Writing `run_{adapter-name}.yaml`
+
+This config file serves as the single entry point for all experiments — oracle verification, parity runs, and general benchmarking. Keep the oracle agent as the default (uncommented) and include other agents as commented-out alternatives so anyone can quickly switch.
+
+```yaml
+datasets:
+  - path: datasets/<adapter-name>
+
+# Default: oracle agent for verification
+agents:
+  - name: oracle
+
+# Uncomment to run with other agents:
+# agents:
+#   - name: codex
+#     model_name: openai/gpt-5-mini
+#
+# agents:
+#   - name: claude-code
+#     model_name: claude-sonnet-4-5-20250929
+
+environment:
+  type: docker
+  delete: true
+
+orchestrator:
+  type: local
+  n_concurrent_trials: 4
+```
+
+You can also create additional config files for different scenarios (e.g., parity subsets, CPU-only vs GPU, Modal). For example, featurebench provides `featurebench_docker_cpu.yaml`, `featurebench_docker_gpu.yaml`, `featurebench_modal.yaml`, and `featurebench_parity.yaml`.
+
+Usage:
+```bash
+# Oracle verification (default)
+harbor run -c adapters/<adapter-name>/run_<adapter-name>.yaml
+
+# Switch agent by uncommenting the desired agent block
+```
 
 ### Rules
 
