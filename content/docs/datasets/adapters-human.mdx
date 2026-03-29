@@ -6,7 +6,7 @@ description: A concise guide for human readers to create a Harbor adapter for yo
 import { Callout } from 'fumadocs-ui/components/callout';
 import { File, Folder, Files } from 'fumadocs-ui/components/files';
 
-To add a new benchmark or dataset to Harbor, you create an [adapter](https://github.com/laude-institute/harbor/tree/main/adapters) that translates the original benchmark's tasks into Harbor format.
+To add a new benchmark or dataset to Harbor, you create an [adapter](https://github.com/harbor-framework/harbor/tree/main/adapters) that translates the original benchmark's tasks into Harbor format.
 
 <Callout title="Using an AI agent to build your adapter?">
 AI agents should follow the spec at [Adapter AI Guideline](/docs/datasets/adapters)
@@ -61,7 +61,7 @@ Before coding, study the original benchmark and identify four key components:
 
 ### 2.0 Read the README template first
 
-The [adapter README template](https://github.com/laude-institute/harbor/blob/main/docs/adapters/templates/README.md) doubles as a requirements checklist. Read it before writing code — it tells you what you'll need to provide.
+The [adapter README template](https://github.com/harbor-framework/harbor/blob/main/docs/adapters/templates/README.md) doubles as a requirements checklist. Read it before writing code — it tells you what you'll need to provide.
 
 ### 2.1 Fork and branch
 
@@ -182,11 +182,11 @@ Reach out to the team (e.g., **Lin Shi**) on [Discord](https://discord.com/invit
 
 Depending on your benchmark, you'll fall into one of three scenarios:
 
-**Scenario A — Compatible agents exist:** The original benchmark already supports Harbor-compatible agents (OpenHands, Codex, Claude-Code, etc.). No extra work needed. Example: [ADEBench](https://github.com/laude-institute/harbor/tree/main/adapters/adebench) — the original benchmark already supports Claude Code.
+**Scenario A — Compatible agents exist:** The original benchmark already supports Harbor-compatible agents (OpenHands, Codex, Claude-Code, etc.). No extra work needed. Example: [ADEBench](https://github.com/harbor-framework/harbor/tree/main/adapters/adebench) — the original benchmark already supports Claude Code.
 
-**Scenario B — LLM-based, no compatible agents:** Fork the original benchmark, implement a Harbor-compatible agent there, and document it. Example: [EvoEval](https://github.com/laude-institute/harbor/tree/main/adapters/evoeval) — forked the repo to add codex agent support for parity.
+**Scenario B — LLM-based, no compatible agents:** Fork the original benchmark, implement a Harbor-compatible agent there, and document it. Example: [EvoEval](https://github.com/harbor-framework/harbor/tree/main/adapters/evoeval) — forked the repo to add codex agent support for parity.
 
-**Scenario C — Custom agents:** Implement the custom agent in Harbor under `adapters/{name}/` and run parity experiments with the custom agents. Also run experiments with standard agents (Codex, Claude-Code) to show the adapter generalizes. Example: [MedAgentBench](https://github.com/laude-institute/harbor/tree/main/adapters/medagentbench) — implements a custom HTTPAgent matching the original GET/POST/FINISH interaction semantics.
+**Scenario C — Custom agents:** Implement the custom agent in Harbor under `adapters/{name}/` and run parity experiments with the custom agents. Also run experiments with standard agents (Codex, Claude-Code) to show the adapter generalizes. Example: [MedAgentBench](https://github.com/harbor-framework/harbor/tree/main/adapters/medagentbench) — implements a custom HTTPAgent matching the original GET/POST/FINISH interaction semantics.
 
 <Callout title="Large benchmarks">
 For expensive benchmarks, you can run parity on a representative subset. Discuss sampling strategy with the team first. Use `--split parity` in your adapter and register with `"version": "parity"` so users can run `-d {name}@parity`.
@@ -308,7 +308,7 @@ harbor run -d <organization-name>/<adapter-name>
 
 ## 9. Document & Submit
 
-Fill out the [README template](https://github.com/laude-institute/harbor/blob/main/docs/adapters/templates/README.md) covering:
+Fill out the [README template](https://github.com/harbor-framework/harbor/blob/main/docs/adapters/templates/README.md) covering:
 - Benchmark bugs discovered and how they were handled
 - Special treatments (prompt tweaks, environment adjustments)
 - Deviations from the original and why
@@ -352,6 +352,6 @@ Migration checklist:
 ## Resources
 
 - [Harbor docs](/docs/getting-started) — Running tasks and jobs
-- [Harbor repo](https://github.com/laude-institute/harbor) — Examples and configs
+- [Harbor repo](https://github.com/harbor-framework/harbor) — Examples and configs
 - [Agent tutorial](/docs/agents) — Creating custom agents
 - [Discord](https://discord.com/invite/6xWPKhGDbA) — Ask questions in `#adapters-spam`
