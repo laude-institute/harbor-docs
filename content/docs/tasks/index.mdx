@@ -55,14 +55,17 @@ The `task.toml` file contains the task's configuration and metadata. Metadata is
 An example is shown below:
 
 ```toml
-version = "1.0"
+schema_version = "1.1"
+
+[task]
+name = "<org>/<name>"
+description = "A short description of the task"
+authors = [{ name = "Steve Jobs", email = "steve@apple.com" }]
+keywords = ["trivial", "programming"]
 
 [metadata]
-author_name = "Steve Jobs"
-author_email = "steve@apple.com"
 difficulty_explanation = "Trivial task for demonstration"
 category = "programming"
-tags = ["trivial"]
 
 [verifier]
 timeout_sec = 120.0
@@ -85,6 +88,7 @@ storage_mb = 10240
 gpus = 0
 gpu_types = ["H100", "A100"]
 allow_internet = true
+env = { SOME_ENV_VAR = "${SOME_ENV_VAR}" } # harbor run requests approval from the user for these env vars
 
 [[environment.mcp_servers]]
 name = "mcp-server"
