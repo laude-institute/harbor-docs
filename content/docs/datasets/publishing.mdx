@@ -1,5 +1,5 @@
 ---
-title: Publishing Datasets
+title: Publishing a dataset
 description: Publish datasets on the Harbor registry to share with others
 ---
 
@@ -22,6 +22,8 @@ This guide will walk you through the process of publishing a dataset to the Harb
 
 ## Prerequisites
 
+### Login to the Harbor registry
+
 Before publishing, run:
 
 ```bash
@@ -37,6 +39,25 @@ You can verify you are signed in by running:
 ```bash
 harbor auth status
 ```
+
+### Update old tasks
+
+Task identifiers are specified in the `[task]` section of the `task.toml` file as `<org>/<name>`. This enables you to create globally unique identifiers that can be published to the registry.
+
+If your tasks are missing the `[task]` section (any task created before Mar 30, 2026), you'll need to add it before publishing them or including them in a dataset. You can do this by running:
+
+```bash
+harbor task update "<path/to/task>" --org "<org>"
+```
+
+This will add the `[task]` section to the task with the name `<org>/<folder-name>`.
+
+You can update an entire directory of tasks by including the `--scan` flag:
+
+```bash
+harbor task update "<path/to/tasks>" --org "<org>" --scan
+```
+
 
 ## 1) Initialize a dataset manifest
 
