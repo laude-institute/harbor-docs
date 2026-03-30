@@ -3,19 +3,18 @@ title: Datasets
 description: Running a dataset
 ---
 
-A [Harbor task](/docs/tasks) is an instruction, container environment, and test script. A dataset is a collection of tasks for evals and training.
+A [Harbor task](/docs/tasks) is an instruction, sandbox environment, and test script. A dataset is a collection of tasks for evals and training. Datasets sometimes define custom metrics that aggregate rewards across tasks.
 
-Tasks can belong to multiple datasets, so datasets are a good way to create targeted eval groups.
-You can publish public datasets or private datasets; private datasets are only available to members of your organization.
+Tasks can belong to multiple datasets. You can create datasets to be targeted eval or training groups. For example, you may want to grab 10 tasks from a few different benchmarks to create a composite benchmark.
 
 There are two ways to use datasets:
 
-1. **Local datasets**: pass a local directory of tasks.
-2. **Published datasets**: use Harbor package references like `org/name@tag` (for example, `my-org/my-dataset@1.0`).
+1. **Local datasets**: run a local directory of tasks.
+2. **Published datasets**: run a dataset from the [Harbor registry](https://registry.harborframework.com/).
 
 ## Local datasets
 
-A local dataset runs directly from disk:
+Run a local dataset with `--path` or `-p`:
 
 ```bash
 harbor run -p "<path/to/dataset>" -a "<agent>" -m "<model>"
@@ -23,14 +22,17 @@ harbor run -p "<path/to/dataset>" -a "<agent>" -m "<model>"
 
 ## Published datasets
 
-Run a published dataset with `-d`:
+Datasets can be published and shared with members of your organization or publicly on the [Harbor registry](https://registry.harborframework.com/). If you publish your dataset privately, all members of your organization can run it. If you publish it publicly, anyone can run it.
+
+Run a published dataset with `--dataset` or `-d`:
 
 ```bash
 harbor run -d "my-org/my-dataset@1.0" -a "<agent>" -m "<model>"
 ```
 
-## Build and publish workflow
+To learn how to create and publish a dataset, see [Publishing Datasets](/docs/datasets/publishing).
 
-- [Registering Datasets](/docs/datasets/registering-datasets)
-- [Publishing (optional)](/docs/datasets/publishing)
+## Related docs
+
+- [Publishing Datasets](/docs/datasets/publishing)
 - [Custom Metrics](/docs/datasets/metrics)

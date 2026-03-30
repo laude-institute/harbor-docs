@@ -15,11 +15,11 @@ export default async function NewsPost(
   const MDX = page.data.body;
 
   return (
-    <main className="mx-auto max-w-4xl px-4 py-12">
+    <main className="mx-auto w-full max-w-4xl px-4 py-12 overflow-x-hidden">
       <article>
         <div className="font-mono">
-          <div className="mb-6 flex items-start justify-between gap-4">
-            <h1 className="text-3xl font-normal">{page.data.title}</h1>
+          <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+            <h1 className="text-2xl sm:text-3xl font-normal">{page.data.title}</h1>
             <ShareButton />
           </div>
           <p className="mt-2 text-sm text-fd-muted-foreground">
@@ -35,7 +35,7 @@ export default async function NewsPost(
             </p>
           )}
         </div>
-        <div className="mt-8">
+        <div className="mt-8 overflow-x-auto">
           <DocsBody>
             <MDX components={getMDXComponents({})} />
           </DocsBody>

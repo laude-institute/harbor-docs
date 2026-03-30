@@ -33,11 +33,11 @@ export default function NewsPage() {
           <Link key={post.url} href={post.url} className="block w-full">
             <Card className="border-t-0 w-full transition-colors hover:bg-fd-accent shadow-none">
               <CardHeader>
-                <div className="mb-2 flex items-start justify-between gap-4">
-                  <CardTitle className="text-xl">
+                <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                  <CardTitle className="text-lg sm:text-xl">
                     {post.data.title}
                   </CardTitle>
-                  <Badge variant="default" className="w-fit">
+                  <Badge variant="default" className="w-fit shrink-0">
                     {new Date(post.data.date).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "long",
