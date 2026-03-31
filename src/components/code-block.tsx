@@ -1,10 +1,19 @@
 import { DynamicCodeBlock } from "fumadocs-ui/components/dynamic-codeblock";
 
-export function CodeBlock({ lang, code }: { lang: string; code: string }) {
+export function CodeBlock({
+  lang,
+  code,
+  className,
+}: {
+  lang: string;
+  code: string;
+  className?: string;
+}) {
   return (
     <DynamicCodeBlock
       lang={lang}
       code={code}
+      codeblock={{ className }}
       options={{
         themes: {
           light: "github-light",

@@ -1,4 +1,5 @@
-import { getPageImage, source } from '@/lib/source';
+import { DocsPageActions } from "@/components/docs-page-actions";
+import { getLLMText, getPageImage, source } from '@/lib/source';
 import {
   DocsBody,
   DocsDescription,
@@ -16,9 +17,11 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   if (!page) notFound();
 
   const MDX = page.data.body;
+  const markdown = await getLLMText(page);
 
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
+      <DocsPageActions markdown={markdown} />
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>

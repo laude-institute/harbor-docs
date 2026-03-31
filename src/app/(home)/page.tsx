@@ -1,39 +1,53 @@
 import { CodeBlock } from "@/components/code-block";
 import { Button } from "@/components/ui/button";
+import { ArrowRight, BoxIcon, ChevronDown } from "lucide-react";
 import Link from "next/link";
-import { ArrowRight, ChevronDown } from "lucide-react";
 
 export default function HomePage() {
   return (
     <>
       <Link
         href="/news/harbor-cookbook"
-        className="block w-full border-b border-border bg-secondary text-secondary-foreground transition-all hover:bg-secondary/80"
+        className="group block w-full border-b border-border bg-card text-foreground transition-colors hover:bg-sidebar dark:hover:bg-accent"
       >
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-3">
-          <p className="font-mono text-sm">
-            announcing the harbor cookbook: recipes for building harbor tasks and optimization loops.
-          </p>
-          <ArrowRight className="size-4" />
+        <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-5 px-4 py-3">
+          <div className="flex items-center gap-4">
+            <BoxIcon className="size-4 shrink-0" strokeWidth={2.5} />
+            <p className="font-mono text-sm">
+              announcing the harbor cookbook: recipes for building harbor tasks
+              and optimization loops.
+            </p>
+          </div>
+          <ArrowRight
+            className="size-4 shrink-0 transition-transform duration-200 group-hover:translate-x-1"
+            strokeWidth={2.5}
+          />
         </div>
       </Link>
-      <main className="flex flex-1 flex-col justify-center space-y-12 max-w-6xl mx-auto px-4 py-6 sm:pt-12">
-        <div className="space-y-6 flex flex-col items-center">
-          <h1 className="text-8xl tracking-tighter font-code">
-            harbor
+      <main className="flex flex-1 flex-col justify-center space-y-12 max-w-6xl mx-auto px-4 py-6 sm:pt-16">
+        <div className="flex flex-col items-center">
+          <h1 className="max-w-5xl text-center text-5xl leading-tight sm:text-6xl lg:text-7xl tracking-tighter font-code font-medium mb-12">
+            harbor: evaluate agents in sandboxed environments
           </h1>
-          <p className="text-sm px-3 py-1 rounded-lg font-mono">
+          <p className="text-xl text-muted-foreground max-w-3xl text-center mb-12">
+            harbor is a framework for specifying sandboxed agent tasks for
+            evaluation and optimization
+          </p>
+          <CodeBlock
+            lang="bash"
+            code={`uv tool install harbor`}
+            className="mb-12"
+          />
+          <Button size="xl" asChild className="mb-12">
+            <Link href="/docs">
+              Read the docs
+              <ArrowRight className="size-4" strokeWidth={3} />
+            </Link>
+          </Button>
+          <p className="text-base px-3 py-1 rounded-lg font-mono mb-8">
             from the makers of terminal-bench
           </p>
-          <p className="text-lg text-muted-foreground text-center font-mono">
-            a framework for evaluating and optimizing agents and models in
-            container environments.
-          </p>
-          <CodeBlock lang="bash" code={`uv tool install harbor`} />
-          <Button size="lg" asChild className="mt-6">
-            <Link href="/docs">Read the docs</Link>
-          </Button>
-          <div className="w-full mt-12">
+          <div className="w-full">
             <Link
               href="#harbor-action"
               className="flex flex-col items-center gap-2"
