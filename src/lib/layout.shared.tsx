@@ -1,4 +1,5 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
+import { HARBOR_REGISTRY_URL } from "@/lib/harbor-registry";
 
 export function baseOptions(): BaseLayoutProps {
   return {
@@ -22,9 +23,10 @@ export function baseOptions(): BaseLayoutProps {
         active: "nested-url",
       },
       {
-        url: "/registry",
+        url: HARBOR_REGISTRY_URL,
         text: "registry",
-        active: "nested-url",
+        active: "none",
+        external: true,
       },
       {
         url: "https://discord.gg/6xWPKhGDbA",
