@@ -18,17 +18,17 @@ export default async function NewsPost(
     <main className="mx-auto w-full max-w-3xl px-4 py-12 overflow-x-hidden">
       <article>
         <div className="font-mono">
-          <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-            <h1 className="text-2xl sm:text-3xl font-normal">{page.data.title}</h1>
+          <h1 className="text-2xl sm:text-3xl font-normal">{page.data.title}</h1>
+          <div className="mt-4 flex items-center justify-between gap-4">
+            <p className="text-sm text-fd-muted-foreground">
+              {new Date(page.data.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </p>
             <ShareButton />
           </div>
-          <p className="mt-2 text-sm text-fd-muted-foreground">
-            {new Date(page.data.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </p>
           {page.data.description && (
             <p className="mt-4 text-sm text-fd-muted-foreground leading-loose">
               {page.data.description}

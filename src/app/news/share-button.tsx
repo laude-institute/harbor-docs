@@ -16,10 +16,10 @@ export function ShareButton() {
 
   return (
     <Button
-      variant="secondary"
-      size="lg"
+      variant="ghost"
+      size="sm"
       onClick={handleShare}
-      className="shrink-0 h-10 px-4"
+      className="shrink-0"
     >
       <Link2 className="size-5" />
       Share
