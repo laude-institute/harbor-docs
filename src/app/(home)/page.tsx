@@ -7,20 +7,19 @@ export default function HomePage() {
   return (
     <>
       <Link
-        href="/news/harbor-cookbook"
+        href="/news/harbor-registry"
         className="group block w-full border-b border-border bg-card text-foreground transition-colors hover:bg-sidebar dark:hover:bg-accent"
       >
         <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-5 px-4 py-3">
           <div className="flex items-center gap-4">
-            <BoxIcon className="size-4 shrink-0" strokeWidth={2.5} />
+            <BoxIcon className="size-4 shrink-0" strokeWidth={2} />
             <p className="font-mono text-sm">
-              announcing the harbor cookbook: recipes for building harbor tasks
-              and optimization loops.
+              the harbor registry is getting an upgrade.
             </p>
           </div>
           <ArrowRight
             className="size-4 shrink-0 transition-transform duration-200 group-hover:translate-x-1"
-            strokeWidth={2.5}
+            strokeWidth={2}
           />
         </div>
       </Link>
