@@ -15,6 +15,98 @@ harbor run --help
 
 Right now, Harbor includes Terminus-2, Claude Code, Codex CLI, Gemini CLI, OpenHands, Mini-SWE-Agent, and more.
 
+### Authentication
+
+Most agents need API credentials to connect to a model provider. Harbor supports several ways to pass credentials, depending on the agent and provider.
+
+#### Environment variables
+
+Set the relevant API key in your shell before running `harbor run`. The agent picks it up automatically.
+
+```bash
+# Anthropic API (Claude Code)
+export ANTHROPIC_API_KEY=sk-ant-...
+harbor run -p ./task -a claude-code -m anthropic/claude-sonnet-4-6
+
+# OpenAI API (Codex CLI)
+export OPENAI_API_KEY=sk-...
+harbor run -p ./task -a codex -m openai/o3
+```
+
+#### Agent environment overrides (`--ae`)
+
+Use `--ae` to pass environment variables directly to the agent container without exporting them in your shell:
+
+```bash
+harbor run -p ./task -a claude-code \
+  --ae ANTHROPIC_API_KEY=sk-ant-...
+```
+
+This is useful for one-off runs or when you need different credentials per run. Variables passed via `--ae` are merged into the agent's environment and take effect inside the container.
+
+#### Provider-specific configuration
+
+Some agents have built-in support for cloud providers that use credential files or token-based auth rather than simple API keys.
+
+##### Claude Code with AWS Bedrock
+
+Claude Code detects Bedrock mode via the `CLAUDE_CODE_USE_BEDROCK` environment variable. Set your AWS credentials and region, then run:
+
+```bash
+export CLAUDE_CODE_USE_BEDROCK=1
+export AWS_REGION=us-east-1
+
+# Option A: Standard AWS credential chain
+export AWS_ACCESS_KEY_ID=AKIA...
+export AWS_SECRET_ACCESS_KEY=...
+
+# Option B: Bedrock API key auth
+export AWS_BEARER_TOKEN_BEDROCK=...
+
+harbor run -p ./task -a claude-code -m anthropic/claude-sonnet-4-6
+```
+
+The agent passes through `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN`, `AWS_PROFILE`, and `AWS_REGION` into the container automatically.
+
+Optional variables:
+- `ANTHROPIC_SMALL_FAST_MODEL_AWS_REGION` — separate region for the small/fast model (Haiku)
+- `DISABLE_PROMPT_CACHING=1` — disable prompt caching (not available in all Bedrock regions)
+
+##### Claude Code with Google Cloud Vertex AI
+
+Claude Code detects Vertex AI mode via the `CLAUDE_CODE_USE_VERTEX` environment variable. Authentication uses [Application Default Credentials](https://cloud.google.com/docs/authentication/application-default-credentials) (ADC).
+
+First, ensure you have ADC configured on your host:
+
+```bash
+gcloud auth application-default login
+```
+
+Then run:
+
+```bash
+export CLAUDE_CODE_USE_VERTEX=1
+export ANTHROPIC_VERTEX_PROJECT_ID=my-gcp-project
+export CLOUD_ML_REGION=us-east5          # or "global" for automatic routing
+
+harbor run -p ./task -a claude-code -m anthropic/claude-sonnet-4-6
+```
+
+The agent automatically locates your ADC credentials file (checking `GOOGLE_APPLICATION_CREDENTIALS` first, then the default `~/.config/gcloud/application_default_credentials.json`), uploads it into the container, and sets `GOOGLE_APPLICATION_CREDENTIALS` to point to it. No manual volume mounting is required.
+
+##### Claude Code with custom API base URL
+
+To use Claude Code with a custom endpoint (OpenRouter, self-hosted proxy, etc.):
+
+```bash
+export ANTHROPIC_BASE_URL=https://openrouter.ai/api/v1
+export ANTHROPIC_API_KEY=sk-or-...
+
+harbor run -p ./task -a claude-code -m openrouter/anthropic/claude-sonnet-4-6
+```
+
+When `ANTHROPIC_BASE_URL` is set, all model aliases (Sonnet, Opus, Haiku, subagent) are pointed to the same model to avoid routing issues.
+
 ## Integrating your own agent
 
 Harbor supports integrating your own agent without having to modify the Harbor source code.
